@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <style>
+        /* 頁首 */
+        #home {
+            width: 100%;
+            height: 100vh;
+            background-color: #1fa19b;
+            position: relative;
+        }
+
+
+        /* navbar狀態 */
+        .nav-link {
+            text-align: end;
+        }
+
+        /* Icon Forward 動態效果*/
+        .hvr-icon-forward {
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            -webkit-transition-duration: 0.1s;
+            transition-duration: 0.1s;
+        }
+
+        .hvr-icon-forward .hvr-icon {
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            -webkit-transition-duration: 0.1s;
+            transition-duration: 0.1s;
+            -webkit-transition-property: transform;
+            transition-property: transform;
+            -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+            color: white;
+            padding: 0 5px;
+            font-size: 14px;
+        }
+
+        .hvr-icon-forward:hover .hvr-icon,
+        .hvr-icon-forward:focus .hvr-icon,
+        .hvr-icon-forward:active .hvr-icon {
+            -webkit-transform: translateX(4px);
+            transform: translateX(4px);
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .content {
+            width: 100%;
+            height: 100%;
+            background-color: #2B998B;
+
+        }
+
+        /* 以下分頁 */
+        section {
+            width: 100%;
+            min-height: 100vh;
+            background-color: rgb(212, 212, 212);
+
+            padding-top: 90px;
+
+        }
+
+        .text-center {
+            padding: 30px;
+        }
+
+        .textArea {
+            width: 100%;
+            height: 100vh;
+            /* background-color: aliceblue; */
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+        }
+
+
+        .textArea_imageBlock {
+            width: calc(50% - 15px);
+            height: 300px;
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: darkgoldenrod;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        .in_mask {
+            width: 80%;
+            height: 80%;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            word-wrap:break-word; 
+        }
+
+        .in_mask {
+            width: 80%;
+            height: 80%;
+        }
+
+        .mask {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(155, 155, 155, 0.8);
+            word-wrap:break-word; 
+
+            position: absolute;
+            left: 0;
+            top: 85%;
+            transition: 1s;
+
+        }
+
+        .textArea_imageBlock:hover .mask {
+            top: 0;
+        }
+
+        /* .img_group:hover .mask {
+            top: 0;
+        } */
+
+        .img-1 {
+            background-image: url(/image/cooking.jpg);
+            background-size: cover;
+        }
+
+
+        .img-2 {
+            background-image: url(/image/GDS-Clothing.jpeg);
+            background-size: cover;
+        }
+
+
+        .img-3 {
+            background-image: url(/image/Clean_beach.jpg);
+            background-size: cover;
+        }
+
+
+        .img-4 {
+            background-image: url(/image/1.jpg);
+            background-size: cover;
+        }
+
+
+
+        .textArea_imageBlock span {
+            /* font-weight: 500; */
+            letter-spacing: 3px;
+            font-size: 16px;
+            text-shadow: gray 0.01em 0.01em 0.9em;
+
+        }
+
+        /* 對.textArea_imageBlock hover時，span變化 */
+        .textArea_imageBlock:hover span {
+            display: none;
+            transition: 1s;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <div id="home">
+
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top ">
+            <a class="navbar-brand text-white" href="#">Zero Market</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon text-white"></span>
+            </button>
+            <div class="collapse navbar-collapse .d-lg-flex justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active hvr-icon-forward">
+                        <a class="nav-link text-white" href="#"><i
+                                class="fas fa-chevron-circle-right hvr-icon text-white"></i>輕鬆找店家</a>
+                    </li>
+                    <li class="nav-item hvr-icon-forward">
+                        <a class="nav-link text-white" href="#"><i
+                                class="fas fa-chevron-circle-right hvr-icon text-white"></i>體驗課程</a>
+                    </li>
+                    <li class="nav-item hvr-icon-forward">
+                        <a class="nav-link text-white" href="#"><i
+                                class="fas fa-chevron-circle-right hvr-icon text-white"></i>種子計畫</a>
+                    </li>
+                    <li class="nav-item dropdown hvr-icon-forward">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                class="fas fa-chevron-circle-right hvr-icon text-white"></i>
+                            安心保證
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="https://www.instagram.com/?hl=zh-tw"><i
+                                class="fab fa-instagram"></i></a></li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="https://www.facebook.com/"><i
+                                class="fab fa-facebook-f"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <!-- 體驗課程 -->
+        <section class="section">
+            <div class="container">
+
+                <div class="text-center h1">體 ● 驗 ● 課 ● 程</div>
+                <div class="textArea">
+                    <!-- <div style= "position:relative ">
+                            <div class="textArea_imageBlock" style= "position:absolute; left:0; top:0; color:#fff; font-weight:bold">布製環保用品
+                            <img width="100%" src= "/image/5d63c947741c7.jpg"> 111</img></div> -->
+
+                    <div class="textArea_imageBlock img-1">
+                        <div class="mask">
+                            <div class="in_mask">
+                                
+                                <span>餐桌上的田野</span>
+                                
+                                <div class="textTitle"></div> 
+                                <!-- <p>jjjjjjjjjjj</p> -->
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="textArea_imageBlock img-2">
+                        <div class="mask">
+                            <div class="in_mask">
+                                <span>布製手作課程</span>
+                            </div>
+
+                            <div class="in_mask content2">
+                                上課時段：
+● 週三～週六：14:00~16:00、20:00~22:00
+
+● 週二：11:00~13:00、14:00~16:00、16:00~18:00、20:00~22:00
+（採一對一個別指導，一星期需上一堂課/2H，如果結伴同行且選擇同時段上課，需選擇相同作品製作）
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="textArea_imageBlock img-3">
+                        <div class="mask">
+                            <div class="in_mask">
+                                
+                                <span>淨山/灘循環接力</span>
+                                
+                                <div class="textTitle"></div> 
+                                <!-- <p>jjjjjjjjjjj</p> -->
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="textArea_imageBlock img-2">
+                        <div class="mask">
+                            <div class="in_mask">
+                                
+                                <span>烹飪料理教室</span>
+                                
+                                <div class="textTitle"></div> 
+                                <!-- <p>jjjjjjjjjjj</p> -->
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="textArea">
+
+
+                </div>
+
+
+
+
+
+
+            </div>
+
+
+
+</body>
+
+<!-- fullPage.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.extensions.min.js"
+    integrity="sha512-pci5WG2+7QnpsinWWpGUd3RgI61fU1bWlQQQegC2mVqwOQC/+Xp0ROGO0AYB6dvoLBYRxwm+t+DWOVRkxmlcdQ=="
+    crossorigin="anonymous"></script>
+<!-- bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.extensions.min.js"
+    integrity="sha512-pci5WG2+7QnpsinWWpGUd3RgI61fU1bWlQQQegC2mVqwOQC/+Xp0ROGO0AYB6dvoLBYRxwm+t+DWOVRkxmlcdQ=="
+    crossorigin="anonymous"></script>
+
+
+<script>
+
+
+</script>
+
+</html>
