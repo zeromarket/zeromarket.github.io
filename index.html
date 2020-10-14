@@ -38,16 +38,12 @@
             height: 10px;
             background-color: #2BA091;
             position: relative;
-            /* background-image: url('/零市集_網站插圖/logo_工作區域\ 1.png'); */
-            /* background-position: center;
-            background-size: 50%;
-            background-repeat: no-repeat; */
         }
 
         #begin {
             width: 10px;
             height: 10px;
-            background-image: url('/零市集_網站插圖/logo/logo.png');
+            background-image: url('/02-圖片/logo/logo.png');
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
@@ -72,71 +68,180 @@
         }
 
         /* Icon Forward 動態效果*/
-        @-webkit-keyframes hvr-icon-wobble-horizontal {
-            16.65% {
-                -webkit-transform: translateX(6px);
-                transform: translateX(6px);
-            }
 
-            33.3% {
-                -webkit-transform: translateX(-5px);
-                transform: translateX(-5px);
-            }
 
-            49.95% {
-                -webkit-transform: translateX(4px);
-                transform: translateX(4px);
-            }
+        .navbar-light .navbar-nav .nav-link:focus,
+        .navbar-light .navbar-nav .nav-link:hover,
+        .fab:hover {
+            color: #F3C71F;
+        }
 
-            66.6% {
-                -webkit-transform: translateX(-2px);
-                transform: translateX(-2px);
-            }
+        /* 導覽點的效果*/
 
-            83.25% {
-                -webkit-transform: translateX(1px);
-                transform: translateX(1px);
-            }
 
+        /* 輕鬆找ICON */
+        @-webkit-keyframes hvr-icon-down {
+
+            0%,
+            50%,
             100% {
-                -webkit-transform: translateX(0);
-                transform: translateX(0);
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+            }
+
+            25%,
+            75% {
+                -webkit-transform: translateY(6px);
+                transform: translateY(6px);
             }
         }
 
-        @keyframes hvr-icon-wobble-horizontal {
-            16.65% {
-                -webkit-transform: translateX(6px);
-                transform: translateX(6px);
-            }
+        @keyframes hvr-icon-down {
 
-            33.3% {
-                -webkit-transform: translateX(-5px);
-                transform: translateX(-5px);
-            }
-
-            49.95% {
-                -webkit-transform: translateX(4px);
-                transform: translateX(4px);
-            }
-
-            66.6% {
-                -webkit-transform: translateX(-2px);
-                transform: translateX(-2px);
-            }
-
-            83.25% {
-                -webkit-transform: translateX(1px);
-                transform: translateX(1px);
-            }
-
+            0%,
+            50%,
             100% {
-                -webkit-transform: translateX(0);
-                transform: translateX(0);
+                -webkit-transform: translateY(0);
+                transform: translateY(-2px);
+            }
+
+            25%,
+            75% {
+                -webkit-transform: translateY(6px);
+                transform: translateY(4px);
             }
         }
 
-        .hvr-icon-wobble-horizontal {
+        .hvr-icon-down {
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        }
+
+        .hvr-icon-down .hvr-icon {
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+
+        .hvr-icon-down:hover .hvr-icon,
+        .hvr-icon-down:focus .hvr-icon,
+        .hvr-icon-down:active .hvr-icon {
+            -webkit-animation-name: hvr-icon-down;
+            animation-name: hvr-icon-down;
+            -webkit-animation-duration: 0.75s;
+            animation-duration: 0.75s;
+            -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+        }
+
+        /* 體驗課程 */
+        @-webkit-keyframes hvr-icon-buzz-out {
+            10% {
+                -webkit-transform: translateX(3px) rotate(2deg);
+                transform: translateX(3px) rotate(2deg);
+            }
+
+            20% {
+                -webkit-transform: translateX(-3px) rotate(-2deg);
+                transform: translateX(-3px) rotate(-2deg);
+            }
+
+            30% {
+                -webkit-transform: translateX(3px) rotate(2deg);
+                transform: translateX(3px) rotate(2deg);
+            }
+
+            40% {
+                -webkit-transform: translateX(-3px) rotate(-2deg);
+                transform: translateX(-3px) rotate(-2deg);
+            }
+
+            50% {
+                -webkit-transform: translateX(2px) rotate(1deg);
+                transform: translateX(2px) rotate(1deg);
+            }
+
+            60% {
+                -webkit-transform: translateX(-2px) rotate(-1deg);
+                transform: translateX(-2px) rotate(-1deg);
+            }
+
+            70% {
+                -webkit-transform: translateX(2px) rotate(1deg);
+                transform: translateX(2px) rotate(1deg);
+            }
+
+            80% {
+                -webkit-transform: translateX(-2px) rotate(-1deg);
+                transform: translateX(-2px) rotate(-1deg);
+            }
+
+            90% {
+                -webkit-transform: translateX(1px) rotate(0);
+                transform: translateX(1px) rotate(0);
+            }
+
+            100% {
+                -webkit-transform: translateX(-1px) rotate(0);
+                transform: translateX(-1px) rotate(0);
+            }
+        }
+
+        @keyframes hvr-icon-buzz-out {
+            10% {
+                -webkit-transform: translateX(3px) rotate(2deg);
+                transform: translateX(3px) rotate(2deg);
+            }
+
+            20% {
+                -webkit-transform: translateX(-3px) rotate(-2deg);
+                transform: translateX(-3px) rotate(-2deg);
+            }
+
+            30% {
+                -webkit-transform: translateX(3px) rotate(2deg);
+                transform: translateX(3px) rotate(2deg);
+            }
+
+            40% {
+                -webkit-transform: translateX(-3px) rotate(-2deg);
+                transform: translateX(-3px) rotate(-2deg);
+            }
+
+            50% {
+                -webkit-transform: translateX(2px) rotate(1deg);
+                transform: translateX(2px) rotate(1deg);
+            }
+
+            60% {
+                -webkit-transform: translateX(-2px) rotate(-1deg);
+                transform: translateX(-2px) rotate(-1deg);
+            }
+
+            70% {
+                -webkit-transform: translateX(2px) rotate(1deg);
+                transform: translateX(2px) rotate(1deg);
+            }
+
+            80% {
+                -webkit-transform: translateX(-2px) rotate(-1deg);
+                transform: translateX(-2px) rotate(-1deg);
+            }
+
+            90% {
+                -webkit-transform: translateX(1px) rotate(0);
+                transform: translateX(1px) rotate(0);
+            }
+
+            100% {
+                -webkit-transform: translateX(-1px) rotate(0);
+                transform: translateX(-1px) rotate(0);
+            }
+        }
+
+        .hvr-icon-buzz-out {
             display: inline-block;
             vertical-align: middle;
             -webkit-transform: perspective(1px) translateZ(0);
@@ -146,42 +251,75 @@
             transition-duration: 0.3s;
         }
 
-        .hvr-icon-wobble-horizontal .hvr-icon {
+        .hvr-icon-buzz-out .hvr-icon {
             -webkit-transform: translateZ(0);
             transform: translateZ(0);
         }
 
-        .hvr-icon-wobble-horizontal:hover .hvr-icon,
-        .hvr-icon-wobble-horizontal:focus .hvr-icon,
-        .hvr-icon-wobble-horizontal:active .hvr-icon {
-            -webkit-animation-name: hvr-icon-wobble-horizontal;
-            animation-name: hvr-icon-wobble-horizontal;
-            -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-            -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
+        .hvr-icon-buzz-out:hover .hvr-icon,
+        .hvr-icon-buzz-out:focus .hvr-icon,
+        .hvr-icon-buzz-out:active .hvr-icon {
+            -webkit-animation-name: hvr-icon-buzz-out;
+            animation-name: hvr-icon-buzz-out;
+            -webkit-animation-duration: 0.75s;
+            animation-duration: 0.75s;
+            -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
             -webkit-animation-iteration-count: 1;
             animation-iteration-count: 1;
-            color: #F3C71F;
         }
 
-        .navbar-light .navbar-nav .nav-link:focus,
-        .navbar-light .navbar-nav .nav-link:hover,
-        .fab:hover {
-            color: #F3C71F;
+        /* 種子計畫ICON */
+        .hvr-icon-fade {
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
         }
 
-        /* 導覽點的效果 */
-        #fp-nav ul li a span,
-        .fp-slidesNav ul li a span {
-            background-color: #f7ce2d;
+        .hvr-icon-fade .hvr-icon {
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+            -webkit-transition-property: color;
+            transition-property: color;
         }
 
-        #fp-nav ul li a.active span,
-        #fp-nav ul li:hover a.active span,
-        .fp-slidesNav ul li a.active span,
-        .fp-slidesNav ul li:hover a.active span {
-            background-color: #F3C71F;
+        .hvr-icon-fade:hover .hvr-icon,
+        .hvr-icon-fade:focus .hvr-icon,
+        .hvr-icon-fade:active .hvr-icon {
+            color: #4affae;
+        }
+
+        /* 安心計畫的ICON */
+        .hvr-icon-grow {
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+        }
+
+        .hvr-icon-grow .hvr-icon {
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-property: transform;
+            transition-property: transform;
+            -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+        }
+
+        .hvr-icon-grow:hover .hvr-icon,
+        .hvr-icon-grow:focus .hvr-icon,
+        .hvr-icon-grow:active .hvr-icon {
+            -webkit-transform: scale(1.3) translateZ(0);
+            transform: scale(1.3) translateZ(0);
         }
 
         /* banner效果 */
@@ -196,7 +334,7 @@
 
 
         #item_text1 {
-            background-image: url('/零市集_網站插圖/首頁/白色_無塑文字.png');
+            background-image: url('/02-圖片/首頁/白色_無塑文字.png');
             background-size: contain;
             background-repeat: no-repeat;
 
@@ -209,7 +347,7 @@
         }
 
         #item_1 {
-            background-image: url('/零市集_網站插圖/首頁/塑膠袋.png');
+            background-image: url('/02-圖片/首頁/塑膠袋.png');
             background-size: contain;
             background-repeat: no-repeat;
 
@@ -223,7 +361,7 @@
         }
 
         #item_2 {
-            background-image: url('/零市集_網站插圖/首頁/瓶子.png');
+            background-image: url('/02-圖片/首頁/瓶子.png');
             background-size: contain;
             background-repeat: no-repeat;
 
@@ -237,7 +375,7 @@
         }
 
         #item_text2 {
-            background-image: url('/零市集_網站插圖/首頁/黃色點點01.png');
+            background-image: url('/02-圖片/首頁/黃色點點01.png');
             background-size: contain;
             background-repeat: no-repeat;
 
@@ -250,7 +388,7 @@
         }
 
         #item_3 {
-            background-image: url('/零市集_網站插圖/首頁/塑膠瓶.png');
+            background-image: url('/02-圖片/首頁/塑膠瓶.png');
             background-size: contain;
             background-repeat: no-repeat;
 
@@ -263,7 +401,7 @@
         }
 
         #item_4 {
-            background-image: url('/零市集_網站插圖/首頁/笑臉袋.png');
+            background-image: url('/02-圖片/首頁/笑臉袋.png');
             background-size: contain;
             background-repeat: no-repeat;
 
@@ -276,7 +414,7 @@
         }
 
         #item_text3 {
-            background-image: url('/零市集_網站插圖/首頁/黃色_無塑文字.png');
+            background-image: url('/02-圖片/首頁/黃色_無塑文字.png');
             background-size: contain;
             background-repeat: no-repeat;
 
@@ -289,7 +427,7 @@
         }
 
         #item_5 {
-            background-image: url('/零市集_網站插圖/首頁/漢堡盒.png');
+            background-image: url('/02-圖片/首頁/漢堡盒.png');
             background-size: contain;
             background-repeat: no-repeat;
 
@@ -303,7 +441,7 @@
         }
 
         #item_6 {
-            background-image: url('/零市集_網站插圖/首頁/杯子.png');
+            background-image: url('/02-圖片/首頁/杯子.png');
             background-size: contain;
             background-repeat: no-repeat;
 
@@ -316,7 +454,7 @@
         }
 
         #item_text4 {
-            background-image: url('/零市集_網站插圖/首頁/黃色點點02.png');
+            background-image: url('/02-圖片/首頁/黃色點點02.png');
             background-size: contain;
             background-repeat: no-repeat;
 
@@ -335,7 +473,7 @@
         /* 人物 */
         #person_1 {
 
-            background-image: url('/零市集_網站插圖/首頁/生氣.png');
+            background-image: url('/02-圖片/首頁/生氣.png');
             background-size: contain;
             background-repeat: no-repeat;
             width: 350px;
@@ -347,7 +485,7 @@
         }
 
         #person_2 {
-            background-image: url('/零市集_網站插圖/首頁/笑臉.png');
+            background-image: url('/02-圖片/首頁/笑臉.png');
             background-size: contain;
             background-repeat: no-repeat;
             width: 600px;
@@ -610,8 +748,8 @@
             </ul>
         </div> -->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #1fa19b;">
-            <a class="navbar-brand text-white p-0" href="#"><img width="150px"
-                    style="position: absolute;top: -5px;left: 5px;" src="/零市集_網站插圖/logo/NAVbar_logo.png"
+            <a class="navbar-brand text-white p-0" href="/index.html"><img width="150px"
+                    style="position: absolute;top: -5px;left: 5px;" src="/02-圖片/logo/NAVbar_logo.png"
                     alt="Zero Market"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -619,17 +757,17 @@
             </button>
             <div class="collapse navbar-collapse .d-lg-flex justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
-                    <li class="nav-item hvr-icon-wobble-horizontal">
-                        <a class="nav-link" href="#"><i class="fas fa-chevron-circle-right hvr-icon"></i> 輕鬆找店家</a>
+                    <li class="nav-item hvr-icon-down">
+                        <a class="nav-link" href="#"><i class="fas fa-map-marker-alt hvr-icon"></i> 輕鬆找店家</a>
                     </li>
-                    <li class="nav-item hvr-icon-wobble-horizontal">
-                        <a class="nav-link " href="#"><i class="fas fa-chevron-circle-right hvr-icon"></i> 體驗課程</a>
+                    <li class="nav-item hvr-icon-buzz-out">
+                        <a class="nav-link " href="體驗課程.html"><i class="fas fa-shopping-bag hvr-icon"></i> 體驗課程</a>
                     </li>
-                    <li class="nav-item hvr-icon-wobble-horizontal">
-                        <a class="nav-link" href="#"><i class="fas fa-chevron-circle-right hvr-icon"></i> 種子計畫</a>
+                    <li class="nav-item hvr-icon-fade">
+                        <a class="nav-link" href="#"><i class="fas fa-seedling hvr-icon"></i> 種子計畫</a>
                     </li>
-                    <li class="nav-item dropdown hvr-icon-wobble-horizontal">
-                        <a class="nav-link" href="#"><i class="fas fa-chevron-circle-right hvr-icon"></i> 安心保證</a>
+                    <li class="nav-item hvr-icon-grow">
+                        <a class="nav-link" href="#peace4"><i class="far fa-smile hvr-icon"></i> 安心保證</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://www.instagram.com/?hl=zh-tw">
@@ -664,7 +802,7 @@
                     <!-- <div id="item_5" class="banner_img"></div>
                 <div id="item_6" class="banner_img"></div> -->
                     <img id="person_1">
-                    <!-- src="/零市集_網站插圖/a1.png" -->
+                    <!-- src="/02-圖片/a1.png" -->
                     <img id="person_2">
 
                 </div>
@@ -685,13 +823,14 @@
                         麼</div>
                     <div class="row" style="margin-top: 5% ;">
                         <div id="about" class="col-lg-6 d-flex justify-content-end">
-                            <img width="200px" style="margin-right: 20%;" src="/零市集_網站插圖/首頁/無包裝是什麼.png" alt="">
+                            <img width="200px" style="margin-right: 20%;" src="/02-圖片/首頁/無包裝是什麼.png" alt="">
                         </div>
                         <div class="col-lg-6">
                             <!-- <div class="contentshadow"></div> -->
 
                             <div class="content">
-                                <img width="100%" style="margin-left: -25%;" src="/內文/無包裝是什麼文字框.png" alt="無包裝是什麼文字框">
+                                <img width="100%" style="margin-left: -20%;" src="/01-文字區塊/無包裝是什麼文字框.png"
+                                    alt="無包裝是什麼文字框">
                             </div>
                         </div>
                     </div>
@@ -703,66 +842,40 @@
                 <div class="container">
                     <!-- 假錨點 -->
                     <div class="anchor"></div>
-                    <div class="text-center title mt-5">
+                    <div class="text-center title mt-3">
                         減<p class="text1"> ∙ </p>
                         減<p class="text1"> ∙ </p>
                         生<p class="text1"> ∙ </p>
                         活</div>
-                    <div class="row pb-5 pt-5">
-                        <div class="col-md-8">
-                            <div class="card rounded" style="height: 200px;background-color: coral;">
-                                <img style="height: 160px;"
-                                    src="https://www.kahunsho-byebye.com/wp-content/themes/kahunsho-byebye/img/img_2.png"
-                                    class="card-img-top p-5" alt="循環利用">
-                                <div class="card-body rounded">
-                                    <p class="card-text">Some quick example tzext to build on the card title and
-                                        make.</p>
-                                </div>
-                            </div>
+                    <div class="row mt-3">
+                        <div class="col-md-8 d-flex justify-content-center">
+                            <img width="100%" src="/01-文字區塊/減減生活＿循環利用.png" alt="循環利用">
                         </div>
                         <div class="col-md-4">
-                            <div class="col">
-                                <img style="max-height: 100px;"
-                                    src="https://www.kahunsho-byebye.com/wp-content/themes/kahunsho-byebye/img/img_2.png"
-                                    class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text">Some quick example text to build on th</p>
-                                </div>
-                                <div class="col">
-                                    <img style="max-height: 100px;"
-                                        src="https://www.kahunsho-byebye.com/wp-content/themes/kahunsho-byebye/img/img_2.png"
-                                        class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <p class="card-text">Some quick example text to build on the card title and
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                            <img class="card-img-top" src="01-文字區塊/少量分裝.png">
+                            <img class="card-img-top" src="/01-文字區塊/日常分裝.png">
                         </div>
                     </div>
+
                     <div class="row">
                         <div class="col-md-4">
-                            <img src="https://www.kahunsho-byebye.com/wp-content/themes/kahunsho-byebye/img/img_2.png"
-                                class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to bu</p>
-                            </div>
+                            <img src="/01-文字區塊/友善寵物.png" class="card-img-top" alt="友善寵物">
                         </div>
                         <div class="col-md-4">
+                            <img src="/01-文字區塊/友善寵物.png" class="card-img-top" alt="????????">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="/01-文字區塊/斷捨離.png" class="card-img-top" alt="段捨離">
+                        </div>
+                        <!-- <div class="col-md-4">
                             <img src="https://www.kahunsho-byebye.com/wp-content/themes/kahunsho-byebye/img/img_2.png"
                                 class="card-img-top" alt="...">
                             <div class="card-body">
                                 <p class="card-text">Some quick example text to build on the card title and</p>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <img src="https://www.kahunsho-byebye.com/wp-content/themes/kahunsho-byebye/img/img_2.png"
-                                class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and</p>
-                            </div>
-                        </div>
-
+                        </div> -->
+                    </div>
+                </div>
             </section>
             <!-- 好物生活 -->
             <section class="section">
@@ -786,11 +899,11 @@
                             <!-- <div class="contentshadow"></div> -->
 
                             <div class="content">
-                                <img width="100%" style="margin-left: 70%;" src="/內文/無包裝是什麼文字框.png" alt="無包裝是什麼文字框">
+                                <img width="100%" style="margin-left: 70%;" src="01-文字區塊/無包裝是什麼文字框.png" alt="綠瓶子計畫介紹">
                             </div>
                         </div>
                         <div id="about" class="col-lg-6 d-flex justify-content-end">
-                            <img width="200px" style="margin-right: 35%;" src="/零市集_網站插圖/首頁/無包裝是什麼.png" alt="">
+                            <img width="200px" style="margin-right: 35%;" src="/02-圖片/首頁/無包裝是什麼.png" alt="">
                         </div>
 
                     </div>
@@ -923,7 +1036,7 @@
 
             </section>
             <!-- 安心保證 -->
-            <section class="section">
+            <section id="peace4" class="section">
                 <div class="container">
                     <div class=" text-center h1 mt-5">安．心．保．證</div>
                     <div class="row mt-5">

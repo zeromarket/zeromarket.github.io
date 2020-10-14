@@ -14,49 +14,125 @@
 
     <style>
         /* 頁首 */
-        #home {
-            width: 100%;
-            height: 100vh;
-            background-color: #1fa19b;
-            position: relative;
-        }
-
-
         /* navbar狀態 */
         .nav-link {
             text-align: end;
         }
 
+        .navbar-light .navbar-nav .nav-link {
+            color: white;
+        }
+
+        /* 標題 */
+        .title {
+            color: #2BA091;
+            font-weight: 700;
+            font-size: 48px;
+        }
+
+        .text1 {
+            display: inline;
+            margin: 0px 10px;
+        }
+
         /* Icon Forward 動態效果*/
-        .hvr-icon-forward {
+        @-webkit-keyframes hvr-icon-wobble-horizontal {
+            16.65% {
+                -webkit-transform: translateX(6px);
+                transform: translateX(6px);
+            }
+
+            33.3% {
+                -webkit-transform: translateX(-5px);
+                transform: translateX(-5px);
+            }
+
+            49.95% {
+                -webkit-transform: translateX(4px);
+                transform: translateX(4px);
+            }
+
+            66.6% {
+                -webkit-transform: translateX(-2px);
+                transform: translateX(-2px);
+            }
+
+            83.25% {
+                -webkit-transform: translateX(1px);
+                transform: translateX(1px);
+            }
+
+            100% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes hvr-icon-wobble-horizontal {
+            16.65% {
+                -webkit-transform: translateX(6px);
+                transform: translateX(6px);
+            }
+
+            33.3% {
+                -webkit-transform: translateX(-5px);
+                transform: translateX(-5px);
+            }
+
+            49.95% {
+                -webkit-transform: translateX(4px);
+                transform: translateX(4px);
+            }
+
+            66.6% {
+                -webkit-transform: translateX(-2px);
+                transform: translateX(-2px);
+            }
+
+            83.25% {
+                -webkit-transform: translateX(1px);
+                transform: translateX(1px);
+            }
+
+            100% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+        }
+
+        .hvr-icon-wobble-horizontal {
             display: inline-block;
             vertical-align: middle;
             -webkit-transform: perspective(1px) translateZ(0);
             transform: perspective(1px) translateZ(0);
             box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-            -webkit-transition-duration: 0.1s;
-            transition-duration: 0.1s;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
         }
 
-        .hvr-icon-forward .hvr-icon {
+        .hvr-icon-wobble-horizontal .hvr-icon {
             -webkit-transform: translateZ(0);
             transform: translateZ(0);
-            -webkit-transition-duration: 0.1s;
-            transition-duration: 0.1s;
-            -webkit-transition-property: transform;
-            transition-property: transform;
-            -webkit-transition-timing-function: ease-out;
-            transition-timing-function: ease-out;
-            color: white;
-            padding: 0 5px;
-            font-size: 14px;
         }
 
-        .hvr-icon-forward:hover .hvr-icon,
-        .hvr-icon-forward:focus .hvr-icon,
-        .hvr-icon-forward:active .hvr-icon {
-            -webkit-transform: translateX(4px);
-            transform: translateX(4px);
+        .hvr-icon-wobble-horizontal:hover .hvr-icon,
+        .hvr-icon-wobble-horizontal:focus .hvr-icon,
+        .hvr-icon-wobble-horizontal:active .hvr-icon {
+            -webkit-animation-name: hvr-icon-wobble-horizontal;
+            animation-name: hvr-icon-wobble-horizontal;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+            -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+            color: #F3C71F;
+        }
+
+        .navbar-light .navbar-nav .nav-link:focus,
+        .navbar-light .navbar-nav .nav-link:hover,
+        .fab:hover {
+            color: #F3C71F;
         }
 
         .container {
@@ -74,15 +150,10 @@
         section {
             width: 100%;
             min-height: 100vh;
-            background-color: rgb(212, 212, 212);
-
-            padding-top: 90px;
-
+            /* padding-top: 90px; */
+            background-image: url('https://www.kahunsho-byebye.com/wp-content/themes/kahunsho-byebye/img/bg_2.png');
         }
 
-        .text-center {
-            padding: 30px;
-        }
 
         .textArea {
             width: 100%;
@@ -96,7 +167,6 @@
 
 
         .textArea_imageBlock {
-            width: calc(50% - 15px);
             height: 300px;
             color: white;
 
@@ -113,14 +183,13 @@
         .in_mask {
             width: 80%;
             height: 80%;
-            margin-top: 10px;
             display: flex;
             justify-content: center;
-            word-wrap:break-word; 
+            word-wrap: break-word;
         }
 
         .in_mask {
-            width: 80%;
+            width: 100%;
             height: 80%;
         }
 
@@ -128,8 +197,8 @@
             width: 100%;
             height: 100%;
             background-color: rgba(155, 155, 155, 0.8);
-            word-wrap:break-word; 
-
+            word-wrap: break-word;
+            padding: 10px;
             position: absolute;
             left: 0;
             top: 85%;
@@ -146,25 +215,25 @@
         } */
 
         .img-1 {
-            background-image: url(/image/cooking.jpg);
+            background-image: url(/02-圖片/綠瓶子計畫/cooking.jpg);
             background-size: cover;
         }
 
 
         .img-2 {
-            background-image: url(/image/GDS-Clothing.jpeg);
+            background-image: url(/02-圖片/綠瓶子計畫/GDS-Clothing.jpeg);
             background-size: cover;
         }
 
 
         .img-3 {
-            background-image: url(/image/Clean_beach.jpg);
+            background-image: url(/02-圖片/綠瓶子計畫/Clean_beach.jpg);
             background-size: cover;
         }
 
 
         .img-4 {
-            background-image: url(/image/1.jpg);
+            background-image: url(/02-圖片/綠瓶子計畫/1.jpg);
             background-size: cover;
         }
 
@@ -193,116 +262,113 @@
     <!-- navbar -->
     <div id="home">
 
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top ">
-            <a class="navbar-brand text-white" href="#">Zero Market</a>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #1fa19b;">
+            <a class="navbar-brand text-white p-0" href="/index.html"><img width="150px"
+                    style="position: absolute;top: -5px;left: 5px;" src="/02-圖片/logo/NAVbar_logo.png"
+                    alt="Zero Market"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon text-white"></span>
             </button>
             <div class="collapse navbar-collapse .d-lg-flex justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
-                    <li class="nav-item active hvr-icon-forward">
-                        <a class="nav-link text-white" href="#"><i
-                                class="fas fa-chevron-circle-right hvr-icon text-white"></i>輕鬆找店家</a>
+                    <li class="nav-item hvr-icon-wobble-horizontal">
+                        <a class="nav-link" href="#"><i class="fas fa-chevron-circle-right hvr-icon"></i> 輕鬆找店家</a>
                     </li>
-                    <li class="nav-item hvr-icon-forward">
-                        <a class="nav-link text-white" href="#"><i
-                                class="fas fa-chevron-circle-right hvr-icon text-white"></i>體驗課程</a>
+                    <li class="nav-item hvr-icon-wobble-horizontal">
+                        <a class="nav-link " href="體驗課程.html"><i class="fas fa-chevron-circle-right hvr-icon"></i>
+                            體驗課程</a>
                     </li>
-                    <li class="nav-item hvr-icon-forward">
-                        <a class="nav-link text-white" href="#"><i
-                                class="fas fa-chevron-circle-right hvr-icon text-white"></i>種子計畫</a>
+                    <li class="nav-item hvr-icon-wobble-horizontal">
+                        <a class="nav-link" href="#"><i class="fas fa-chevron-circle-right hvr-icon"></i> 種子計畫</a>
                     </li>
-                    <li class="nav-item dropdown hvr-icon-forward">
-                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink"
-                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
-                                class="fas fa-chevron-circle-right hvr-icon text-white"></i>
-                            安心保證
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
+                    <li class="nav-item dropdown hvr-icon-wobble-horizontal">
+                        <a class="nav-link" href="#section4"><i class="fas fa-chevron-circle-right hvr-icon"></i>
+                            安心保證</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="https://www.instagram.com/?hl=zh-tw"><i
-                                class="fab fa-instagram"></i></a></li>
+                        <a class="nav-link" href="https://www.instagram.com/?hl=zh-tw">
+                            <i class="fab fa-instagram"></i></a></li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="https://www.facebook.com/"><i
-                                class="fab fa-facebook-f"></i></a></li>
+                        <a class="nav-link" href="https://www.facebook.com/">
+                            <i class="fab fa-facebook-f"></i></a></li>
                 </ul>
             </div>
         </nav>
 
-
         <!-- 體驗課程 -->
         <section class="section">
             <div class="container">
-
-                <div class="text-center h1">體 ● 驗 ● 課 ● 程</div>
+                <!-- 假錨點 -->
+                <div style="width: 100%;height: 60px;"></div>
+                <!-- 標題 -->
+                <div class="text-center title m-3">
+                    綠<p class="text1"> ∙ </p>
+                    瓶<p class="text1"> ∙ </p>
+                    子<p class="text1"> ∙ </p>
+                    計<p class="text1"> ∙ </p>
+                    劃</div>
                 <div class="textArea">
-                    <!-- <div style= "position:relative ">
-                            <div class="textArea_imageBlock" style= "position:absolute; left:0; top:0; color:#fff; font-weight:bold">布製環保用品
-                            <img width="100%" src= "/image/5d63c947741c7.jpg"> 111</img></div> -->
+                 
+                        <div class="col-md-6">
 
-                    <div class="textArea_imageBlock img-1">
-                        <div class="mask">
-                            <div class="in_mask">
-                                
-                                <span>餐桌上的田野</span>
-                                
-                                <div class="textTitle"></div> 
-                                <!-- <p>jjjjjjjjjjj</p> -->
+                            <div class="textArea_imageBlock img-1">
+                                <div class="mask">
+                                    <div class="in_mask">
+                                        <div class="text-center h4">好吃的找我
+
+                                            <div class="ab m-3 text-left h5">吃好吃好吃好吃好好吃
+                                                好吃好好吃好吃好好吃好吃好好吃好吃</div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-
                         </div>
-                    </div>
-
-                    <div class="textArea_imageBlock img-2">
-                        <div class="mask">
-                            <div class="in_mask">
-                                <span>布製手作課程</span>
+                        <div class="col-md-6">
+                            <div class="textArea_imageBlock img-2">
+                                <div class="mask">
+                                    <div class="in_mask ">
+                                        <div class="text-center h4">好吃的找我
+                                            <div class="ab m-3 text-left h5">吃好吃好吃好吃好好吃
+                                                好吃好好吃好吃好好吃好吃好好吃好吃</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-
-                            <div class="in_mask content2">
-                                上課時段：
-● 週三～週六：14:00~16:00、20:00~22:00
-
-● 週二：11:00~13:00、14:00~16:00、16:00~18:00、20:00~22:00
-（採一對一個別指導，一星期需上一堂課/2H，如果結伴同行且選擇同時段上課，需選擇相同作品製作）
-                            </div>
-
                         </div>
-                    </div>
+                    
+                        <div class="col-md-6">
+                            <div class="textArea_imageBlock img-3">
+                                <div class="mask">
+                                    <div class="in_mask ">
+                                        <div class="text-center h4">好吃的找我
 
-                    <div class="textArea_imageBlock img-3">
-                        <div class="mask">
-                            <div class="in_mask">
-                                
-                                <span>淨山/灘循環接力</span>
-                                
-                                <div class="textTitle"></div> 
-                                <!-- <p>jjjjjjjjjjj</p> -->
+                                            <div class="ab m-3 text-left h5">吃好吃好吃好吃好好吃
+                                                好吃好好吃好吃好好吃好吃好好吃好吃</div>
+                                          
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
-
                         </div>
-                    </div>
 
-                    <div class="textArea_imageBlock img-2">
-                        <div class="mask">
-                            <div class="in_mask">
-                                
-                                <span>烹飪料理教室</span>
-                                
-                                <div class="textTitle"></div> 
-                                <!-- <p>jjjjjjjjjjj</p> -->
+                        <div class="col-md-6">
+                            <div class="textArea_imageBlock img-4">
+                                <div class="mask">
+                                    <div class="in_mask ">
+                                        <div class="text-center h4">好吃的找我
+
+                                            <div class="ab m-3 text-left h5">吃好吃好吃好吃好好吃
+                                                好吃好好吃好吃好好吃好吃好好吃好吃</div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-
                         </div>
-                    </div>
-
-
+                    
                 </div>
 
                 <div class="textArea">
