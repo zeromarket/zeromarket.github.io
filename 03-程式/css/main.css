@@ -33,6 +33,7 @@
     position: fixed;
 }
 
+
 /* 頁首 */
 #home {
     width: 100%;
@@ -60,7 +61,17 @@
 }
 
 /* 導覽點的效果*/
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    background-color: #f8d442;
+}
 
+#fp-nav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li a.active span,
+.fp-slidesNav ul li:hover a.active span {
+    background-color: #F3C71F;
+}
 
 /* 輕鬆找ICON */
 @-webkit-keyframes hvr-icon-down {
@@ -377,7 +388,7 @@ body {
 
     position: absolute;
     left: 35%;
-    bottom: 72%;
+    bottom: 62%;
 
     width: 160px;
     height: 110px;
@@ -390,7 +401,7 @@ body {
 
     position: absolute;
     left: 48%;
-    bottom: 68%;
+    bottom: 62%;
 
     width: 150px;
     height: 150px;
@@ -456,7 +467,7 @@ body {
 /* 人物 */
 #person_1 {
 
-    background-image: url('/02-圖片/首頁/生氣.png');
+    /* background-image: url('/02-圖片/首頁/生氣.png'); */
     background-size: contain;
     background-repeat: no-repeat;
     width: 350px;
@@ -468,7 +479,7 @@ body {
 }
 
 #person_2 {
-    background-image: url('/02-圖片/首頁/笑臉.png');
+    /* background-image: url('/02-圖片/首頁/笑臉.png'); */
     background-size: contain;
     background-repeat: no-repeat;
     width: 600px;

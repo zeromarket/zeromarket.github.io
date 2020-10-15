@@ -16,7 +16,413 @@
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <style>
-        @import url(/03-程式/css/main.css);
+        /* 進場畫面 */
+        #loading {
+            background: #F3C71F;
+            bottom: 0;
+            left: 0;
+            position: fixed;
+            right: 0;
+            top: 0;
+            /*四面都切 物件為滿版*/
+            z-index: 5000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* 對子層作排列 */
+        }
+
+        #begin_back {
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            background-color: #2BA091;
+            position: relative;
+            /* background-image: url('/零市集_網站插圖/logo_工作區域\ 1.png'); */
+            /* background-position: center;
+            background-size: 50%;
+            background-repeat: no-repeat; */
+        }
+
+        #begin {
+            width: 10px;
+            height: 10px;
+            background-image: url('/零市集_網站插圖/logo_工作區域\ 1.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: fixed;
+        }
+
+        /* 頁首 */
+        #home {
+            width: 100%;
+            height: 100vh;
+            background-color: #1fa19b;
+            position: relative;
+        }
+
+        /* navbar狀態 */
+        .nav-link {
+            text-align: end;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: white;
+        }
+
+        /* Icon Forward 動態效果*/
+        @-webkit-keyframes hvr-icon-wobble-horizontal {
+            16.65% {
+                -webkit-transform: translateX(6px);
+                transform: translateX(6px);
+            }
+
+            33.3% {
+                -webkit-transform: translateX(-5px);
+                transform: translateX(-5px);
+            }
+
+            49.95% {
+                -webkit-transform: translateX(4px);
+                transform: translateX(4px);
+            }
+
+            66.6% {
+                -webkit-transform: translateX(-2px);
+                transform: translateX(-2px);
+            }
+
+            83.25% {
+                -webkit-transform: translateX(1px);
+                transform: translateX(1px);
+            }
+
+            100% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes hvr-icon-wobble-horizontal {
+            16.65% {
+                -webkit-transform: translateX(6px);
+                transform: translateX(6px);
+            }
+
+            33.3% {
+                -webkit-transform: translateX(-5px);
+                transform: translateX(-5px);
+            }
+
+            49.95% {
+                -webkit-transform: translateX(4px);
+                transform: translateX(4px);
+            }
+
+            66.6% {
+                -webkit-transform: translateX(-2px);
+                transform: translateX(-2px);
+            }
+
+            83.25% {
+                -webkit-transform: translateX(1px);
+                transform: translateX(1px);
+            }
+
+            100% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+        }
+
+        .hvr-icon-wobble-horizontal {
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+        }
+
+        .hvr-icon-wobble-horizontal .hvr-icon {
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+
+        .hvr-icon-wobble-horizontal:hover .hvr-icon,
+        .hvr-icon-wobble-horizontal:focus .hvr-icon,
+        .hvr-icon-wobble-horizontal:active .hvr-icon {
+            -webkit-animation-name: hvr-icon-wobble-horizontal;
+            animation-name: hvr-icon-wobble-horizontal;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+            -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+            color: #F3C71F;
+        }
+
+        .navbar-light .navbar-nav .nav-link:focus,
+        .navbar-light .navbar-nav .nav-link:hover,
+        .fab:hover {
+            color: #F3C71F;
+        }
+ /* 導覽點的效果 */
+        #fp-nav ul li a span,
+        .fp-slidesNav ul li a span {
+            background-color: rgb(255, 255, 255, 0.5);
+        }
+
+        #fp-nav ul li a.active span,
+        #fp-nav ul li:hover a.active span,
+        .fp-slidesNav ul li a.active span,
+        .fp-slidesNav ul li:hover a.active span {
+            background-color: #f3c71fb5;
+        }
+
+        /* banner效果 */
+        body {
+            width: 100%;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            position: relative;
+        }
+
+
+        #item_1 {
+            position: absolute;
+            top: 10%;
+            left: 20%;
+        }
+
+        #item_2 {
+            position: absolute;
+            top: 400px;
+            left: 200px;
+        }
+
+        #item_3 {
+            position: absolute;
+            bottom: 10%;
+            right: 10%;
+        }
+
+        #item_4 {
+            position: absolute;
+            bottom: 15%;
+            right: 20%;
+        }
+
+        .banner_img {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+
+        }
+
+        /* 人物 */
+        #person_1 {
+
+            background-image: url('/零市集_網站插圖/a1.png');
+            background-size: cover;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            bottom: 0;
+            left: calc(50% - 100px);
+        }
+
+        #person_2 {
+
+            background-image: url('/零市集_網站插圖/a2.png');
+            background-size: cover;
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            bottom: 0;
+            left: calc(50% - 100px);
+            display: none;
+        }
+
+        /* 以下分頁 */
+        section {
+            width: 100%;
+            min-height: 100vh;
+            background-color: rgb(212, 212, 212);
+
+        }
+
+        .anchor {
+            width: 100%;
+            height: 60px;
+
+        }
+
+        .content {
+            width: 100%;
+            height: 100%;
+            background-color: yellow;
+        }
+
+
+        /* 翻牌效果 */
+        ul {
+            padding-inline-start: 0;
+        }
+
+        .CardList-item {
+            width: 100%;
+            /* max-width: 100%; */
+            height: 80vh;
+            display: inline-block;
+            position: relative;
+            margin-bottom: 1.5rem;
+            cursor: pointer;
+            -webkit-perspective: 3000px;
+            perspective: 3000px;
+
+        }
+
+        .CardList-itemInnerWrapper {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            border: 1px solid #1ca9b0;
+            -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+            -webkit-transition: -webkit-transform 700ms;
+            transition: -webkit-transform 700ms;
+            transition: transform 700ms;
+            transition: transform 700ms, -webkit-transform 700ms;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+
+        .CardList-item.is-active .CardList-itemInnerWrapper {
+            -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+        }
+
+        .no-csstransforms3d .CardList-item.is-active .CardList-itemInnerWrapper,
+        .is-IE .CardList-item.is-active .CardList-itemInnerWrapper {
+            -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+        }
+
+        .CardList-item.is-active.no-action .CardList-itemInnerWrapper {
+            -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+        }
+
+        .CardList-title,
+        .CardList-description {
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .CardList-title {
+            margin-top: 0;
+            background: #f0f0f0;
+            color: #595959;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+            text-align: center;
+            -webkit-transition: color 300ms ease-out;
+            transition: color 300ms ease-out;
+            z-index: 2;
+            -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+        }
+
+        .CardList-item:hover .CardList-title {
+            color: #1ca9b0;
+        }
+
+        .CardList-titleInnerWrapper {
+            position: absolute;
+            top: 50%;
+            margin-top: auto;
+            margin-bottom: auto;
+            left: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            width: 80%;
+        }
+
+        .CardList-description {
+            background: #1ca9b0;
+            color: #fff;
+            z-index: 1;
+            -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+
+        }
+
+        .no-csstransforms3d .CardList-description,
+        .is-IE .CardList-description {
+            display: none;
+            -webkit-transform: none;
+            transform: none;
+            z-index: 3;
+        }
+
+        .CardList-descriptionInnerWrapper {
+            position: absolute;
+            top: 50%;
+            margin-top: auto;
+            margin-bottom: auto;
+            left: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            width: 80%;
+        }
+
+        .CardList-icon {
+            width: 3rem;
+            height: 3rem;
+            fill: none;
+            stroke: #1ca9b0;
+            stroke-linecap: square;
+            stroke-miterlimit: 10;
+            stroke-width: 2px;
+            display: block;
+            margin: 0 auto 1rem;
+        }
+
+        .rounded {
+            border-radius: .50rem !important;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+        }
+
+
+        @media(min-width: 992px) {
+            .us {
+                flex: 0 0 25%;
+                max-width: calc(25% - 40px);
+            }
+        }
     </style>
 </head>
 
@@ -31,41 +437,39 @@
     <!-- 頁首 -->
     <!-- navbar -->
     <div id="home">
-        <!-- 導覽點 -->
-        <!-- <div id="fp-nav" class="fp-right">
+        <div id="fp-nav" class="fp-right">
             <ul>
-                <li><a href="#" class="active"><span class="fp-sr-only">Section 1</span></a></li>
-                <li><a href="#" class=""><span class="fp-sr-only">Section 2</span></a></li>
-                <li><a href="#" class=""><span class="fp-sr-only">Section 3</span></a></li>
-                <li><a href="#" class=""><span class="fp-sr-only">Section 4</span></a></li>
-                <li><a href="#" class=""><span class="fp-sr-only">Section 5</span></a></li>
-                <li><a href="#" class=""><span class="fp-sr-only">Section 6</span></a></li>
-                <li><a href="#" class=""><span class="fp-sr-only">Section 7</span></a></li>
-                <li><a href="#" class=""><span class="fp-sr-only">Section 8</span></a></li>
-                <li><a href="#"><span class="fp-sr-only">Section 9</span></a></li>
+                <li class="text-info"><a href="#" class="active"><span class="fp-sr-only">Section
+                            1</span><span></span></a></li>
+                <li><a href="#" class=""><span class="fp-sr-only">Section 2</span><span></span></a></li>
+                <li><a href="#" class=""><span class="fp-sr-only">Section 3</span><span></span></a></li>
+                <li><a href="#" class=""><span class="fp-sr-only">Section 4</span><span></span></a></li>
+                <li><a href="#" class=""><span class="fp-sr-only">Section 5</span><span></span></a></li>
+                <li><a href="#" class=""><span class="fp-sr-only">Section 6</span><span></span></a></li>
+                <li><a href="#" class=""><span class="fp-sr-only">Section 7</span><span></span></a></li>
+                <li><a href="#" class=""><span class="fp-sr-only">Section 8</span><span></span></a></li>
+                <li><a href="#"><span class="fp-sr-only">Section 9</span><span></span></a></li>
             </ul>
-        </div> -->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #1fa19b;">
-            <a class="navbar-brand text-white p-0" href="/index.html"><img width="150px"
-                    style="position: absolute;top: -5px;left: 5px;" src="/02-圖片/logo/NAVbar_logo.png"
-                    alt="Zero Market"></a>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top ">
+            <a class="navbar-brand text-white" href="#">Zero Market</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon text-white"></span>
             </button>
             <div class="collapse navbar-collapse .d-lg-flex justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
-                    <li class="nav-item hvr-icon-down">
-                        <a class="nav-link" href="#"><i class="fas fa-map-marker-alt hvr-icon"></i> 輕鬆找店家</a>
+                    <li class="nav-item hvr-icon-wobble-horizontal">
+                        <a class="nav-link" href="#"><i class="fas fa-chevron-circle-right hvr-icon"></i> 輕鬆找店家</a>
                     </li>
-                    <li class="nav-item hvr-icon-buzz-out">
-                        <a class="nav-link " href="體驗課程.html"><i class="fas fa-shopping-bag hvr-icon"></i> 體驗課程</a>
+                    <li class="nav-item hvr-icon-wobble-horizontal">
+                        <a class="nav-link " href="#"><i class="fas fa-chevron-circle-right hvr-icon"></i> 體驗課程</a>
                     </li>
-                    <li class="nav-item hvr-icon-fade">
-                        <a class="nav-link" href="#"><i class="fas fa-seedling hvr-icon"></i> 種子計畫</a>
+                    <li class="nav-item hvr-icon-wobble-horizontal">
+                        <a class="nav-link" href="#"><i class="fas fa-chevron-circle-right hvr-icon"></i> 種子計畫</a>
                     </li>
-                    <li class="nav-item hvr-icon-grow">
-                        <a class="nav-link" href="#section7"><i class="far fa-smile hvr-icon"></i> 安心保證</a>
+                    <li class="nav-item dropdown hvr-icon-wobble-horizontal">
+                        <a class="nav-link" href="#"><i class="fas fa-chevron-circle-right hvr-icon"></i>安心保證</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://www.instagram.com/?hl=zh-tw">
@@ -76,32 +480,25 @@
                 </ul>
             </div>
         </nav>
-        <!-- 首頁 -->
-        <!-- fullpage效果 -->
+        <!-- banner頁首動畫呈現 -->
         <div id="fullpage">
-            <!-- banner頁首動畫呈現 -->
-            <banner class="d-flex justify-content-center align-items-center section active">
+
+            <banner class="d-flex justify-content-center align-items-center section">
 
                 <div class="container pt-5" style="height: 100vh;">
-
-                    <!-- <div id="big_log" class="text-center col mt-5" style="font-size: 100px;">Zero Market</div> -->
-                    <div id="item_text1"></div>
-                    <div id="item_1" class="banner_img"></div>
-                    <div id="item_2" class="banner_img"></div>
-                    <div id="item_text2"></div>
-                    <div id="item_3" class="banner_img"></div>
-                    <div id="item_4" class="banner_img"></div>
-                    <div id="item_text3"></div>
-                    <div id="item_5" class="banner_img"></div>
-                    <div id="item_6" class="banner_img"></div>
-                    <div id="item_text4"></div>
-
+                    <div class="row">
+                        <div id="big_log" class="text-center col mt-5" style="font-size: 100px;">Zero Market </div>
+                        <div id="item_1" class="banner_img"></div>
+                        <div id="item_2" class="banner_img"></div>
+                        <div id="item_3" class="banner_img"></div>
+                        <div id="item_4" class="banner_img"></div>
+                    </div>
 
                     <!-- <div id="item_5" class="banner_img"></div>
                 <div id="item_6" class="banner_img"></div> -->
-                    <img id="person_1" src="/02-圖片/首頁/生氣.png">
-                    <!-- src="/02-圖片/a1.png" -->
-                    <img id="person_2" src="/02-圖片/首頁/笑臉.png">
+                    <img id="person_1">
+                    <!-- src="/零市集_網站插圖/a1.png" -->
+                    <img id="person_2">
 
                 </div>
             </banner>
@@ -112,23 +509,19 @@
                 <!-- <div class="anchor"></div> -->
                 <div class="container">
 
-                    <div class="text-center title">
-                        無<p class="text1"> ∙ </p>
-                        包<p class="text1"> ∙ </p>
-                        裝<p class="text1"> ∙ </p>
-                        是<p class="text1"> ∙ </p>
-                        什<p class="text1"> ∙ </p>
-                        麼</div>
+                    <div class="text-center h1">ABOUT</div>
+                    <div class="text-center h3 p-2">關於裸買</div>
                     <div class="row" style="margin-top: 5% ;">
-                        <div id="about" class="col-lg-6 d-flex justify-content-end">
-                            <img width="200px" style="margin-right: 20%;" src="/02-圖片/首頁/無包裝是什麼.png" alt="">
+                        <div id="about" class="col-lg-6 d-flex justify-content-center">
+                            <img src="https://www.kahunsho-byebye.com/wp-content/themes/kahunsho-byebye/img/img_2.png"
+                                alt="">
+                            <!-- 這邊只是一張圖 不搞互動 發現跟前面圖一模一樣 -->
                         </div>
                         <div class="col-lg-6">
-                            <!-- <div class="contentshadow"></div> -->
-
-                            <div class="content">
-                                <img width="100%" style="margin-left: -20%;" src="/01-文字區塊/無包裝是什麼文字框.png"
-                                    alt="無包裝是什麼文字框">
+                            <div class="content p-5">
+                                <h2 class="pt-2 mb-3">裸買（shop naked）</h2>
+                                <h4 class="text-justify p-2 ">
+                                    即購物時避免使用不必要的包裝，減少浪費。「裸買運動」是一系列可持續發展關注組織思網絡發起的環保行動。鼓勵社區環保意識之餘，亦為可能落實的都市固體廢物收費計劃作好準備
                             </div>
                         </div>
                     </div>
@@ -137,41 +530,70 @@
             </section>
             <!-- 減減生活(1) -->
             <section class="section">
-                <div class="container">
-                    <!-- 假錨點 -->
-                    <div class="anchor"></div>
-                    <div class="text-center title mt-3">
-                        減<p class="text1"> ∙ </p>
-                        減<p class="text1"> ∙ </p>
-                        生<p class="text1"> ∙ </p>
-                        活</div>
-                    <div class="row mt-3">
-                        <div class="col-md-8 d-flex justify-content-center">
-                            <img width="100%" src="/01-文字區塊/減減生活＿循環利用.png" alt="循環利用">
+                <div class="container pb-5">
+
+                    <div class="text-center h1 mt-5">減．減．生 ● 活</div>
+                    <div class="text-center h4">2020年、最新研究に基づいた
+                        花粉にまつわる注目の情報をピックアップ！</div>
+                    <div class="row pb-5 pt-5">
+                        <div class="col-md-8">
+                            <div class="card">
+                                <img src="https://www.kahunsho-byebye.com/wp-content/themes/kahunsho-byebye/img/img_2.png"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">Some quick example text to build on the card title and
+                                        make.</p>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-4">
-                            <img class="card-img-top" src="01-文字區塊/少量分裝.png">
-                            <img class="card-img-top" src="/01-文字區塊/日常分裝.png">
+                            <div class="col">
+                                <img src="https://www.kahunsho-byebye.com/wp-content/themes/kahunsho-byebye/img/img_2.png"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">Some quick example text to build on th</p>
+                                </div>
+                                <div class="col">
+                                    <img src="https://www.kahunsho-byebye.com/wp-content/themes/kahunsho-byebye/img/img_2.png"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text">Some quick example text to build on the card title and
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
+            </section>
+
+            <!-- 減減生活(2) -->
+            <section class="section">
+                <div class="container">
                     <div class="row">
                         <div class="col-md-4">
-                            <img src="/01-文字區塊/友善寵物.png" class="card-img-top" alt="友善寵物">
+                            <img src="https://www.kahunsho-byebye.com/wp-content/themes/kahunsho-byebye/img/img_2.png"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to bu</p>
+                            </div>
                         </div>
                         <div class="col-md-4">
-                            <img src="/01-文字區塊/友善寵物.png" class="card-img-top" alt="????????">
-                        </div>
-                        <div class="col-md-4">
-                            <img src="/01-文字區塊/斷捨離.png" class="card-img-top" alt="段捨離">
-                        </div>
-                        <!-- <div class="col-md-4">
                             <img src="https://www.kahunsho-byebye.com/wp-content/themes/kahunsho-byebye/img/img_2.png"
                                 class="card-img-top" alt="...">
                             <div class="card-body">
                                 <p class="card-text">Some quick example text to build on the card title and</p>
                             </div>
-                        </div> -->
+                        </div>
+                        <div class="col-md-4">
+                            <img src="https://www.kahunsho-byebye.com/wp-content/themes/kahunsho-byebye/img/img_2.png"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and</p>
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
             </section>
@@ -186,32 +608,29 @@
             <!-- 綠瓶子計畫(1) -->
             <section class="section">
                 <div class="container">
-                    <div class="text-center title">
-                        綠<p class="text1"> ∙ </p>
-                        瓶<p class="text1"> ∙ </p>
-                        子<p class="text1"> ∙ </p>
-                        計<p class="text1"> ∙ </p>
-                        劃</div>
-                    <div class="row" style="margin-top: 5% ;">
-                        <div class="col-lg-6">
-                            <!-- <div class="contentshadow"></div> -->
 
-                            <div class="content">
-                                <img width="100%" style="margin-left: 70%;" src="01-文字區塊/無包裝是什麼文字框.png" alt="綠瓶子計畫介紹">
+                    <div class="text-center h1">綠●瓶●子●計●畫</div>
+                    <div class="text-center h4 m-5">2020年、最新研究に基づいた
+                        花粉にまつわる注目の情報をピックアップ！</div>
+                    <div class="row" style="margin-top: 5%;">
+
+                        <div class="col-lg-6">
+                            <div class="content p-5">
+                                <h2 class="pt-2 mb-3">裸買（shop naked）</h2>
+                                <h4 class="text-justify p-2 ">
+                                    即購物時避免使用不必要的包裝，減少浪費。「裸買運動」是一系列可持續發展關注組織思網絡發起的環保行動。鼓勵社區環保意識之餘，亦為可能落實的都市固體廢物收費計劃作好準備
                             </div>
                         </div>
-                        <div id="about" class="col-lg-6 d-flex justify-content-end">
-                            <img width="200px" style="margin-right: 35%;" src="/02-圖片/首頁/無包裝是什麼.png" alt="">
+                        <div id="about" class="col-lg-6 d-flex justify-content-center bg-info">
+                            <img src="https://www.kahunsho-byebye.com/wp-content/themes/kahunsho-byebye/img/img_2.png"
+                                alt="">
                         </div>
-
                     </div>
 
                 </div>
             </section>
             <!-- 綠瓶子計畫(2) -->
             <section class="section">
-                <!-- 假錨點 -->
-                <div class="anchor"></div>
                 <div class="row">
                     <div class="col-lg-3" style="display: block;">
                         <div class="CardList-item">
@@ -401,15 +820,13 @@
                             <h2 class="pt-2 mb-3">加入我們!</h2>
                             <hr class="m-5">
                             </hr>
-                            <h4 class="text-justify p-2">
+                            <h4 class="text-justify p-2 ">
                                 即購物時避免使用不必要的包裝，減少浪費。「裸買運動」是一系列可持續發展關注組織思網絡發起的環保行動。鼓勵社區環保意識之餘，亦為可能落實的都市固體廢物收費計劃作好準備
                         </div>
                     </div>
                 </div>
                 <footer>
-                    <div class="d-flex justify-content-center align-items-end p-3 text-white"
-                        style="background-color: #1fa19b;">
-                        我是footer</div>
+                    <div class="bg-info d-flex justify-content-center align-items-end p-3">我是footer</div>
                 </footer>
             </section>
         </div>
@@ -433,17 +850,8 @@
             new fullpage('#fullpage', {
                 // 導覽業自動跳出
                 navigation: true,
-                anchors: ['section1', 'section2', 'section3', 'section4', 'section5', 'section6', 'section7', 'section8'],
                 // sectionsColor: ['yellow', 'orange', '#C0C0C0', '#ADD8E6'],
-
             });
-
-            // 防止LOADING結束前的滾動
-            // 1700ms大於LODING時間
-            // FULLPAGE_API: 路徑  MOVETO第一個SECTION
-
-            window.setTimeout((() => fullpage_api.moveTo(1)), 1700);
-            
             //   loading的效果
             $(document).ready(function () {
 
@@ -475,10 +883,8 @@
                 // 把loading整個頁面關閉
             });
 
-
-
             // banner JQ互動效果
-            var x = 6;
+            var x = 4;
             // 物件數
             $('.banner_img').mouseleave(function () {
                 // mouseout V.S mouseleave 在於 滑鼠移出後執行次數 1:無限大
@@ -516,18 +922,6 @@
             $('#item_4').mouseover(function () {
                 $('#item_4').animate({ opacity: '0' }, 500);
                 $('#item_4').delay(500).animate({ height: "0%" }, 0);
-                $('#person_1').fadeToggle();
-                $('#person_2').fadeToggle();
-            })
-            $('#item_5').mouseover(function () {
-                $('#item_5').animate({ opacity: '0' }, 500);
-                $('#item_5').delay(500).animate({ height: "0%" }, 0);
-                $('#person_1').fadeToggle();
-                $('#person_2').fadeToggle();
-            })
-            $('#item_6').mouseover(function () {
-                $('#item_6').animate({ opacity: '0' }, 500);
-                $('#item_6').delay(500).animate({ height: "0%" }, 0);
                 $('#person_1').fadeToggle();
                 $('#person_2').fadeToggle();
             })
