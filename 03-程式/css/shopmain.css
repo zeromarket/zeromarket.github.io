@@ -1,0 +1,332 @@
+:root {
+    --main-bg-color: #F3C71F;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: .625em;
+    font-size: calc(1em * .625);
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    font: normal 300 1.4em / 1.2 'Open-sans', helvetica, sans-serif;
+    color: #111;
+    background-color: rgb(226, 226, 226);
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.shop_a a:hover {
+    color: #F3C71F;
+}
+
+ol, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+b, strong {
+    font-weight: 600;
+}
+
+hr {
+    background: #111;
+    box-shadow: none;
+    border: none;
+    height: 1px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+/* 所有區域 */
+
+.shop_area {
+    position: relative;
+    top: 60px;
+    background-image: url(../../02-圖片/分頁01-輕鬆找店家/bg_2.png);
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* 標題區域 */
+
+.title_area {
+    width: 100%;
+    max-width: 1140px;
+    margin: 50px auto;
+    padding: 0 10px;
+}
+
+/* 標題區域文字 */
+
+.shop_title_area {
+    width: 100%;
+    height: 150px;
+    position: relative;
+}
+
+.shop_title_area h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #2ba091;
+    position: absolute;
+    top: calc(50% - 28.5px);
+    left: calc(50% - 216px)
+}
+
+.title_text {
+    line-height: 2.2rem;
+    color: rgb(34, 34, 34);
+}
+
+.title_img_group {
+    width: 100%;
+    display: flex;
+}
+
+.title_img {
+    background-color: rgb(110, 110, 110);
+    width: 100%;
+    height: 300px;
+}
+
+.color_yellow {
+    width: 100%;
+    height: 120px;
+    position: relative;
+    top: 180px;
+    background-color: #ffffff;
+}
+
+.bg_color_yellow {
+    width: 100%;
+    height: 60px;
+    background-color: #ffffff;
+    margin-bottom: 50px;
+}
+
+::selection {
+    background: var(--main-bg-color);
+    color: #fff;
+}
+
+::-moz-selection {
+    background: var(--main-bg-color);
+    color: #fff;
+}
+
+.navbar {
+    background-color: #2BA091;
+}
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.wrapper {
+    padding: 40px 0;
+}
+
+/* 商店卡片 */
+
+.shop_card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, .1);
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow .2s ease-in-out;
+    border: 2px solid #2BA091;
+}
+
+/* 商店卡片圖片 */
+
+.card__picture {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+/* 商店卡片資訊 */
+
+.southern a:hover {
+    color: #fff;
+}
+
+.card-infos {
+    padding: 20px;
+    background: #2BA091;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+/* 商店卡片的標題 */
+
+.card__title {
+    font-family: 'Hind';
+    color: #F3C71F;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0 0 10px;
+}
+
+/* 商店卡片的內文 */
+
+.card__text {
+    font-size: 1.4rem;
+    margin: 0;
+    line-height: 2.2rem;
+    color: #ffffff;
+}
+
+.card__text--high {
+    font-weight: 600;
+}
+
+.header {
+    background: var(--main-bg-color);
+    height: 160px;
+    display: flex;
+}
+
+.header__title {
+    margin: auto;
+    font-weight: 300;
+    font-size: 3.2rem;
+    color: #fff;
+}
+
+.header__title--high {
+    font-weight: 600;
+}
+
+.sortable__nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* 上排連結 */
+
+.nav__link {
+    padding: 0 20px 4px;
+    color: rgb(39, 39, 39);
+    font-size: 1rem;
+    font-weight: 400;
+    display: block;
+    border-bottom: 2px solid transparent;
+    margin: 10px;
+}
+
+.nav__link.is-active {
+    border-color: var(--main-bg-color);
+}
+
+.footer__list.list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list__item.item {
+    display: flex;
+}
+
+.item__link.link {
+    margin: 0;
+}
+
+.item__link.link:not(:first-child) {
+    margin-left: 20px;
+}
+
+.link__icon {
+    height: 2rem;
+    width: 2rem;
+}
+
+/* banner圖片區 */
+
+.shop_banner_area {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.banner_img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.banner_img img {
+    width: 35%;
+}
+
+/* shop導覽列樣式 */
+
+.shop_nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.shop_nav_border {
+    border: 2px solid #2BA091;
+    border-radius: 8px;
+    padding: 25px 20px 2px 20px;
+}
+
+.all_shop_mark {
+    width: 150px;
+    height: 35px;
+    font-weight: 600;
+    background-color: #2BA091;
+    border-radius: 8px;
+    font-size: 20px;
+    line-height: 35px;
+    text-align: center;
+    color: #F3C71F;
+    position: absolute;
+    top: -15px;
+    left: calc(50% - 75px);
+}
+
+.nav_padding{
+    padding: 8px 16px;
+    height: 56px;
+
+    display:flex;
+    justify-content: center;
+}
+
+@media(max-width:992px){
+    .banner_img img {
+        width: 60%;
+    }
+}
