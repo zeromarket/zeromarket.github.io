@@ -237,9 +237,9 @@ hr {
 .nav__link {
     padding: 0 20px 4px;
     color: #2BA091 !important;
-    font-size: 15px;
+    font-size: 17px;
     font-family: 'Noto Sans TC', sans-serif;
-    font-weight: 700;
+    font-weight: 900;
     display: block;
     border-bottom: 2px solid transparent;
     margin: 10px;
@@ -305,7 +305,7 @@ hr {
 .shop_nav_border {
     border: 2px solid #2BA091;
     border-radius: 8px;
-    padding: 35px 20px 0px 20px;
+    padding: 38px 20px 2px 20px;
 }
 
 .all_shop_mark {
