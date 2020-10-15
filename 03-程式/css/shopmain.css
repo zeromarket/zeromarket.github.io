@@ -19,14 +19,17 @@ body {
     margin: 0;
     padding: 0;
     font: normal 300 1.4em / 1.2 'Open-sans', helvetica, sans-serif;
-    color: #111;
+    color:#2BA091;
     background-color: rgb(226, 226, 226);
 }
+
 
 a {
     text-decoration: none;
     cursor: pointer;
 }
+
+
 
 .shop_a a:hover {
     color: #F3C71F;
@@ -59,7 +62,7 @@ hr {
 
 .shop_area {
     position: relative;
-    top: 60px;
+    top: 56px;
     background-image: url(../../02-圖片/分頁01-輕鬆找店家/bg_2.png);
     width: 100%;
     min-height: 100vh;
@@ -233,16 +236,19 @@ hr {
 
 .nav__link {
     padding: 0 20px 4px;
-    color: rgb(39, 39, 39);
-    font-size: 1rem;
-    font-weight: 400;
+    color: #2BA091 !important;
+    font-size: 15px;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 700;
     display: block;
     border-bottom: 2px solid transparent;
     margin: 10px;
+
 }
 
 .nav__link.is-active {
     border-color: var(--main-bg-color);
+    height: 16px;
 }
 
 .footer__list.list {
@@ -299,7 +305,7 @@ hr {
 .shop_nav_border {
     border: 2px solid #2BA091;
     border-radius: 8px;
-    padding: 25px 20px 2px 20px;
+    padding: 35px 20px 0px 20px;
 }
 
 .all_shop_mark {
@@ -308,7 +314,7 @@ hr {
     font-weight: 600;
     background-color: #2BA091;
     border-radius: 8px;
-    font-size: 20px;
+    font-size: 22px;
     line-height: 35px;
     text-align: center;
     color: #F3C71F;
@@ -317,16 +323,42 @@ hr {
     left: calc(50% - 75px);
 }
 
-.nav_padding{
-    padding: 8px 16px;
-    height: 56px;
-
-    display:flex;
-    justify-content: center;
-}
 
 @media(max-width:992px){
     .banner_img img {
         width: 60%;
     }
+}
+
+
+/* 修改原生bootstrap樣式 */
+
+#shop_home {
+    width: 100%;
+    height: 100vh;
+    background-color: #1fa19b;
+    position: relative;
+}
+
+.navbar-toggler{
+    padding: 4px 12px !important;
+    font-size: 20px !important;
+}
+
+
+
+.navbar{
+    padding:8px 16px!important;
+}
+
+.nav-link{
+    padding:8px 0 !important;
+}
+
+body{
+    line-height: 0 !important;
+}
+
+a.nav-link{
+    margin: 4px 8px !important;
 }
