@@ -310,16 +310,16 @@ hr {
 
 .all_shop_mark {
     width: 150px;
-    height: 35px;
+    height: 38px;
     font-weight: 600;
     background-color: #2BA091;
     border-radius: 8px;
-    font-size: 22px;
-    line-height: 35px;
+    font-size: 23px;
+    line-height: 38px;
     text-align: center;
     color: #F3C71F;
     position: absolute;
-    top: -15px;
+    top: -18px;
     left: calc(50% - 75px);
 }
 
