@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <style>
+        /* navbar狀態 */
+        .nav-link {
+            text-align: end;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: white;
+        }
+
+        /* Icon Forward 動態效果*/
+
+
+        .navbar-light .navbar-nav .nav-link:focus,
+        .navbar-light .navbar-nav .nav-link:hover,
+        .fab:hover {
+            color: #F3C71F;
+        }
+
+        /* 導覽點的效果*/
+        #fp-nav ul li a span,
+        .fp-slidesNav ul li a span {
+            background-color: #f8d442;
+        }
+
+        #fp-nav ul li a.active span,
+        #fp-nav ul li:hover a.active span,
+        .fp-slidesNav ul li a.active span,
+        .fp-slidesNav ul li:hover a.active span {
+            background-color: #F3C71F;
+        }
+
+        /* 輕鬆找ICON */
+        @-webkit-keyframes hvr-icon-down {
+
+            0%,
+            50%,
+            100% {
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+            }
+
+            25%,
+            75% {
+                -webkit-transform: translateY(6px);
+                transform: translateY(6px);
+            }
+        }
+
+        @keyframes hvr-icon-down {
+
+            0%,
+            50%,
+            100% {
+                -webkit-transform: translateY(0);
+                transform: translateY(-2px);
+            }
+
+            25%,
+            75% {
+                -webkit-transform: translateY(6px);
+                transform: translateY(4px);
+            }
+        }
+
+        .hvr-icon-down {
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        }
+
+        .hvr-icon-down .hvr-icon {
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+
+        .hvr-icon-down:hover .hvr-icon,
+        .hvr-icon-down:focus .hvr-icon,
+        .hvr-icon-down:active .hvr-icon {
+            -webkit-animation-name: hvr-icon-down;
+            animation-name: hvr-icon-down;
+            -webkit-animation-duration: 0.75s;
+            animation-duration: 0.75s;
+            -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+        }
+
+        /* 體驗課程 */
+        @-webkit-keyframes hvr-icon-buzz-out {
+            10% {
+                -webkit-transform: translateX(3px) rotate(2deg);
+                transform: translateX(3px) rotate(2deg);
+            }
+
+            20% {
+                -webkit-transform: translateX(-3px) rotate(-2deg);
+                transform: translateX(-3px) rotate(-2deg);
+            }
+
+            30% {
+                -webkit-transform: translateX(3px) rotate(2deg);
+                transform: translateX(3px) rotate(2deg);
+            }
+
+            40% {
+                -webkit-transform: translateX(-3px) rotate(-2deg);
+                transform: translateX(-3px) rotate(-2deg);
+            }
+
+            50% {
+                -webkit-transform: translateX(2px) rotate(1deg);
+                transform: translateX(2px) rotate(1deg);
+            }
+
+            60% {
+                -webkit-transform: translateX(-2px) rotate(-1deg);
+                transform: translateX(-2px) rotate(-1deg);
+            }
+
+            70% {
+                -webkit-transform: translateX(2px) rotate(1deg);
+                transform: translateX(2px) rotate(1deg);
+            }
+
+            80% {
+                -webkit-transform: translateX(-2px) rotate(-1deg);
+                transform: translateX(-2px) rotate(-1deg);
+            }
+
+            90% {
+                -webkit-transform: translateX(1px) rotate(0);
+                transform: translateX(1px) rotate(0);
+            }
+
+            100% {
+                -webkit-transform: translateX(-1px) rotate(0);
+                transform: translateX(-1px) rotate(0);
+            }
+        }
+
+        @keyframes hvr-icon-buzz-out {
+            10% {
+                -webkit-transform: translateX(3px) rotate(2deg);
+                transform: translateX(3px) rotate(2deg);
+            }
+
+            20% {
+                -webkit-transform: translateX(-3px) rotate(-2deg);
+                transform: translateX(-3px) rotate(-2deg);
+            }
+
+            30% {
+                -webkit-transform: translateX(3px) rotate(2deg);
+                transform: translateX(3px) rotate(2deg);
+            }
+
+            40% {
+                -webkit-transform: translateX(-3px) rotate(-2deg);
+                transform: translateX(-3px) rotate(-2deg);
+            }
+
+            50% {
+                -webkit-transform: translateX(2px) rotate(1deg);
+                transform: translateX(2px) rotate(1deg);
+            }
+
+            60% {
+                -webkit-transform: translateX(-2px) rotate(-1deg);
+                transform: translateX(-2px) rotate(-1deg);
+            }
+
+            70% {
+                -webkit-transform: translateX(2px) rotate(1deg);
+                transform: translateX(2px) rotate(1deg);
+            }
+
+            80% {
+                -webkit-transform: translateX(-2px) rotate(-1deg);
+                transform: translateX(-2px) rotate(-1deg);
+            }
+
+            90% {
+                -webkit-transform: translateX(1px) rotate(0);
+                transform: translateX(1px) rotate(0);
+            }
+
+            100% {
+                -webkit-transform: translateX(-1px) rotate(0);
+                transform: translateX(-1px) rotate(0);
+            }
+        }
+
+        .hvr-icon-buzz-out {
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+        }
+
+        .hvr-icon-buzz-out .hvr-icon {
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+
+        .hvr-icon-buzz-out:hover .hvr-icon,
+        .hvr-icon-buzz-out:focus .hvr-icon,
+        .hvr-icon-buzz-out:active .hvr-icon {
+            -webkit-animation-name: hvr-icon-buzz-out;
+            animation-name: hvr-icon-buzz-out;
+            -webkit-animation-duration: 0.75s;
+            animation-duration: 0.75s;
+            -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+            -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+        }
+
+        /* 種子計畫ICON */
+        .hvr-icon-fade {
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        }
+
+        .hvr-icon-fade .hvr-icon {
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+            -webkit-transition-property: color;
+            transition-property: color;
+        }
+
+        .hvr-icon-fade:hover .hvr-icon,
+        .hvr-icon-fade:focus .hvr-icon,
+        .hvr-icon-fade:active .hvr-icon {
+            color: #4affae;
+        }
+
+        /* 安心計畫的ICON */
+        .hvr-icon-grow {
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+        }
+
+        .hvr-icon-grow .hvr-icon {
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-property: transform;
+            transition-property: transform;
+            -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+        }
+
+        .hvr-icon-grow:hover .hvr-icon,
+        .hvr-icon-grow:focus .hvr-icon,
+        .hvr-icon-grow:active .hvr-icon {
+            -webkit-transform: scale(1.3) translateZ(0);
+            transform: scale(1.3) translateZ(0);
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #E8DFD9;
+            width: 100%;
+            background-image: url('https://www.kahunsho-byebye.com/wp-content/themes/kahunsho-byebye/img/bg_2.png');
+        }
+
+        
+
+
+        /* 假錨點 */
+        .anchor {
+            width: 100%;
+            height: 60px;
+
+        }
+
+        /* 標題 */
+        .title {
+            color: #2BA091;
+            font-weight: 700;
+            font-size: 48px;
+        }
+
+        .text1 {
+            display: inline;
+            margin: 0px 10px;
+        }
+
+
+        *,
+        html,
+        body {
+            font-family: "TrebuchetMS", trebuchet, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            line-height: 30px;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 18px;
+            line-height: 25px;
+            margin-top: 20px;
+        }
+
+        button {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border: 0;
+            padding: 14px 50px;
+            border-radius: 4px;
+            background-color: #37B595;
+            color: #FFFFFF;
+            text-transform: capitalize;
+            font-size: 18px;
+            line-height: 22px;
+            outline: none;
+            cursor: pointer;
+            -webkit-transition: all 0.2s;
+            transition: all 0.2s;
+        }
+
+        button:hover {
+            background-color: #1A7F75;
+        }
+
+        button.previous {
+            background-color: #A2ACAF;
+        }
+
+        button.previous:hover {
+            background-color: #5A5F61;
+        }
+
+        .full-width-container {
+            width: 100%;
+            min-width: 500px;
+        }
+
+        .sized-container {
+            max-width: 960px;
+            width: 100%;
+            /* margin: 0 auto; */
+        }
+
+        .slide-container {
+            position: relative;
+            left: 0;
+            overflow: hidden;
+        }
+
+        .slide {
+            float: left;
+        }
+
+        .slide .sized-container {
+            padding: 75px 25px;
+        }
+
+        .button-container {
+            border-top: 1px solid black;
+            overflow: hidden;
+            padding-top: 30px;
+        }
+
+        .button-container button {
+            float: right;
+            margin-left: 30px;
+        }
+
+        .pagination-container {
+            margin-top: 120px;
+        }
+
+        .pagination {
+            width: 100%;
+            text-align: center;
+            padding: 0 25px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .indicator {
+            width: 25px;
+            height: 25px;
+            border: 4px solid lightgray;
+            border-radius: 50%;
+            display: inline-block;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .indicator .tag {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            color: lightgray;
+            white-space: nowrap;
+        }
+
+        .indicator.active,
+        .indicator.complete {
+            border-color: #37B595;
+        }
+
+        .indicator.active .tag,
+        .indicator.complete .tag {
+            color: #37B595;
+        }
+
+        .indicator.complete:after {
+            content: "✓";
+            position: absolute;
+            color: #37B595;
+            left: 4px;
+            top: -2px;
+            font-size: 14px;
+        }
+
+        .progress-bar-container {
+            width: 10%;
+            height: 4px;
+            display: inline-block;
+            background-color: lightgray;
+            position: relative;
+            top: 10px;
+        }
+
+        .progress-bar-container:last-of-type {
+            display: none;
+        }
+
+        .progress-bar-container .progress-bar {
+            width: 0;
+            height: 100%;
+            background-color: #37B595;
+        }
+
+        ul {
+            padding-inline-start: 0px;
+        }
+    </style>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #1fa19b;">
+        <a class="navbar-brand text-white p-0" href="/index.html"><img width="150px"
+                style="position: absolute;top: -5px;left: 5px;" src="/02-圖片/logo/NAVbar_logo.png" alt="Zero Market"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon text-white"></span>
+        </button>
+        <div class="collapse navbar-collapse .d-lg-flex justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item hvr-icon-down">
+                    <a class="nav-link" href="分頁01-輕鬆找店家.html"><i class="fas fa-map-marker-alt hvr-icon"></i>
+                        輕鬆找店家</a>
+                </li>
+                <li class="nav-item hvr-icon-buzz-out">
+                    <a class="nav-link " href="分頁02-體驗課程.html"><i class="fas fa-shopping-bag hvr-icon"></i> 體驗課程</a>
+                </li>
+                <li class="nav-item hvr-icon-fade">
+                    <a class="nav-link" href="#"><i class="fas fa-seedling hvr-icon"></i> 種子計畫</a>
+                </li>
+                <li class="nav-item hvr-icon-grow">
+                    <a class="nav-link" href="#section7"><i class="far fa-smile hvr-icon"></i> 安心保證</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.instagram.com/?hl=zh-tw">
+                        <i class="fab fa-instagram"></i></a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.facebook.com/">
+                        <i class="fab fa-facebook-f"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="anchor"></div>
+
+        <div class="text-center title">
+            無<p class="text1"> ∙ </p>
+            包<p class="text1"> ∙ </p>
+            裝<p class="text1"> ∙ </p>
+            是<p class="text1"> ∙ </p>
+            什<p class="text1"> ∙ </p>
+            麼</div>
+        <div class="pagination-container full-width-container">
+            <div class="sized-container">
+                <!-- 進度條 -->
+                <div class="pagination"></div>
+            </div>
+        </div>
+        <div class="viewport full-width-container">
+            <ul class="slide-container">
+                <li class="slide" data-tag="開始">
+                    <div class="sized-container">
+                        <h1>開始體驗減減生活</h1>
+                        <h2>何謂減減生活?? 點我</h2>
+                    </div>
+                </li>
+                <li class="slide" data-tag="7days">
+                    <div class="sized-container">
+                        <h1>Tell us about your area of expertise.</h1>
+                        <h2>去離家最近的吳包裝商店體驗減減生活</h2>
+                    </div>
+                </li>
+                <li class="slide" data-tag="14days">
+                    <div class="sized-container">
+                        <h1>Lets get a little more in depth.</h1>
+                        <h2>Information about this section.</h2>
+                    </div>
+                </li>
+                <li class="slide" data-tag="21days">
+                    <div class="sized-container">
+                        <h1>Tell us about where you've worked before.</h1>
+                        <h2>Information about this section.</h2>
+                    </div>
+                </li>
+                <li class="slide" data-tag="To be continued">
+                    <div class="sized-container">
+                        <h1>Describe your formal education.</h1>
+                        <h2>Information about this section.</h2>
+                    </div>
+                </li>
+                <!-- <li class="slide" data-tag="Additional">
+                <div class="sized-container">
+                    <h1>Mention any additional comments.</h1>
+                    <h2>Information about this section.</h2>
+                </div>
+            </li>
+            <li class="slide" data-tag="Confirm">
+                <div class="sized-container">
+                    <h1>Confirm your application.</h1>
+                    <h2>Information about this section.</h2>
+                </div>
+            </li> -->
+            </ul>
+        </div>
+        <div class="full-width-container">
+            <div class="button-container sized-container">
+                <button class="next">完成</button>
+                <button class="previous">上一頁</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <!-- <button class="radius-toggle">Toggle Click Radius</button> -->
+    <script>
+        var currentSlide = 0,
+            $slideContainer = $('.slide-container'),
+            $slide = $('.slide'),
+            slideCount = $slide.length,
+            animationTime = 300;
+
+        function setSlideDimensions() {
+            var windowWidth = $(window).width();
+            $slideContainer.width(windowWidth * slideCount);
+            $slide.width(windowWidth);
+        }
+
+        function generatePagination() {
+            var $pagination = $('.pagination');
+            for (var i = 0; i < slideCount; i++) {
+                var $indicator = $('<div>').addClass('indicator'),
+                    $progressBarContainer = $('<div>').addClass('progress-bar-container'),
+                    $progressBar = $('<div>').addClass('progress-bar'),
+                    indicatorTagText = $slide.eq(i).attr('data-tag'),
+                    $tag = $('<div>').addClass('tag').text(indicatorTagText);
+                $indicator.append($tag);
+                $progressBarContainer.append($progressBar);
+                $pagination.append($indicator).append($progressBarContainer);
+            }
+            $pagination.find('.indicator').eq(0).addClass('active');
+        }
+
+        function goToNextSlide() {
+            if (currentSlide >= slideCount - 1) return;
+            var windowWidth = $(window).width();
+            currentSlide++;
+            $slideContainer.animate({
+                left: -(windowWidth * currentSlide)
+            });
+            setActiveIndicator();
+            $('.progress-bar').eq(currentSlide - 1).animate({
+                width: '100%'
+            }, animationTime);
+        }
+
+        function goToPreviousSlide() {
+            if (currentSlide <= 0) return;
+            var windowWidth = $(window).width();
+            currentSlide--;
+            $slideContainer.animate({
+                left: -(windowWidth * currentSlide)
+            }, animationTime);
+            setActiveIndicator();
+            $('.progress-bar').eq(currentSlide).animate({
+                width: '0%'
+            }, animationTime);
+        }
+
+        function postitionSlides() {
+            var windowWidth = $(window).width();
+            setSlideDimensions();
+            $slideContainer.css({
+                left: -(windowWidth * currentSlide)
+            }, animationTime);
+        }
+
+        function setActiveIndicator() {
+            var $indicator = $('.indicator');
+            $indicator.removeClass('active').removeClass('complete');
+            $indicator.eq(currentSlide).addClass('active');
+            for (var i = 0; i < currentSlide; i++) {
+                $indicator.eq(i).addClass('complete');
+            }
+        }
+
+        setSlideDimensions();
+        generatePagination();
+        $(window).resize(postitionSlides);
+        $('.next').on('click', goToNextSlide);
+        $('.previous').on('click', goToPreviousSlide);
+    </script>
+</body>
+
+</html>
