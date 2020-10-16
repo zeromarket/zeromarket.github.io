@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZeroMarket 零市集</title>
+    <link rel="stylesheet" href="./03-程式/css/shopmain.css">
+    <link rel="stylesheet" href="./03-程式/dist/sortable.min.css">
+
+    <!-- fullpage -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css"> -->
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        @import url(./03-程式/css/main.css);
+
+        a.nav-link {
+            font-size: 16px;
+            padding: 4px;
+            margin: 0 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="shop_home">
+
+
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #1fa19b;">
+            <a class="navbar-brand text-white p-0 " href="/index.html"><img width="150px"
+                    style="position: absolute;top: -5px;left: 5px;" src="./02-圖片/logo/NAVbar_logo.png"
+                    alt="Zero Market"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon text-white"></span>
+            </button>
+            <div class="collapse navbar-collapse .d-lg-flex justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item hvr-icon-down">
+                        <a class="nav-link" href="分頁01-輕鬆找店家.html"><i class="fas fa-map-marker-alt hvr-icon"></i>
+                            輕鬆找店家</a>
+                    </li>
+                    <li class="nav-item hvr-icon-buzz-out">
+                        <a class="nav-link " href="分頁02-體驗課程.html"><i class="fas fa-shopping-bag hvr-icon"></i> 體驗課程</a>
+                    </li>
+                    <li class="nav-item hvr-icon-fade">
+                        <a class="nav-link" href="#"><i class="fas fa-seedling hvr-icon"></i> 種子計畫</a>
+                    </li>
+                    <li class="nav-item hvr-icon-grow">
+                        <a class="nav-link" href="#peace4"><i class="far fa-smile hvr-icon"></i> 安心保證</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.instagram.com/?hl=zh-tw">
+                            <i class="fab fa-instagram"></i></a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.facebook.com/">
+                            <i class="fab fa-facebook-f"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+
+        <!-- <div class="title_area">
+        <h1 class="title_text">輕鬆找店家</h1>
+        <h1 class="title_text">SHOP</h1>
+    </div>
+
+    <div class="title_img_group">
+        <div class="title_img"></div>
+        <div class="title_img"></div>
+        <div class="title_img"></div>
+        <div class="color_yellow"></div>
+    </div>
+    <div class="bg_color_yellow"></div> -->
+
+
+
+
+        <main class="sortable shop_area">
+            <div class="container">
+                <div class="shop_title_area">
+                    <h1>輕．鬆．找．店．家</h1>
+                </div>
+
+                <div class="shop_banner_area">
+                    <div class="banner_img">
+                        <img src="./02-圖片/分頁01-輕鬆找店家/大圖.png" alt="">
+                    </div>
+                </div>
+
+                <div class="wrapper">
+
+                    <div class="shop_nav">
+                        <div class="shop_nav_border">
+                            <div class="all_shop_mark">全台好店</div>
+
+                            <ul class="sortable__nav nav">
+                                <li> <a data-sjslink="all" class="nav__link"> 全台一覽 </a> </li>
+                                <li> <a data-sjslink="northern" class="nav__link"> 北部 </a> </li>
+                                <li> <a data-sjslink="central" class="nav__link"> 中部 </a> </li>
+                                <li> <a data-sjslink="southern" class="nav__link"> 南部 </a> </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+
+                    <div id="sortable" class="sjs-default">
+                        <div data-sjsel="southern" class="shop_a">
+                            <a href="https://www.facebook.com/fukurou.Tainan/" target="_blank">
+                                <div class="shop_card"> <img class="card__picture"
+                                        src="./02-圖片/分頁01-輕鬆找店家/店家圖片/南/富穀樂糧行.jpg" alt="">
+                                    <div class="card-infos">
+                                        <h2 class="card__title">富穀樂糧行</h2>
+                                        <p class="card__text"> 商店類別：選物店</p>
+                                        <p class="card__text">販售商品類別：食品 / 生活雜貨</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div data-sjsel="central" class="shop_a">
+                            <a href="https://zh-tw.facebook.com/pages/category/Business-Service/%E5%8F%B0%E7%81%A3%E6%B0%B8%E8%B1%90%E7%B1%B3%E7%B3%A7%E8%A1%8C-736671973019120/"
+                                target="_blank">
+                                <div class="shop_card"> <img class="card__picture"
+                                        src="./02-圖片/分頁01-輕鬆找店家/店家圖片/中/永豐米糧行.jpg" alt="">
+                                    <div class="card-infos">
+                                        <h2 class="card__title">台灣永豐米糧行</h2>
+                                        <p class="card__text"> 商店類別：選物店結合食堂</p>
+                                        <p class="card__text">販售商品類別：食品 / 生活雜貨</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div data-sjsel="central" class="shop_a">
+                            <a href="https://green-share.business.site/" target="_blank">
+                                <div class="shop_card"> <img class="card__picture"
+                                        src="./02-圖片/分頁01-輕鬆找店家/店家圖片/中/綠享家.jpg" alt="">
+                                    <div class="card-infos">
+                                        <h2 class="card__title">綠享家 Green Share House</h2>
+                                        <p class="card__text"> 商店類別：選物店</p>
+                                        <p class="card__text">販售商品類別：生活雜貨</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div data-sjsel="northern" class="shop_a">
+                            <a href="https://zh-tw.facebook.com/sanshi106/?hc_location=ufi" target="_blank">
+                                <div class="shop_card"> <img class="card__picture"
+                                        src="./02-圖片/分頁01-輕鬆找店家/店家圖片/北/三時生活實驗室.jpg" alt="">
+                                    <div class="card-infos">
+                                        <h2 class="card__title">三時生活實驗室San Shi Living Lab</h2>
+                                        <p class="card__text"> 商店類別：選物店</p>
+                                        <p class="card__text">販售商品類別：食品 / 肌膚清潔 / 居家清潔 / 生活雜貨</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div data-sjsel="central" class="shop_a">
+                            <a href="https://www.facebook.com/sunmoonrefillery/" target="_blank">
+                                <div class="shop_card"> <img class="card__picture"
+                                        src="./02-圖片/分頁01-輕鬆找店家/店家圖片/中/山盟商行4.jpg" alt="">
+                                    <div class="card-infos">
+                                        <h2 class="card__title">山盟商行</h2>
+                                        <p class="card__text"> 商店類別：選物店</p>
+                                        <p class="card__text">販售商品類別：食品 / 肌膚清潔 / 居家清潔 / 生活雜貨</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+
+
+                        <div data-sjsel="northern" class="shop_a">
+                            <a href="https://www.chef-clean.com/about-chef-clean/" target="_blank">
+                                <div class="shop_card"> <img class="card__picture"
+                                        src="./02-圖片/分頁01-輕鬆找店家/店家圖片/北/淨毒五郎.jpg" alt="">
+                                    <div class="card-infos">
+                                        <h2 class="card__title">淨毒五郎</h2>
+                                        <p class="card__text"> 商店類別：天然清潔劑品牌
+                                        </p>
+                                        <p class="card__text">販售商品類別：肌膚清潔 / 居家清潔</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div data-sjsel="central" class="shop_a">
+                            <a href="http://www.eco-homework.com/" target="_blank">
+                                <div class="shop_card"> <img class="card__picture"
+                                        src="./02-圖片/分頁01-輕鬆找店家/店家圖片/中/家務室2.jpg" alt="">
+                                    <div class="card-infos">
+                                        <h2 class="card__title">家務室 Home Work</h2>
+                                        <p class="card__text"> 商店類別：選物店</p>
+                                        <p class="card__text">販售商品類別：食品 / 肌膚清潔 / 生活雜貨</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div data-sjsel="northern" class="shop_a">
+                            <a href="https://www.facebook.com/unpackaged.tw/" target="_blank">
+                                <div class="shop_card"> <img class="card__picture"
+                                        src="./02-圖片/分頁01-輕鬆找店家/店家圖片/北/Unpackaged.jpg" alt="">
+                                    <div class="card-infos">
+                                        <h2 class="card__title">Unpackaged.U商店</h2>
+                                        <p class="card__text"> 商店類別：選物店</p>
+                                        <p class="card__text">販售商品類別：食品 / 肌膚清潔</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div data-sjsel="northern" class="shop_a">
+                            <a href="https://zh-tw.facebook.com/sanshi106/?hc_location=ufi" target="_blank">
+                                <div class="shop_card"> <img class="card__picture"
+                                        src="./02-圖片/分頁01-輕鬆找店家/店家圖片/北/零居3.jpg" alt="">
+                                    <div class="card-infos">
+                                        <h2 class="card__title">零居 Zero Living</h2>
+                                        <p class="card__text"> 商店類別：植物性商品選物店</p>
+                                        <p class="card__text">販售商品類別：食品 / 肌膚清潔 / 居家清潔</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div data-sjsel="northern" class="shop_a">
+                            <a href="https://www.facebook.com/zerowastebulkshop/" target="_blank">
+                                <div class="shop_card"> <img class="card__picture"
+                                        src="./02-圖片/分頁01-輕鬆找店家/店家圖片/北/零浪費雜貨店.jpg" alt="">
+                                    <div class="card-infos">
+                                        <h2 class="card__title">零浪費雜貨店</h2>
+                                        <p class="card__text"> 商店類別：選物店</p>
+                                        <p class="card__text">販售商品類別：食品 / 肌膚清潔 / 居家清潔 / 生活雜貨</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div data-sjsel="northern" class="shop_a">
+                            <a href="https://www.dawoko.com.tw/" target="_blank">
+                                <div class="shop_card"> <img class="card__picture"
+                                        src="./02-圖片/分頁01-輕鬆找店家/店家圖片/北/木酢達人.jpg" alt="">
+                                    <div class="card-infos">
+                                        <h2 class="card__title">木酢達人</h2>
+                                        <p class="card__text"> 商店類別：樹木天然清潔品牌
+                                        </p>
+                                        <p class="card__text">販售商品類別：肌膚清潔 / 居家清潔</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div data-sjsel="southern" class="shop_a">
+                            <a href="https://www.facebook.com/fukurou.Tainan/" target="_blank">
+                                <div class="shop_card"> <img class="card__picture"
+                                        src="./02-圖片/分頁01-輕鬆找店家/店家圖片/南/青春交換所.jpg" alt="">
+                                    <div class="card-infos">
+                                        <h2 class="card__title">青春交換所</h2>
+                                        <p class="card__text"> 商店類別：無包裝商店結合純植物料理</p>
+                                        <p class="card__text">販售商品類別：食品 / 生活雜貨</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div data-sjsel="northern" class="shop_a">
+                            <a href="https://www.facebook.com/zerowasteshoptaiwan/" target="_blank">
+                                <div class="shop_card"> <img class="card__picture"
+                                        src="./02-圖片/分頁01-輕鬆找店家/店家圖片/北/新村小商號3.jpg" alt="">
+                                    <div class="card-infos">
+                                        <h2 class="card__title">新村小商號</h2>
+                                        <p class="card__text"> 商店類別：選物店(另有販售農產加工品)
+                                        </p>
+                                        <p class="card__text">販售商品類別：食品 / 生活雜貨</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div data-sjsel="northern" class="shop_a">
+                            <a href="https://www.facebook.com/bringyourownjar.brunch/photos/?ref=page_internal"
+                                target="_blank">
+                                <div class="shop_card"> <img class="card__picture"
+                                        src="./02-圖片/分頁01-輕鬆找店家/店家圖片/北/養成零早午餐.jpg" alt="">
+                                    <div class="card-infos">
+                                        <h2 class="card__title">養成零早午餐</h2>
+                                        <p class="card__text"> 商店類別：Brunch結合無包裝選物商店</p>
+                                        <p class="card__text">販售商品類別：食品</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div data-sjsel="northern" class="shop_a">
+                            <a href="https://www.facebook.com/naked.grocery/" target="_blank">
+                                <div class="shop_card"> <img class="card__picture"
+                                        src="./02-圖片/分頁01-輕鬆找店家/店家圖片/北/少塑福利社.jpg" alt="">
+                                    <div class="card-infos">
+                                        <h2 class="card__title">少塑福利社</h2>
+                                        <p class="card__text"> 商店類別：選物店
+                                        </p>
+                                        <p class="card__text">販售商品類別：食品 / 居家清潔 / 生活雜貨</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+    </div>
+    </main>
+
+    </div>
+
+    <!-- <footer>
+        <div class="d-flex justify-content-center align-items-end p-3 text-white"
+            style="background-color: #1fa19b;">
+            我是footer</div>
+    </footer> -->
+
+
+    <script src="./03-程式/dist/sortable.main.js"></script>
+    <script>
+        document.querySelector('#sortable').sortablejs()
+    </script>
+
+    <!-- fullPage.js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.extensions.min.js"
+     integrity="sha512-pci5WG2+7QnpsinWWpGUd3RgI61fU1bWlQQQegC2mVqwOQC/+Xp0ROGO0AYB6dvoLBYRxwm+t+DWOVRkxmlcdQ=="
+     crossorigin="anonymous"></script> -->
+
+    <!-- bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // fullPage.js 註解
+        // new fullpage('#fullpage', {
+        // 導覽業自動跳出
+        // navigation: true,
+        // sectionsColor: ['yellow', 'orange', '#C0C0C0', '#ADD8E6'],
+        // });
+
+
+        //   loading的效果
+        $(document).ready(function () {
+
+            var wValue = $('#begin_back').width();
+            var hValue = $('#begin_back').height();
+
+            var wwValue = $('#begin').width();
+            var hhValue = $('#begin').height();
+
+            $('#begin').animate({
+                width: 30 * wValue,
+                height: 30 * hValue,
+            }, 2000);
+
+            $('#begin_back').animate({
+                width: 30 * wValue,
+                height: 30 * hValue,
+            }, 2000);
+
+            // *0.5感覺畫面有些微變化
+
+            $('#begin_back').animate({
+                width: 2400 * wValue,
+                height: 2400 * hValue
+            }, 3000);
+
+            // 二次放大
+            $('#loading').delay(2000).fadeOut(1000);
+            // 把loading整個頁面關閉
+        });
+
+        // banner JQ互動效果
+        var x = 6;
+        // 物件數
+        $('.banner_img').mouseleave(function () {
+            // mouseout V.S mouseleave 在於 滑鼠移出後執行次數 1:無限大
+            if (x > 1) {
+                x -= 1;
+                $('#person_1').fadeToggle();
+                $('#person_2').fadeToggle();
+                // toggle會自行判斷狀態
+                console.log(x);
+            }
+            else {
+            }
+        })
+        $('#item_1').mouseover(function () {
+            $('#item_1').animate({ opacity: '0' }, 500);
+            // 消失時間0.5秒
+            // $('#item_1')[0].style.display = 'none';
+            $('#item_1').delay(500).animate({ height: "0%" }, 0);
+            // 這裡要等待上排時間 物件消失後再display='none'
+            $('#person_1').fadeToggle();
+            $('#person_2').fadeToggle();
+        })
+        $('#item_2').mouseover(function () {
+            $('#item_2').animate({ opacity: '0' }, 500);
+            $('#item_2').delay(500).animate({ height: "0%" }, 0);
+            $('#person_1').fadeToggle();
+            $('#person_2').fadeToggle();
+        })
+        $('#item_3').mouseover(function () {
+            $('#item_3').animate({ opacity: '0' }, 500);
+            $('#item_3').delay(500).animate({ height: "0%" }, 0);
+            $('#person_1').fadeToggle();
+            $('#person_2').fadeToggle();
+        })
+        $('#item_4').mouseover(function () {
+            $('#item_4').animate({ opacity: '0' }, 500);
+            $('#item_4').delay(500).animate({ height: "0%" }, 0);
+            $('#person_1').fadeToggle();
+            $('#person_2').fadeToggle();
+        })
+        $('#item_5').mouseover(function () {
+            $('#item_5').animate({ opacity: '0' }, 500);
+            $('#item_5').delay(500).animate({ height: "0%" }, 0);
+            $('#person_1').fadeToggle();
+            $('#person_2').fadeToggle();
+        })
+        $('#item_6').mouseover(function () {
+            $('#item_6').animate({ opacity: '0' }, 500);
+            $('#item_6').delay(500).animate({ height: "0%" }, 0);
+            $('#person_1').fadeToggle();
+            $('#person_2').fadeToggle();
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>

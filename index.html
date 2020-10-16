@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ZeroMarket 零市集</title>
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -15,19 +15,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css">
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- 字體 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <style>
-        @import url(/03-程式/css/main.css);
+        @import url(./03-程式/css/main.css);
     </style>
 </head>
 
 <body>
 
     <!-- begin是loading中的畫面呈現 -->
-    <!-- <div id="loading">
+    <div id="loading">
         <div id="begin_back"></div>
         <div id="begin"></div>
 
-    </div> -->
+    </div>
     <!-- 頁首 -->
     <!-- navbar -->
     <div id="home">
@@ -56,16 +59,16 @@
             <div class="collapse navbar-collapse .d-lg-flex justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item hvr-icon-down">
-                        <a class="nav-link" href="#"><i class="fas fa-map-marker-alt hvr-icon"></i> 輕鬆找店家</a>
+                        <a class="nav-link" href="分頁01-輕鬆找店家.html"><i class="fas fa-map-marker-alt hvr-icon"></i> 輕鬆找店家</a>
                     </li>
                     <li class="nav-item hvr-icon-buzz-out">
-                        <a class="nav-link " href="體驗課程.html"><i class="fas fa-shopping-bag hvr-icon"></i> 體驗課程</a>
+                        <a class="nav-link " href="分頁02-體驗課程.html"><i class="fas fa-shopping-bag hvr-icon"></i> 體驗課程</a>
                     </li>
                     <li class="nav-item hvr-icon-fade">
                         <a class="nav-link" href="#"><i class="fas fa-seedling hvr-icon"></i> 種子計畫</a>
                     </li>
                     <li class="nav-item hvr-icon-grow">
-                        <a class="nav-link" href="#peace4"><i class="far fa-smile hvr-icon"></i> 安心保證</a>
+                        <a class="nav-link" href="#section7"><i class="far fa-smile hvr-icon"></i> 安心保證</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://www.instagram.com/?hl=zh-tw">
@@ -80,7 +83,7 @@
         <!-- fullpage效果 -->
         <div id="fullpage">
             <!-- banner頁首動畫呈現 -->
-            <banner class="d-flex justify-content-center align-items-center section">
+            <banner class="d-flex justify-content-center align-items-center section active">
 
                 <div class="container pt-5" style="height: 100vh;">
 
@@ -99,9 +102,9 @@
 
                     <!-- <div id="item_5" class="banner_img"></div>
                 <div id="item_6" class="banner_img"></div> -->
-                    <img id="person_1">
+                    <img id="person_1" src="/02-圖片/首頁/生氣.png">
                     <!-- src="/02-圖片/a1.png" -->
-                    <img id="person_2">
+                    <img id="person_2" src="/02-圖片/首頁/笑臉.png">
 
                 </div>
             </banner>
@@ -334,9 +337,20 @@
 
             </section>
             <!-- 安心保證 -->
+<<<<<<< HEAD
+            <section class="section">
+                <div class="container">
+                    <div class=" text-center h1 mt-5">安．心．保．證</div>
+                    <div class="row mt-5">
+                        <div class="col-md-4 card margin-rem">
+                            <img class="bd-placeholder-img rounded-circle mt-3" width="140" height="140"
+                                src="https://sdl-stickershop.line.naver.jp/stickershop/v1/sticker/10445613/android/sticker.png"
+                                style="margin:auto" alt="GREEN">
+=======
             <section id="peace4" class="section">
                 <div class="green_area">
                     <div class="container green_container">
+>>>>>>> 03fd8dd1603d10fe7d31a90b4506ee8bac9dc95e
 
                         <div class="green_all">
 
@@ -480,8 +494,17 @@
             new fullpage('#fullpage', {
                 // 導覽業自動跳出
                 navigation: true,
+                anchors: ['section1', 'section2', 'section3', 'section4', 'section5', 'section6', 'section7', 'section8'],
                 // sectionsColor: ['yellow', 'orange', '#C0C0C0', '#ADD8E6'],
+
             });
+
+            // 防止LOADING結束前的滾動
+            // 1700ms大於LODING時間
+            // FULLPAGE_API: 路徑  MOVETO第一個SECTION
+
+            window.setTimeout((() => fullpage_api.moveTo(1)), 1700);
+            
             //   loading的效果
             $(document).ready(function () {
 
@@ -512,6 +535,8 @@
                 $('#loading').delay(2000).fadeOut(1000);
                 // 把loading整個頁面關閉
             });
+
+
 
             // banner JQ互動效果
             var x = 6;
