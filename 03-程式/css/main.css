@@ -524,7 +524,7 @@ section:nth-child(2n-1) {
 .title {
     color: #2BA091;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 2.5rem;
 }
 
 .text1 {
@@ -532,31 +532,78 @@ section:nth-child(2n-1) {
     /* margin: 0px 10px; */
 }
 
-#about {
+.about {
     width: 100%;
-    height: 40vh;
+    height: 80vh;
 }
 .what_img1{
-    background-image: url("/02-圖片/綠瓶子計畫/綠瓶子計畫_.png");
+    width: 100%;
+    height: 100%;
+    background-image: url("/02-圖片/首頁/無包裝是什麼.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 }
 .what_img2{
-    background-image: url("/02-圖片/綠瓶子計畫/綠瓶子計畫_.png");
+    width: 100%;
+    height: 100%;
+    background-image: url("/01-文字區塊/無包裝是什麼文字框.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 }
 /*減減生活*/
-.awh{
-    border-radius: 20%;
-    
+.reduce{
+    height: 80vh;
 }
-
-
-
-
+.reduce1{
+    width: 50%;
+    height: 50%;
+    background-position: center;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-image: url("/02-圖片/減減生活/循環利用.png");
+}
+.reduce2{
+    width: 50%;
+    height: 25%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("/02-圖片/減減生活/少量.png");
+}
+.reduce3{
+    width: 50%;
+    height: 25%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("/02-圖片/減減生活/日常分裝.png");
+}
+.reduce4{
+    width: 33%;
+    height: 25%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("/02-圖片/減減生活/友善寵物.png");
+}
+.reduce5{
+    width: 50%;
+    height: 25%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("/02-圖片/減減生活/認知.png");
+}
+.reduce6{
+    width: 50%;
+    height: 25%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("/02-圖片/減減生活/斷捨離.png");
+}
 /* .contentfake {
     position: relative;
 
@@ -1001,4 +1048,24 @@ footer {
     transition-duration: 0.3s;
     transition-timing-function: ease;
 }
+.join{
+    width: 100%;
+    height: 100%;
+    background-image: url("/02-圖片/加入我們/加入我們圖_png.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.join1{
+    width: 100%;
+    height: 100%;
+    background-image: url("/02-圖片/加入我們/字框_png.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.download{
+    width: 20%;
+    border-radius: 20px;
 
+}
