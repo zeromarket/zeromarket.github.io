@@ -429,13 +429,20 @@
 
         .btn {
             color: #fff;
+            font-weight: 700;
             background-color: #0bcc6c;
-            padding: .8rem;
-            font-size: 1.2rem;
-            line-height: 1.2rem;
-            border-radius: 5px;
-            border: 2px solid transparent;
-            min-width: 45px !important;
+            /* padding: .8rem; */
+            /* font-size: 1.2rem; */
+            /* line-height: 100px; */
+            padding: 0;
+            /* border-radius: 5px; */
+            /* border: 2px solid transparent; */
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            position: absolute;
+            top: -37.5px;
+            left: calc(50% - 37.5px);
         }
 
         .btn:hover,
@@ -450,9 +457,9 @@
         .btn:active,
         .btn.active {
             color: #fff;
-            background-color: #00b858;
+            background-color: #15c269;
             box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.3);
-            outline: 2px solid #0bcc6c;
+            /* outline: 2px solid #0bcc6c; */
         }
 
         .btn:focus,
@@ -505,25 +512,22 @@
 
         .buttons {
             width: 100%;
-            display: flex;
-            justify-content: center;
+            height: 80px;
+            position: relative;
             /* display: -webkit-box;
             display: -ms-flexbox; */
 
         }
 
-        .buttons .btn {
-            margin-right: 15px;
-        }
 
         .c-title {
-            font-weight: 700;
+            font-weight: 900;
             margin: auto;
             width: 100px;
             height: 35px;
             line-height: 35px;
             text-align: center;
-            background-color: #F3C71F;
+            /* background-color: #F3C71F; */
 
         }
 
@@ -774,9 +778,30 @@
             background-size: contain;
             margin: 1rem auto;
         }
-        .context{
-            width: 600px;
+
+        .context {
+            width: 294px;
+            height: 175px;
+            padding: 5%;
             text-align: justify;
+            border-radius: 10px;
+            /* background: rgb(255, 255, 255, 0.7); */
+            background-color: rgb(243, 201, 32, 0.8);
+            font-family: 微軟正黑體;
+        }
+
+        .logo {
+            width: 150px;
+            height: 35.4px;
+            background-image: url("/02-圖片/logo/白色logo.png");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .logo:active {
+            background-image: url("/02-圖片/logo/黃色logo.png");
+
         }
     </style>
 </head>
@@ -784,8 +809,9 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #1fa19b;">
-        <a class="navbar-brand text-white p-0" href="/index.html"><img width="150px"
-                style="position: absolute;top: -5px;left: 5px;" src="/02-圖片/logo/NAVbar_logo.png" alt="Zero Market"></a>
+        <a class="navbar-brand text-white p-0" href="/index.html">
+            <div class="logo"></div>
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon text-white"></span>
@@ -849,155 +875,49 @@
                 <div class="form-step js-form-step" data-step="1">
 
                     <p class="form-instructions a">
-                    <div class="c-title rounded text-white">- 第一周 -</div>
                     <div class="context" style="text-align: center;">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptatibus quae ex neque dolorem
-                        dolores id accusantium saepe, eveniet perspiciatis deserunt dignissimos quasi voluptate qui
-                        nobis iure? Maxime, corporis veniam!
+                        <div class="c-title mb-1"> 第一周 </div>
+                        請點開網站內的輕鬆找店家，找到離家最近的無包裝商店體驗全新感受的減減生活。
                     </div>
-                    <!-- <form action="" name="form-step-1">
-                        <div class="fieldgroup">
-                            <input type="text" name="firstName" id="firstName" />
-                            <label for="firstName">First name</label>
-                        </div>
-
-                        <div class="fieldgroup">
-                            <input type="text" name="lastName" id="lastName" />
-                            <label for="lastName">Last name</label>
-                        </div>
-
-                        <div class="fieldgroup">
-                            <input type="text" name="email" id="email" />
-                            <label for="email">Email</label>
-                        </div>
-
-                        <div class="fieldgroup">
-                            <input type="text" name="postalCode" id="postalCode" />
-                            <label for="postalCode">Postal code</label>
-                        </div>
-
-                        <div class="buttons">
-                            <button type="button" class="btn btn-alt js-reset">Reset</button>
-
-                            <button type="submit" class="btn">Continue</button>
-                        </div>
-                    </form> -->
                     <div class="buttons">
-                        <button type="button" class="btn btn-alt js-reset d-flex ">Reset</button>
-
-                        <button type="submit" class="btn">Continue</button>
+                        <button type="submit" class="btn">GO!</button>
                     </div>
                 </div>
 
                 <!-- Step two -->
                 <div class="form-step js-form-step waiting hidden" data-step="2">
-                    <div class="c-title rounded text-white">- 第二周 -</div>
-                    <p class="form-instructions"><strong>Click the continue button to show form progression.</strong>
-                        <br> Please fill in the token below with yesterday's date plus the timestamp from the day of
-                        your birth (expressed as an integer) to the power of fourteen divided by two.</p>
-
-                    <!-- <form action="" name="form-step-2">
-                        <div class="fieldgroup">
-                            <input type="text" name="token" id="token" />
-                            <label for="token">Token</label>
-                        </div>
-
-                        <div class="buttons">
-                            <button type="button" class="btn btn-alt js-reset">Reset</button>
-
-                            <button type="submit" class="btn">Continue</button>
-                        </div>
-                    </form> -->
-                    <div class="buttons d-flex justify-content-center">
-                        <button type="button" class="btn btn-alt js-reset">Reset</button>
-
-                        <button type="submit" class="btn">Continue</button>
+                    <div class="context" style="text-align: center;">
+                        <div class="c-title mb-1"> 第二周 </div>
+                        出門在外吃吃喝喝，也別忘記替自己準備專屬的環保筷、環保吸管、碗，重覆利用的器皿，好好慰勞自己喔～
                     </div>
-
+                    <div class="buttons">
+                        <button type="submit" class="btn">GO <sup>2</sup></button>
+                    </div>
+                    
                 </div>
 
                 <!-- Step three -->
                 <div class="form-step js-form-step waiting hidden" data-step="3">
-                    <div class="c-title rounded text-white">- 第三周 -</div>
-                    <p class="form-instructions"><strong>Click the continue button to show form progression.</strong>
-                        <br> Please fill in the token below with yesterday's date plus the timestamp from the day of
-                        your birth (expressed as an integer) to the power of fourteen divided by two.</p>
-
-                    <!-- <form action="" name="form-step-2">
-        <div class="fieldgroup">
-            <input type="text" name="token" id="token" />
-            <label for="token">Token</label>
-        </div>
-
-        <div class="buttons">
-            <button type="button" class="btn btn-alt js-reset">Reset</button>
-
-            <button type="submit" class="btn">Continue</button>
-        </div>
-    </form> -->
-                    <div class="buttons d-flex justify-content-center">
-                        <button type="button" class="btn btn-alt js-reset">Reset</button>
-
-                        <button type="submit" class="btn">Continue</button>
+                    <div class="context" style="text-align: center;">
+                        <div class="c-title mb-1"> 第三周 </div>
+                        有進步喔～請將這兩週的無包裝體驗跟概念傳遞給身旁好友～大手拉小手，善的循環傳遞下去。
+                    </div>
+                    <div class="buttons">
+                        <button type="submit" class="btn">GO <sup>3</sup></button>
                     </div>
 
                 </div>
-
-
-                <!-- <div class="form-step js-form-step waiting hidden" data-step="3">
-
-                    <p class="form-instructions"><strong>Click the continue button to show form progression.</strong>
-                        <br> Please tell us your credit card information. We promise not to store it or use it to buy a
-                        new iPhone in the App Store.</p>
-
-                    <form action="" name="form-step-3">
-                        <div class="fieldgroup">
-                            <input type="text" name="credit-card" id="credit-card" />
-                            <label for="credit-card">Credit card number</label>
-                        </div>
-
-                        <div class="fieldgroup">
-                            <input type="text" name="credit-card-expiry" id="credit-card-expiry" />
-                            <label for="credit-card-expiry">Credit card expiry</label>
-                        </div>
-
-                        <div class="buttons">
-                            <button type="button" class="btn btn-alt js-reset">Reset</button>
-
-                            <button type="submit" class="btn">Continue</button>
-                        </div>
-                    </form>
-                    <div class="buttons d-flex justify-content-center">
-                        <button type="button" class="btn btn-alt js-reset">Reset</button>
-
-                        <button type="submit" class="btn">Continue</button>
-                    </div>
-
-
-                </div> -->
 
 
 
                 <!-- Step four -->
                 <div class="form-step js-form-step waiting hidden" data-step="4">
-                    <div class="c-title rounded text-white">- 第四周 -</div>
-                    <p class="form-instructions"><strong>Click the continue button to show form progression.</strong>
-                        <br> Finally, please just write the words "I Agree" in the field below to consent to us using
-                        the previous data you entered to buy a new iPhone.</p>
-
-                    <!-- <form action="" name="form-step-4">
-                        <div class="fieldgroup">
-                            <input type="text" name="agreen" id="agreen" />
-                            <label for="agreen">I agree</label>
-                        </div>
-
-                        <div class="buttons">
-                            <button type="button" class="btn btn-alt js-reset">Reset</button>
-                        </div>
-                    </form> -->
-                    <div class="buttons d-flex justify-content-center">
-                        <button type="button" class="btn btn-alt js-reset">Reset</button>
+                    <div class="context p-4" style="text-align: center;">
+                        <div class="c-title mb-1"> 恭喜你！！</div>
+                        養成無包裝的好習慣了！
+最後請參加體驗課程中的淨灘活動，替我們生活的地球進行無包裝大掃除喔。
                     </div>
+                    
                 </div>
             </div>
     </section>
