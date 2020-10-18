@@ -67,6 +67,8 @@ body{
 .shop_area {
     position: relative;
     top: 56px;
+    background-image: url(../../02-圖片/輕鬆找店家/bg_2.png);
+
     width: 100%;
     min-height: 100vh;
 }
