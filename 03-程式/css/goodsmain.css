@@ -17,24 +17,28 @@
     flex-wrap: wrap;
     align-content: center;
 
+
 }
 
 /* 標題區域文字 */
 
 .goods_title_area {
     width: 100%;
-    height: 100px;
+    height: 80px;
     position: relative;
+
+    
+    margin-top: 30px;
 
 }
 
 .goods_title_area h1 {
-    font-size: 48px;
+    font-size: 32px;
     font-weight: 700;
     color: #2ba091;
     position: absolute;
-    top: calc(50% - 28.5px);
-    left: calc(50% - 168px)
+    top: calc(50% - 19px);
+    left: calc(50% - 112px)
 }
 
 
@@ -88,11 +92,11 @@
 
 .goods_line_1 span::after {
     content: '';
-    width: 220px;
+    width: 240px;
     height: 2px;
     background-color: #2ba091;
     position: absolute;
-    top: -100%;
+    top: -130%;
     left: 120%;
 
     border-radius: 8px;
@@ -103,11 +107,11 @@
 
 .goods_line_2 span::after {
     content: '';
-    width: 190px;
+    width: 210px;
     height: 2px;
     background-color: #2ba091;
     position: absolute;
-    top: -100%;
+    top: -130%;
     left: 75%;
 
     border-radius: 8px;
@@ -119,11 +123,11 @@
 
 .goods_line_3 span::after {
     content: '';
-    width: 190px;
+    width: 210px;
     height: 2px;
     background-color: #2ba091;
     position: absolute;
-    top: -100%;
+    top: -130%;
     left: 25%;
 
     border-radius: 8px;
@@ -135,11 +139,11 @@
 
 .goods_line_4 span::after {
     content: '';
-    width: 220px;
+    width: 240px;
     height: 2px;
     background-color: #2ba091;
     position: absolute;
-    top: -100%;
+    top: -130%;
     left: -20%;
 
     border-radius: 8px;
@@ -255,6 +259,49 @@
 
 
 /* media query */
+/*  1400以下大圖跟圈圈比例縮小，線變短，info卡位移調整*/
+@media(max-width: 1400px){
+    .goods_mainphoto img {
+        width: 40%;
+    }
+
+    .goods_line_area {
+        height: 8%;
+    
+    }
+
+    .goods_icon {
+        width: 90px;
+        height: 90px;
+    }
+
+    .goods_line_1 span::after {
+        width: 140px;
+        transform: rotate(130deg);
+    }
+
+    .goods_line_2 span::after {
+        width: 120px;
+        transform: rotate(110deg);
+    }
+
+    .goods_line_3 span::after {
+        width: 120px;
+        transform: rotate(70deg);
+    }
+
+    .goods_line_4 span::after {
+        width: 140px;
+        transform: rotate(45deg);
+    }
+
+    .goods_info_group {
+        top: -315px;
+
+    }
+}
+
+
 /*  1050以下大圖跟圈圈比例縮小，線變短，info卡位移調整*/
 @media(max-width: 1100px) {
     .goods_mainphoto img {
@@ -262,8 +309,8 @@
     }
 
     .goods_icon {
-        width: 90px;
-        height: 90px;
+        width: 80px;
+        height: 80px;
     }
 
     .goods_line_1 span::after {
@@ -287,7 +334,7 @@
     }
 
     .goods_info_group {
-        top: -370px;
+        top: -275px;
 
     }
 
@@ -301,8 +348,8 @@
 
 
     .goods_icon {
-        width: 75px;
-        height: 75px;
+        width: 70px;
+        height: 70px;
     }
 
     .goods_info_group {
@@ -338,8 +385,8 @@
     }
 
     .goods_icon {
-        width: 110px;
-        height: 110px;
+        width: 85px;
+        height: 85px;
     }
 
     .goods_info_group {
@@ -387,8 +434,8 @@
     }
 
     .goods_icon {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
     }
 
     .goods_info_group {
@@ -399,7 +446,7 @@
 /* (手機尺寸1)480以下，大圖放大，線隱藏，圈圈彈出改視窗彈出 */
 @media(max-width:480px){
     .goods_mainphoto img {
-        width: 85%;
+        width: 70%;
     }
 
     .goods_line_1 span::after,
@@ -414,8 +461,8 @@
     }
 
     .goods_icon {
-        width: 120px;
-        height: 120px;
+        width:90px;
+        height:90px;
 
         margin: 10px;
 ;
@@ -432,10 +479,10 @@
 
 /* (手機尺寸2)370以下，標題縮小，大圖放大，圈圈彈出改視窗彈出 */
 @media(max-width:370px) {
-    .goods_title_area h1 {
+    /* .goods_title_area h1 {
         font-size: 35px;
         left: calc(50% - 122.5px)
-    }
+    } */
 
 
     .goods_line_area {
@@ -443,8 +490,8 @@
     }
 
     .goods_icon {
-        width: 90px;
-        height: 90px;
+        width: 80px;
+        height: 80px;
 
         margin: 12px;
     }
