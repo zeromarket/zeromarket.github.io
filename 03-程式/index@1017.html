@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZeroMarket 零市集</title>
+    <!-- 基本樣式 -->
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- 基本樣式END -->
+    <!-- fullpage -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- 字體 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        @import url(./03-程式/css/main.css);
+    </style>
+</head>
+
+<body>
+
+    <!-- begin是loading中的畫面呈現 -->
+    <!-- <div id="loading">
+        <div id="begin_back"></div>
+        <div id="begin"></div>
+
+    </div> -->
+    <!-- 頁首 -->
+    <!-- navbar -->
+    <div id="home">
+        <!-- 導覽點 -->
+        <!-- <div id="fp-nav" class="fp-right">
+            <ul>
+                <li><a href="#" class="active"><span class="fp-sr-only">Section 1</span></a></li>
+                <li><a href="#" class=""><span class="fp-sr-only">Section 2</span></a></li>
+                <li><a href="#" class=""><span class="fp-sr-only">Section 3</span></a></li>
+                <li><a href="#" class=""><span class="fp-sr-only">Section 4</span></a></li>
+                <li><a href="#" class=""><span class="fp-sr-only">Section 5</span></a></li>
+                <li><a href="#" class=""><span class="fp-sr-only">Section 6</span></a></li>
+                <li><a href="#" class=""><span class="fp-sr-only">Section 7</span></a></li>
+                <li><a href="#" class=""><span class="fp-sr-only">Section 8</span></a></li>
+                <li><a href="#"><span class="fp-sr-only">Section 9</span></a></li>
+            </ul>
+        </div> -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #1fa19b;">
+            <a class="navbar-brand text-white p-0" href="/index.html">
+                <img width="150px" style="position: absolute;top: -5px;left: 5px;" src="/02-圖片/logo/NAVbar_logo.png"
+                    alt="Zero Market">
+                <img width="150px" style="position: absolute;top: -5px;left: 5px;" src="/02-圖片/logo/yellow_logo-01.png"
+                    alt="Zero Market">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon text-white"></span>
+            </button>
+            <div class="collapse navbar-collapse .d-lg-flex justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item hvr-icon-down">
+                        <a class="nav-link" href="分頁01-輕鬆找店家.html"><i class="fas fa-map-marker-alt hvr-icon"></i>
+                            輕鬆找店家</a>
+                    </li>
+                    <li class="nav-item hvr-icon-buzz-out">
+                        <a class="nav-link " href="分頁02-體驗課程.html"><i class="fas fa-shopping-bag hvr-icon"></i> 體驗課程</a>
+                    </li>
+                    <li class="nav-item hvr-icon-fade">
+                        <a class="nav-link" href="分頁03-種子計畫.html"><i class="fas fa-seedling hvr-icon"></i> 種子計畫</a>
+                    </li>
+                    <li class="nav-item hvr-icon-grow">
+                        <a class="nav-link" href="#section7"><i class="far fa-smile hvr-icon"></i> 安心保證</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.instagram.com/?hl=zh-tw">
+                            <i class="fab fa-instagram"></i></a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.facebook.com/">
+                            <i class="fab fa-facebook-f"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- 首頁 -->
+        <!-- fullpage效果 -->
+        <div id="fullpage">
+            <!-- banner頁首動畫呈現 -->
+
+            <banner class="d-flex justify-content-center align-items-center section active">
+                <div class="anchor" style="height: 5vh;"></div>
+                <div class="container" style="height: 95vh;">
+
+                    <!-- <div id="big_log" class="text-center col mt-5" style="font-size: 100px;">Zero Market</div> -->
+                    <div id="item_text1"></div>
+                    <div id="item_1" class="banner_img"></div>
+                    <div id="item_2" class="banner_img"></div>
+                    <div id="item_text2"></div>
+                    <div id="item_3" class="banner_img"></div>
+                    <div id="item_4" class="banner_img"></div>
+                    <div id="item_text3"></div>
+                    <div id="item_5" class="banner_img"></div>
+                    <div id="item_6" class="banner_img"></div>
+                    <div id="item_text4"></div>
+
+
+                    <!-- <div id="item_5" class="banner_img"></div>
+                <div id="item_6" class="banner_img"></div> -->
+                    <img id="person_1" src="/02-圖片/首頁/生氣.png">
+                    <!-- src="/02-圖片/a1.png" -->
+                    <img id="person_2" src="/02-圖片/首頁/笑臉.png">
+
+                </div>
+            </banner>
+            <!-- 概念 -->
+            <!-- 無包裝是什麼 -->
+            <section class="section">
+                <div class="container">
+                    <!-- 假錨點 -->
+                    <div class="anchor"></div>
+
+                    <div class="text-center title mt-5">
+                        無<p class="text1"> ∙ </p>
+                        包<p class="text1"> ∙ </p>
+                        裝<p class="text1"> ∙ </p>
+                        是<p class="text1"> ∙ </p>
+                        什<p class="text1"> ∙ </p>
+                        麼</div>
+                    <div class="row p-3" style="height: 70vh;">
+                        <div class="what_img1"></div>
+                        <!-- <div class="col-lg-6">
+                            <div class="what_img1"></div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="what_img2"></div>
+                        </div> -->
+                    </div>
+
+                </div>
+            </section>
+            <!-- 減減生活(1) -->
+            <section class="section">
+                <div id="con" class="container">
+                    <!-- 假錨點 -->
+                    <div class="anchor"></div>
+                    <div class="text-center title ">
+                        減<p class="text1"> ∙ </p>
+                        減<p class="text1"> ∙ </p>
+                        生<p class="text1"> ∙ </p>
+                        活</div>
+                    <div class="reduce">
+                        <div class="row1 d-flex" style="height: 40vh;width: 100%;">
+                            <div class="row1_1">
+                                <div class="reduce1"></div>
+                            </div>
+
+                            <div class="row1_2">
+                                <div class="reduce2"></div>
+                                <div class="reduce3"></div>
+                            </div>
+
+                        </div>
+
+                        <div class="row1 d-flex" style="height: 40vh;width: 100%;">
+                            <div class="row1_3">
+                                <div class="reduce4"></div>
+                                <div class="reduce5"></div>
+                            </div>
+                            <div class="row1_4">
+                                <div class="reduce6"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- <div class="reduce">
+                        <div class="row about">
+                            <div class="col-md-7">
+                                <div class="reduce1"></div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="reduce2 awh"></div>
+                                <div class="reduce3 awh mt-1"></div>
+                            </div>
+                        </div> -->
+
+                    <!-- <div class="row about1">
+                        <div class="col-md-4">
+                            <div class="reduce4"></div>
+                            <img src='/02-圖片/減減生活/友善寵物.png' class="card-img-top" alt="友善寵物">
+                        </div>
+                        <div class="col-md-4">
+                            <div class="reduce5"></div>
+                            <img src='/02-圖片/減減生活/從認知改變世界 png.png' class="card-img-top" alt="????????">
+                        </div>
+                        <div class="col-md-4">
+                            <div class="reduce6"></div>
+                            <img src='/02-圖片/減減生活/斷捨離.png' class="card-img-top" alt="段捨離">
+                        </div> -->
+                    <!-- <div class="col-md-4">
+                            <img src="https://www.kahunsho-byebye.com/wp-content/themes/kahunsho-byebye/img/img_2.png"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Some quick example text to build on the card title and</p>
+                            </div>
+                        </div> -->
+                    <!-- </div> -->
+                </div>
+                <!-- </div> -->
+            </section>
+            <!-- 好物生活 -->
+            <section class="section">
+                <div class="container">
+                    <div class="text-center h1 mt-5">好．物．生．活</div>
+                    <div class="text-center h4">2020年、最新研究に基づいた
+                        花粉にまつわる注目の情報をピックアップ！</div>
+                </div>
+            </section>
+            <!-- 綠瓶子計畫(1) -->
+            <section class="section">
+                <div class="container">
+                    <div class="anchor"></div>
+
+                    <div class="text-center title m-2">
+                        綠<p class="text1"> ∙ </p>
+                        瓶<p class="text1"> ∙ </p>
+                        子<p class="text1"> ∙ </p>
+                        計<p class="text1"> ∙ </p>
+                        劃</div>
+                    <div class="row p-3" style="height: 70vh;">
+                        <div class="what_img2"></div>
+
+                    </div>
+            </section>
+            <!-- 綠瓶子計畫(2) -->
+            <section class="section">
+                <!-- 假錨點 -->
+                <div class="anchor"></div>
+                <div class="row">
+                    <div class="col-lg-3" style="display: block;">
+                        <div class="CardList-item">
+                            <div class=" CardList-itemInnerWrapper">
+                                <h2 class="CardList-title">
+                                    <span class="CardList-titleInnerWrapper">
+                                        <div class="CardList-icon">
+                                            <div class="trcard1"></div>
+                                        </div>
+                                    </span>
+                                </h2>
+                                <div class="CardList-description">
+                                    <span class="CardList-descriptionInnerWrapper">
+                                        turpis elit.
+                                        Aliquam convallis non lectus eu laoreet. </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3" style="display: block;">
+                        <div class="CardList-item">
+                            <div class="CardList-itemInnerWrapper">
+                                <h2 class="CardList-title">
+                                    <span class="CardList-titleInnerWrapper">
+                                        <svg class="CardList-icon" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 46 46">
+                                            <path class="CardList-iconPath" d="M27 11h18v34H1V11h18"></path>
+                                            <path class="CardList-iconPath"
+                                                d="M27 14.99h-8v-10a4 4 0 0 1 4-4 4 4 0 0 1 4 4v10zM14 28.99a3 3 0 0 1-3-3v-2a3 3 0 0 1 3-3 3 3 0 0 1 3 3v2a3 3 0 0 1-3 3zM28 27h10M28 33h7M21 36.99H7v-1.5a3.54 3.54 0 0 1 3.5-3.5h7a3.54 3.54 0 0 1 3.5 3.5v1.5z">
+                                            </path>
+                                        </svg>Maximize Marketing </span>
+                                </h2>
+                                <div class="CardList-description">
+                                    <span class="CardList-descriptionInnerWrapper">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer felis turpis,
+                                        viverra a tellus
+                                        quis, tincidunt faucibus velit. Phasellus varius ipsum et dolor molestie
+                                        vehicula.
+                                        Sed eleifend
+                                        leo odio, ac venenatis sem euismod vel. Suspendisse sed pharetra dolor. Maecenas
+                                        a
+                                        turpis elit.
+                                        Aliquam convallis non lectus eu laoreet. </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3" style="display: block;">
+
+                        <div class="CardList-item">
+                            <div class="CardList-itemInnerWrapper">
+                                <h2 class="CardList-title">
+                                    <span class="CardList-titleInnerWrapper">
+                                        <svg class="CardList-icon" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 46 46">
+                                            <path class="CardList-iconPath" d="M27 11h18v34H1V11h18"></path>
+                                            <path class="CardList-iconPath"
+                                                d="M27 14.99h-8v-10a4 4 0 0 1 4-4 4 4 0 0 1 4 4v10zM14 28.99a3 3 0 0 1-3-3v-2a3 3 0 0 1 3-3 3 3 0 0 1 3 3v2a3 3 0 0 1-3 3zM28 27h10M28 33h7M21 36.99H7v-1.5a3.54 3.54 0 0 1 3.5-3.5h7a3.54 3.54 0 0 1 3.5 3.5v1.5z">
+                                            </path>
+                                        </svg>Maximize Marketing </span>
+                                </h2>
+                                <div class="CardList-description">
+                                    <span class="CardList-descriptionInnerWrapper">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer felis turpis,
+                                        viverra a tellus
+                                        quis, tincidunt faucibus velit. Phasellus varius ipsum et dolor molestie
+                                        vehicula.
+                                        Sed eleifend
+                                        leo odio, ac venenatis sem euismod vel. Suspendisse sed pharetra dolor. Maecenas
+                                        a
+                                        turpis elit.
+                                        Aliquam convallis non lectus eu laoreet. </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3" style="display: block;">
+
+                        <div class="CardList-item">
+                            <div class="CardList-itemInnerWrapper">
+                                <h2 class="CardList-title">
+                                    <span class="CardList-titleInnerWrapper">
+                                        <svg class="CardList-icon" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 46 46">
+                                            <path class="CardList-iconPath" d="M27 11h18v34H1V11h18"></path>
+                                            <path class="CardList-iconPath"
+                                                d="M27 14.99h-8v-10a4 4 0 0 1 4-4 4 4 0 0 1 4 4v10zM14 28.99a3 3 0 0 1-3-3v-2a3 3 0 0 1 3-3 3 3 0 0 1 3 3v2a3 3 0 0 1-3 3zM28 27h10M28 33h7M21 36.99H7v-1.5a3.54 3.54 0 0 1 3.5-3.5h7a3.54 3.54 0 0 1 3.5 3.5v1.5z">
+                                            </path>
+                                        </svg>Maximize Marketing </span>
+                                </h2>
+                                <div class="CardList-description">
+                                    <span class="CardList-descriptionInnerWrapper">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer felis turpis,
+                                        viverra a tellus
+                                        quis, tincidunt faucibus velit. Phasellus varius ipsum et dolor molestie
+                                        vehicula.
+                                        Sed eleifend
+                                        leo odio, ac venenatis sem euismod vel. Suspendisse sed pharetra dolor. Maecenas
+                                        a
+                                        turpis elit.
+                                        Aliquam convallis non lectus eu laoreet. </span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+            </section>
+            <!-- 安心保證 -->
+            <section id="peace4" class="section">
+                <div class="green_area">
+                    <div class="container green_container">
+
+                        <div class="green_all">
+
+                            <div class="text-center title pb-4">
+                                安<p class="text1"> ∙ </p>
+                                心<p class="text1"> ∙ </p>
+                                保<p class="text1"> ∙ </p>
+                                證</div>
+
+                            <div class="green_content_area">
+                                <div class="green_icon_top">
+
+                                    <div class="green_icons">
+                                        <div class="green_icon icon1">
+                                            <div class="green_check">
+                                                <span></span>
+                                            </div>
+                                            <div class="green_icon_img"><img class="img1_opacity" src="02-圖片/安心保證/1.png"
+                                                    alt=""></div>
+                                        </div>
+
+
+                                        <div class="green_text">
+                                            <h5>使用植物做為主來源</h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="green_icons">
+                                        <div class="green_icon icon2">
+                                            <div class="green_check">
+                                                <span></span>
+                                            </div>
+                                            <div class="green_icon_img"><img class="img2_opacity" src="02-圖片/安心保證/2.png"
+                                                    alt=""></div>
+                                        </div>
+
+
+                                        <div class="green_text">
+                                            <h5>重複利用容器</h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="green_icons">
+                                        <div class="green_icon icon3">
+                                            <div class="green_check">
+                                                <span></span>
+                                            </div>
+                                            <div class="green_icon_img"><img class="img3_opacity" src="02-圖片/安心保證/3.png"
+                                                    alt=""></div>
+                                        </div>
+
+
+                                        <div class="green_text">
+                                            <h5>SGS產品檢驗合格</h5>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="green_icon_bottom">
+
+                                    <div class="green_icons">
+                                        <div class="green_icon icon4">
+                                            <div class="green_check">
+                                                <span></span>
+                                            </div>
+                                            <div class="green_icon_img"><img class="img4_opacity" src="02-圖片/安心保證/4.png"
+                                                    alt=""></div>
+                                        </div>
+
+
+                                        <div class="green_text">
+                                            <h5>產地標示明確</h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="green_icons">
+                                        <div class="green_icon icon5">
+                                            <div class="green_check">
+                                                <span></span>
+                                            </div>
+                                            <div class="green_icon_img"><img class="img5_opacity" src="02-圖片/安心保證/5.png"
+                                                    alt=""></div>
+                                        </div>
+
+
+                                        <div class="green_text">
+                                            <h5>寶寶/寵物皆可安心使用</h5>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 加入我們+footer -->
+            <section class="section">
+                <div class="row p-5">
+                    <div class="col-lg-6 about">
+                        <div class="join"></div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="join1">
+                            <button class="download">下載表單</button>
+                        </div>
+
+                        <!-- <div class="content p-5">
+                            <h2 class="pt-2 mb-3">加入我們!</h2>
+                            <hr class="m-5">
+                            </hr>
+                            <h4 class="text-justify p-2">
+                                即購物時避免使用不必要的包裝，減少浪費。「裸買運動」是一系列可持續發展關注組織思網絡發起的環保行動。鼓勵社區環保意識之餘，亦為可能落實的都市固體廢物收費計劃作好準備
+                        </div> -->
+                    </div>
+                </div>
+                <footer>
+                    <div class="d-flex justify-content-center align-items-end p-3 text-white"
+                        style="background-color: #1fa19b;">
+                        我是footer</div>
+                </footer>
+            </section>
+        </div>
+
+        <!-- fullPage.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.extensions.min.js"
+            integrity="sha512-pci5WG2+7QnpsinWWpGUd3RgI61fU1bWlQQQegC2mVqwOQC/+Xp0ROGO0AYB6dvoLBYRxwm+t+DWOVRkxmlcdQ=="
+            crossorigin="anonymous"></script>
+        <!-- bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+            crossorigin="anonymous"></script>
+
+        <script>
+            // fullPage.js 註解
+            new fullpage('#fullpage', {
+                // 導覽業自動跳出
+                navigation: true,
+                anchors: ['section1', 'section2', 'section3', 'section4', 'section5', 'section6', 'section7', 'section8'],
+                // sectionsColor: ['yellow', 'orange', '#C0C0C0', '#ADD8E6'],
+
+            });
+
+            // 防止LOADING結束前的滾動
+            // 1700ms大於LODING時間
+            // FULLPAGE_API: 路徑  MOVETO第一個SECTION
+
+            window.setTimeout((() => fullpage_api.moveTo(1)), 1700);
+
+            //   loading的效果
+            $(document).ready(function () {
+
+                var wValue = $('#begin_back').width();
+                var hValue = $('#begin_back').height();
+
+                var wwValue = $('#begin').width();
+                var hhValue = $('#begin').height();
+
+                $('#begin').animate({
+                    width: 30 * wValue,
+                    height: 30 * hValue,
+                }, 2000);
+
+                $('#begin_back').animate({
+                    width: 30 * wValue,
+                    height: 30 * hValue,
+                }, 2000);
+
+                // *0.5感覺畫面有些微變化
+
+                $('#begin_back').animate({
+                    width: 2400 * wValue,
+                    height: 2400 * hValue
+                }, 3000);
+
+                // 二次放大
+                $('#loading').delay(2000).fadeOut(1000);
+                // 把loading整個頁面關閉
+            });
+
+
+
+            // banner JQ互動效果
+            var x = 6;
+            // 物件數
+            $('.banner_img').mouseleave(function () {
+                // mouseout V.S mouseleave 在於 滑鼠移出後執行次數 1:無限大
+                if (x > 1) {
+                    x -= 1;
+                    $('#person_1').fadeToggle();
+                    $('#person_2').fadeToggle();
+                    // toggle會自行判斷狀態
+                    console.log(x);
+                }
+                else {
+                }
+            })
+            $('#item_1').mouseover(function () {
+                $('#item_1').animate({ opacity: '0' }, 500);
+                // 消失時間0.5秒
+                // $('#item_1')[0].style.display = 'none';
+                $('#item_1').delay(500).animate({ height: "0%" }, 0);
+                // 這裡要等待上排時間 物件消失後再display='none'
+                $('#person_1').fadeToggle();
+                $('#person_2').fadeToggle();
+            })
+            $('#item_2').mouseover(function () {
+                $('#item_2').animate({ opacity: '0' }, 500);
+                $('#item_2').delay(500).animate({ height: "0%" }, 0);
+                $('#person_1').fadeToggle();
+                $('#person_2').fadeToggle();
+            })
+            $('#item_3').mouseover(function () {
+                $('#item_3').animate({ opacity: '0' }, 500);
+                $('#item_3').delay(500).animate({ height: "0%" }, 0);
+                $('#person_1').fadeToggle();
+                $('#person_2').fadeToggle();
+            })
+            $('#item_4').mouseover(function () {
+                $('#item_4').animate({ opacity: '0' }, 500);
+                $('#item_4').delay(500).animate({ height: "0%" }, 0);
+                $('#person_1').fadeToggle();
+                $('#person_2').fadeToggle();
+            })
+            $('#item_5').mouseover(function () {
+                $('#item_5').animate({ opacity: '0' }, 500);
+                $('#item_5').delay(500).animate({ height: "0%" }, 0);
+                $('#person_1').fadeToggle();
+                $('#person_2').fadeToggle();
+            })
+            $('#item_6').mouseover(function () {
+                $('#item_6').animate({ opacity: '0' }, 500);
+                $('#item_6').delay(500).animate({ height: "0%" }, 0);
+                $('#person_1').fadeToggle();
+                $('#person_2').fadeToggle();
+            })
+
+            // 卡片翻轉的效果
+
+            var $cards = $('.CardList-item');
+
+            $cards.mouseenter(function (e) {
+                $cards.removeClass('is-active');
+                $(e.target).parents('.CardList-item').addClass('is-active');
+            });
+
+
+            //安心保證icon效果
+            var green_check = document.querySelectorAll('.green_check')
+
+            green_check.forEach(element => {
+                element.onclick = function () {
+                    element.classList.toggle('active')
+                }
+            });
+
+
+        </script>
+</body>
+
+</html>
