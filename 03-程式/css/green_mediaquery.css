@@ -1,0 +1,143 @@
+/* 1366以下，間距變窄 */
+@media(max-width:1366px){
+    .green_icon {
+        margin-bottom: 12px;
+    }
+}
+
+
+
+/* 1280以下，圓變小，間距變窄 */
+
+@media(max-width:1280px) {
+    .green_icon, .green_icon_img, .green_icon_img img, .green_check span {
+        width: 180px;
+        height: 180px;
+    }
+    .green_icon_img, .green_icon_img img {
+        top: calc(50% - 90px);
+        left: calc(50% - 90px);
+    }
+
+    .green_icon {
+        margin-bottom: 18px;
+    }
+}
+    
+
+/* 500以下，2圓1行，圓變小 */
+
+@media(max-width:500px) {
+    .green_icons {
+        width: 42%;
+    }
+    .green_icon_top {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .green_icon, .green_icon_img, .green_icon_img img, .green_check span {
+        width: 120px;
+        height: 120px;
+    }
+    .green_icon_img, .green_icon_img img {
+        top: calc(50% - 60px);
+        left: calc(50% - 60px);
+    }
+    .green_icon {
+        margin-bottom: 10px;
+    }
+    .green_icon_bottom {
+        margin-top: 0px;
+    }
+    .green_text h5 {
+        font-size: 18px;
+    }
+    .pb-4 {
+        padding-bottom: 0rem !important;
+    }
+    /* 勾勾 */
+    .green_check {
+        top: calc(50% - 60px);
+    }
+    .green_check span::before {
+        height: 12px;
+        top: 52%;
+        left: 30%;
+    }
+    .green_check span::after {
+        height: 12px;
+        top: 75%;
+        left: 39%;
+    }
+    .green_check.active span {
+        transform: scale(1.1);
+    }
+    .green_check:hover span::after {
+        width: 70px;
+    }
+    .green_check:hover span::before {
+        width: 37px;
+    }
+    .green_check.active span::after {
+        width: 70px;
+    }
+    .green_check.active span::before {
+        width: 37px;
+    }
+}
+
+
+/* 375以下，2圓1行，圓變小 */
+
+@media(max-width:375px) {
+    
+    .green_icon, .green_icon_img, .green_icon_img img, .green_check span {
+        width: 90px;
+        height: 90px;
+    }
+    .green_icon_img, .green_icon_img img {
+        top: calc(50% - 45px);
+        left: calc(50% - 45px);
+    }
+    
+    
+    .green_text  {
+       height: 60px;
+    }
+
+    .green_all{
+        position: absolute;
+        top:40px;
+    }
+    
+    /* 勾勾 */
+    .green_check {
+        top: calc(50% - 45px);
+    }
+    .green_check span::before {
+        height: 10px;
+        top: 52%;
+        left: 30%;
+    }
+    .green_check span::after {
+        height: 10px;
+        top: 75%;
+        left: 39%;
+    }
+    .green_check.active span {
+        transform: scale(1.1);
+    }
+    .green_check:hover span::after {
+        width: 52px;
+    }
+    .green_check:hover span::before {
+        width: 30px;
+    }
+    .green_check.active span::after {
+        width: 52px;
+    }
+    .green_check.active span::before {
+        width: 30px;
+    }
+}
