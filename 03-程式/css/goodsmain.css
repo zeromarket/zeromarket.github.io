@@ -1,0 +1,504 @@
+ /* 好物生活的css */
+ .goods_area {
+    background-image: url(../../02-圖片/好物生活/bg_2.png);
+
+}
+
+.goods_area_container {
+    min-height: 100vh;
+
+
+}
+
+.goods_all {
+    height: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+
+}
+
+/* 標題區域文字 */
+
+.goods_title_area {
+    width: 100%;
+    height: 100px;
+    position: relative;
+
+}
+
+.goods_title_area h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #2ba091;
+    position: absolute;
+    top: calc(50% - 28.5px);
+    left: calc(50% - 168px)
+}
+
+
+.goods_content {
+    width: 100%;
+    height: 70%;
+
+
+    margin: auto;
+    margin-top: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.goods_mainphoto {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+.goods_mainphoto img {
+    width: 50%;
+
+    z-index: 1;
+}
+
+
+/* 4條線的區域 */
+
+.goods_line_area {
+    width: 100%;
+    height: 11%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.goods_line {
+    width: 20%;
+    height: 100%;
+
+    /* background-color: aqua; */
+    position: relative;
+}
+
+.goods_line_1 span::after {
+    content: '';
+    width: 220px;
+    height: 2px;
+    background-color: #2ba091;
+    position: absolute;
+    top: -100%;
+    left: 120%;
+
+    border-radius: 8px;
+
+    transform-origin: 0% 0%;
+    transform: rotate(120deg);
+}
+
+.goods_line_2 span::after {
+    content: '';
+    width: 190px;
+    height: 2px;
+    background-color: #2ba091;
+    position: absolute;
+    top: -100%;
+    left: 75%;
+
+    border-radius: 8px;
+
+    transform-origin: 0% 0%;
+    transform: rotate(100deg);
+
+}
+
+.goods_line_3 span::after {
+    content: '';
+    width: 190px;
+    height: 2px;
+    background-color: #2ba091;
+    position: absolute;
+    top: -100%;
+    left: 25%;
+
+    border-radius: 8px;
+
+    transform-origin: 0% 0%;
+    transform: rotate(75deg);
+
+}
+
+.goods_line_4 span::after {
+    content: '';
+    width: 220px;
+    height: 2px;
+    background-color: #2ba091;
+    position: absolute;
+    top: -100%;
+    left: -20%;
+
+    border-radius: 8px;
+
+    transform-origin: 0% 0%;
+    transform: rotate(60deg);
+}
+
+
+
+/* icon區域css */
+
+.goods_icon_area {
+    width: 70%;
+
+    /* background-color: chocolate; */
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    position: relative;
+}
+
+.goods_icon {
+    width: 110px;
+    height: 110px;
+    margin: auto;
+
+    border-radius: 50%;
+    background-color: white;
+
+    z-index: 1;
+
+
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2.5px solid #2ba091;
+
+    transition: 0.2s;
+}
+
+
+
+/* icon圖 */
+.goods_icon_img1 {
+    background-image: url(../../02-圖片/好物生活/食品圓-2.png);
+}
+
+.goods_icon_img2 {
+    background-image: url(../../02-圖片/好物生活/肌膚圓-2.png);
+}
+
+.goods_icon_img3 {
+    background-image: url(../../02-圖片/好物生活/居家圓-2.png);
+}
+
+.goods_icon_img4 {
+    background-image: url(../../02-圖片/好物生活/雜貨圓-2.png);
+}
+
+/* icon hover */
+.goods_icon_img1:hover {
+    background-image: url(../../02-圖片/好物生活/icon-01-食品-2.png);
+}
+
+.goods_icon_img2:hover {
+    background-image: url(../../02-圖片/好物生活/icon-02-肌膚清潔-2.png);
+}
+
+.goods_icon_img3:hover {
+    background-image: url(../../02-圖片/好物生活/icon-03-居家清潔-2.png);
+}
+
+.goods_icon_img4:hover {
+    background-image: url(../../02-圖片/好物生活/icon-04-生活雜貨-2.png);
+}
+
+
+
+
+
+/* 資訊卡css */
+.goods_info_group {
+    position: absolute;
+    top: -330px;
+    width: 100%;
+    height: 250px;
+
+    /* background-color: cornflowerblue; */
+
+    display: flex;
+    justify-content: space-between;
+
+    z-index: 2;
+
+}
+
+.goods_info {
+    width: 25%;
+
+    opacity: 0;
+}
+
+.goods_info.active {
+    opacity: 1;
+}
+
+.goods_info img {
+    width: 100%;
+}
+
+
+/* media query */
+/*  1050以下大圖跟圈圈比例縮小，線變短，info卡位移調整*/
+@media(max-width: 1100px) {
+    .goods_mainphoto img {
+        width: 40%;
+    }
+
+    .goods_icon {
+        width: 90px;
+        height: 90px;
+    }
+
+    .goods_line_1 span::after {
+        width: 150px;
+        transform: rotate(125deg);
+    }
+
+    .goods_line_2 span::after {
+        width: 130px;
+        transform: rotate(105deg);
+    }
+
+    .goods_line_3 span::after {
+        width: 130px;
+        transform: rotate(70deg);
+    }
+
+    .goods_line_4 span::after {
+        width: 150px;
+        transform: rotate(55deg);
+    }
+
+    .goods_info_group {
+        top: -370px;
+
+    }
+
+}
+
+/*  992以下圈圈比例縮小，info卡位移調整*/
+@media(max-width: 992px) {
+    .goods_mainphoto img {
+        width: 45%;
+    }
+
+
+    .goods_icon {
+        width: 75px;
+        height: 75px;
+    }
+
+    .goods_info_group {
+        top: -205px;
+    }
+
+}
+
+/*  768(平板)以下圈圈比例縮小，info卡位移調整*/
+@media(max-width: 768px) {
+    .goods_mainphoto img {
+        width: 70%;
+    }
+
+    .goods_line_1 span::after {
+        width: 250px;
+        transform: rotate(123deg);
+    }
+
+    .goods_line_2 span::after {
+        width: 220px;
+        transform: rotate(103deg);
+    }
+
+    .goods_line_3 span::after {
+        width: 220px;
+        transform: rotate(75deg);
+    }
+
+    .goods_line_4 span::after {
+        width: 250px;
+        transform: rotate(55deg);
+    }
+
+    .goods_icon {
+        width: 110px;
+        height: 110px;
+    }
+
+    .goods_info_group {
+        top: -260px;
+    }
+
+    .goods_icon_area {
+        width: 90%;
+
+        /* background-color: chocolate; */
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        position: relative;
+    }
+
+}
+
+/*  576(平板)以下圈圈比例縮小，info卡位移調整*/
+@media(max-width: 576px) {
+    .goods_mainphoto img {
+        width: 80%;
+    }
+
+    .goods_line_1 span::after {
+        width: 250px;
+        transform: rotate(115deg);
+    }
+
+    .goods_line_2 span::after {
+        width: 220px;
+        transform: rotate(98deg);
+    }
+
+    .goods_line_3 span::after {
+        width: 220px;
+        transform: rotate(80deg);
+    }
+
+    .goods_line_4 span::after {
+        width: 250px;
+        transform: rotate(65deg);
+    }
+
+    .goods_icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .goods_info_group {
+        top: -180px;
+    }
+}
+
+/* (手機尺寸1)480以下，大圖放大，線隱藏，圈圈彈出改視窗彈出 */
+@media(max-width:480px){
+    .goods_mainphoto img {
+        width: 85%;
+    }
+
+    .goods_line_1 span::after,
+    .goods_line_2 span::after,
+    .goods_line_3 span::after,
+    .goods_line_4 span::after {
+        width: 0px;
+    }
+
+    .goods_info_group {
+        display: none;
+    }
+
+    .goods_icon {
+        width: 120px;
+        height: 120px;
+
+        margin: 10px;
+;
+    }
+
+    .goods_icon_area{
+        margin-top: -40px;
+    }
+
+
+}
+
+
+
+/* (手機尺寸2)370以下，標題縮小，大圖放大，圈圈彈出改視窗彈出 */
+@media(max-width:370px) {
+    .goods_title_area h1 {
+        font-size: 35px;
+        left: calc(50% - 122.5px)
+    }
+
+
+    .goods_line_area {
+        height: 0%;
+    }
+
+    .goods_icon {
+        width: 90px;
+        height: 90px;
+
+        margin: 12px;
+    }
+
+    .goods_icon_area{
+        margin-top: 5px;
+    }
+
+}
+
+
+
+
+
+
+/* 手機板mask樣式 */
+.goods_info_mask {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+    /* 確保mask會占滿整個版面 */
+
+    background-color: rgba(0, 0, 0, 0.6);
+
+    display: none;
+
+}
+
+.goods_info_mask.active {
+    display: block;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.goods_phone_info {
+    width: 55%;
+
+    position: absolute;
+    top: calc(50% - 160px);
+
+    opacity: 0;
+
+}
+
+.goods_phone_info.active {
+    opacity: 1;
+}
+
+.goods_phone_info img {
+    width: 100%;
+}

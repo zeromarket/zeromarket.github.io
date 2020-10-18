@@ -23,8 +23,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
     <style>
-        @import url(03-程式/css/main.css);
-        @import url(03-程式/css/goodsmain.css);
+        @import url(./03-程式/css/main.css);
     </style>
 </head>
 
@@ -213,54 +212,10 @@
             </section>
             <!-- 好物生活 -->
             <section class="section">
-                <!-- 假錨點 -->
-                <div class="anchor"></div>
-                <div class="goods_phone_info_group">
-                    <div class="goods_info_mask">
-                        <div class="goods_phone_info"><img src="02-圖片/好物生活/食品_2.png" alt=""></div>
-                        <div class="goods_phone_info"><img src="02-圖片/好物生活/肌膚清潔＿2.png" alt=""></div>
-                        <div class="goods_phone_info"><img src="02-圖片/好物生活/居家清潔_2.png" alt=""></div>
-                        <div class="goods_phone_info"><img src="02-圖片/好物生活/雜貨＿2.png" alt=""></div>
-                    </div>
-                </div>
-
-                <div class="goods_area">
-                    <div class="goods_area_container container">
-                        <div class="goods_all">
-
-                            <div class="goods_title_area">
-                                <h1>好．物．生．活</h1>
-                            </div>
-                            <div class="goods_content">
-                                <div class="goods_mainphoto">
-                                    <img src="02-圖片/好物生活/好物生活主圖_工作區域1-2.png" alt=""></div>
-                                <div class="goods_line_area">
-                                    <div class="goods_line goods_line_1"><span></span></div>
-                                    <div class="goods_line goods_line_2"><span></span></div>
-                                    <div class="goods_line goods_line_3"><span></span></div>
-                                    <div class="goods_line goods_line_4"><span></span></div>
-                                </div>
-
-                                <div class="goods_icon_area">
-                                    <div class="goods_icon goods_icon_img1"></div>
-                                    <div class="goods_icon goods_icon_img2"></div>
-                                    <div class="goods_icon goods_icon_img3"></div>
-                                    <div class="goods_icon goods_icon_img4"></div>
-
-                                    <div class="goods_info_group">
-                                        <div class="goods_info "><img src="02-圖片/好物生活/食品_2.png" alt=""></div>
-                                        <div class="goods_info"><img src="02-圖片/好物生活/肌膚清潔＿2.png" alt=""></div>
-                                        <div class="goods_info"><img src="02-圖片/好物生活/居家清潔_2.png" alt=""></div>
-                                        <div class="goods_info"><img src="02-圖片/好物生活/雜貨＿2.png" alt=""></div>
-                                    </div>
-                                </div>
-
-
-                            </div>
-
-
-                        </div>
-                    </div>
+                <div class="container">
+                    <div class="text-center h1 mt-5">好．物．生．活</div>
+                    <div class="text-center h4">2020年、最新研究に基づいた
+                        花粉にまつわる注目の情報をピックアップ！</div>
                 </div>
             </section>
             <!-- 綠瓶子計畫(1) -->
@@ -293,7 +248,7 @@
                                 </h2>
                                 <div class="CardList-description trcard11">
                                     <span class="CardList-descriptionInnerWrapper ">
-                                    </span>
+                                       </span>
                                 </div>
                             </div>
                         </div>
@@ -316,7 +271,7 @@
                             <div class="CardList-itemInnerWrapper">
                                 <h2 class="CardList-title trcard3">
                                     <span class="CardList-titleInnerWrapper">
-
+                                       
                                 </h2>
                                 <div class="CardList-description trcard31">
                                     <span class="CardList-descriptionInnerWrapper"></span>
@@ -597,63 +552,6 @@
                     element.classList.toggle('active')
                 }
             });
-
-            ////////////////////////////
-
-
-            //////////好物生活的JS部分///////////////
-
-            // 點選goods_icon時，相對應的goods_info出現
-            var goods_icon = document.querySelectorAll(".goods_icon")
-            var goods_info = document.querySelectorAll(".goods_info")
-
-            goods_icon.forEach(function (element, index) {
-
-                element.onmouseover = function () {
-                    goods_info[index].classList.add("active")
-                }
-
-                element.onmouseout = function () {
-                    goods_info[index].classList.remove("active")
-                }
-
-            })
-
-
-
-            //手機板的好物生活的跳出視窗，點擊半透明黑色區塊(goods_info_mask)，goods_info_mask的active移除，為了讓display繼續保持none的狀態
-
-            $('.goods_info_mask').click(function () {
-                $('.goods_info_mask').removeClass('active')
-                // $('.block').removeClass('active')
-            })
-
-
-
-            var windows_width = window.screen.availWidth
-            // console.log(window.screen.availWidth);
-
-            if (windows_width <= 480) {
-
-                //點選goods_icon時，跳出相對應的goods_phone_info
-                var goods_icon = document.querySelectorAll(".goods_icon")
-                var goods_phone_info = document.querySelectorAll(".goods_phone_info")
-
-
-
-                goods_icon.forEach(function (element, index) {
-
-                    element.onclick = function () {
-                        $(".goods_phone_info").removeClass("active")
-
-                        $('.goods_info_mask').addClass('active')
-                        goods_phone_info[index].classList.add("active")
-                    }
-                })
-            }
-            
-            ////////////////////////////////
-
 
 
         </script>

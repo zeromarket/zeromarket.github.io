@@ -330,6 +330,67 @@ hr {
     }
 }
 
+@media(max-width:768px){
+    .banner_img img {
+        width: 70%;
+    }
+}
+
+@media(max-width:520px){
+    .shop_title_area h1{
+        font-size: 40px;
+        left: calc(50% - 180px);
+
+        margin-top:20px
+    }
+
+    .shop_title_area{
+        height: 100px;
+    }
+    .banner_img img {
+        width: 75%;
+    }
+}
+
+@media(max-width:485px){
+    .nav__link{
+        padding: 0 10px 4px;
+    }
+}
+
+
+@media(max-width:405px){
+    .shop_title_area h1{
+        font-size: 35px;
+        left: calc(50% - 157.5px);
+    }
+
+    .nav__link{
+        padding: 0 8px 4px;
+    }
+
+    .shop_nav_border{
+        padding: 38px 8px 2px 8px;
+    }
+}
+
+@media(max-width:365px){
+    .shop_title_area h1{
+        font-size: 30px;
+        left: calc(50% - 135px);
+    }
+
+    .banner_img img {
+        width: 85%;
+    }
+
+    .nav__link{
+        font-size: 15px;
+        padding: 0 4px 4px;
+
+    }
+}
+
 
 /* 修改原生bootstrap樣式 */
 
