@@ -1,11 +1,67 @@
+/* info_box */
+
+/* css */
+
+.green__info_group {
+    position: relative;
+}
+
+.green__info_mask {
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    /* 確保mask會占滿整個版面 */
+    background-color: rgba(0, 0, 0, 0.75);
+    display: none;
+}
+
+.green__info_mask.active {
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.green__info_box {
+    width: 30%;
+    opacity: 0;
+    position: absolute;
+    margin: auto;
+}
+
+.green__info_box.active {
+    opacity: 1;
+}
+
+.green__info_box img {
+    width: 100%;
+}
+
+.green__info_box button {
+    width: 30%;
+    height: 10%;
+    background-image: url(../../02-圖片/安心保證/安心保證小卡-按鈕.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8px;
+    border: 2px solid white;
+    position: absolute;
+    bottom: 25px;
+    right: 30px;
+}
+
+
+
 /* 1366以下，間距變窄 */
-@media(max-width:1366px){
+
+@media(max-width:1366px) {
     .green_icon {
         margin-bottom: 12px;
     }
 }
-
-
 
 /* 1280以下，圓變小，間距變窄 */
 
@@ -18,12 +74,10 @@
         top: calc(50% - 90px);
         left: calc(50% - 90px);
     }
-
     .green_icon {
         margin-bottom: 18px;
     }
 }
-    
 
 /* 500以下，2圓1行，圓變小 */
 
@@ -85,13 +139,18 @@
     .green_check.active span::before {
         width: 37px;
     }
-}
 
+    /* 彈跳視窗 */
+
+    .green__info_box {
+        width: 65%;
+    }
+    
+}
 
 /* 375以下，2圓1行，圓變小 */
 
 @media(max-width:375px) {
-    
     .green_icon, .green_icon_img, .green_icon_img img, .green_check span {
         width: 90px;
         height: 90px;
@@ -100,17 +159,13 @@
         top: calc(50% - 45px);
         left: calc(50% - 45px);
     }
-    
-    
-    .green_text  {
-       height: 40px;
+    .green_text {
+        height: 40px;
     }
-
-    .green_all{
+    .green_all {
         position: absolute;
-        top:40px;
+        top: 40px;
     }
-    
     /* 勾勾 */
     .green_check {
         top: calc(50% - 45px);
@@ -141,3 +196,4 @@
         width: 30px;
     }
 }
+

@@ -29,7 +29,7 @@
         @import url(03-程式/css/goodsmain.css);
 
         /* 安心保證的media query */
-        @import url(03-程式/css/green_mediaquery.css);
+        @import url(03-程式/css/green_media+infobox.css);
     </style>
 </head>
 
@@ -159,7 +159,7 @@
                     <div class="reduce">
                     </div>
 
-                  
+
                 </div>
                 <!-- </div> -->
             </section>
@@ -299,6 +299,27 @@
             <!-- 安心保證 -->
             <section class="section">
                 <div class="anchor"></div>
+                <!-- 彈出視窗 -->
+                <div class="green__info_group">
+                    <div class="green__info_mask">
+                        <div class="green__info_box">
+                            <img src="02-圖片/安心保證/安心保證小卡-01.png" alt="">
+                            <button class="green_btn btn1"></button></div>
+                        <div class="green__info_box">
+                            <img src="02-圖片/安心保證/安心保證小卡-02.png" alt="">
+                            <button class="green_btn"></button></div>
+                        <div class="green__info_box">
+                            <img src="02-圖片/安心保證/安心保證小卡-03.png" alt="">
+                            <button class="green_btn"></button></div>
+                        <div class="green__info_box">
+                            <img src="02-圖片/安心保證/安心保證小卡-04.png" alt="">
+                            <button class="green_btn"></button></div>
+                        <div class="green__info_box">
+                            <img src="02-圖片/安心保證/安心保證小卡-05.png" alt="">
+                            <button class="green_btn"></button></div>
+                    </div>
+                </div>
+
                 <div class="green_area">
                     <div class="container green_container">
 
@@ -537,16 +558,74 @@
             });
 
 
-            //安心保證icon效果
-            var green_check = document.querySelectorAll('.green_check')
+            //安心保證icon效果(原本的)
+            // var green_check = document.querySelectorAll('.green_check')
 
-            green_check.forEach(element => {
+            // green_check.forEach(element => {
+            //     element.onclick = function () {
+            //         element.classList.toggle('active')
+            //     }
+            // });
+
+            ////////安心保證的彈出視窗效果
+            //點選green_check，green__info_mask加入active，並依照相對應的green__info_box顯示視窗，點選button才可返回，返回時並觸發green_check的active
+
+            var green_checks = document.querySelectorAll('.green_check')
+            var green__info_box = document.querySelectorAll(".green__info_box")
+
+
+
+            green_checks.forEach(function (element, index) {
+
                 element.onclick = function () {
-                    element.classList.toggle('active')
-                }
-            });
+                    $(".green__info_box").removeClass("active")
 
-            ////////////////////////////
+                    $('.green__info_mask').addClass('active')
+                    green__info_box[index].classList.add("active")
+                }
+
+            })
+
+            var green_btns = document.querySelectorAll(".green_btn")
+
+            for (var i = 0; i < green_btns.length; i++) {
+                const btn = green_btns[i];
+                // const check = green_checks[i]
+
+                btn.onclick = function () {
+                    $('.green__info_mask').removeClass('active')
+                    $(".green__info_box").removeClass("active")
+
+                    // check.classList.add('active');
+                }
+            }
+
+
+
+
+            // console.log(green_btns);
+            // console.log(green_checks);
+
+            // console.log(green_btn);
+
+            // green_btn.forEach(function (btn, index) {
+
+            //    btn.onclick = function () {
+            //         $('.green__info_mask').removeClass('active')
+            //         $(".green__info_box").removeClass("active")
+
+            //         var green_checks = document.querySelectorAll('.green_check')
+
+            //         const green_check = green_checks[index]
+            //         並且在相對應的green_check加入active
+            //         green_check.classList.add('active')
+            //     }
+
+            // })
+
+
+
+
 
 
             //////////好物生活的JS部分///////////////
@@ -557,13 +636,15 @@
 
             goods_icon.forEach(function (element, index) {
 
-                element.onmouseover = function () {
-                    goods_info[index].classList.add("active")
-                }
+                goods_icon.forEach(function (element, index) {
 
-                element.onmouseout = function () {
-                    goods_info[index].classList.remove("active")
-                }
+                    element.onclick = function () {
+                        $(".goods_phone_info").removeClass("active")
+
+                        $('.goods_info_mask').addClass('active')
+                        goods_phone_info[index].classList.add("active")
+                    }
+                })
 
             })
 
