@@ -43,6 +43,18 @@
 }
 
 /* navbar狀態 */
+.navbar-brand:active img{
+    width: 0;
+    
+}
+/* .navbar-brand{
+    width: 124px;
+    height: 50px;
+    background-image: url('/02-圖片/logo/NAVbar_logo.png');
+    background-position: center;
+    background-size: contain;
+    padding-top: 0;
+} */
 .nav-link {
     text-align: end;
 }
@@ -524,7 +536,7 @@ section:nth-child(2n-1) {
 .title {
     color: #2BA091;
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .text1 {
@@ -544,7 +556,7 @@ section:nth-child(2n-1) {
 .what_img1{
     width: 100%;
     height: 100%;
-    background-image: url("/02-圖片/首頁/無包裝是什麼.png");
+    background-image: url("/02-圖片/無包裝是什麼/無包裝是什麼＿.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -552,7 +564,7 @@ section:nth-child(2n-1) {
 .what_img2{
     width: 100%;
     height: 100%;
-    background-image: url("/01-文字區塊/無包裝是什麼文字框.png");
+    background-image: url("/02-圖片/綠瓶子計畫/綠瓶子計畫文字加圖.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -611,7 +623,7 @@ section:nth-child(2n-1) {
     padding-left: 10%;
 
     background-repeat: no-repeat;
-    background-image: url("/02-圖片/減減生活/少量.png");
+    background-image: url("/02-圖片/減減生活/少量分裝＿.png");
 }
 .reduce3{
 
@@ -643,7 +655,7 @@ section:nth-child(2n-1) {
     float: right;
 
     background-repeat: no-repeat;
-    background-image: url("/02-圖片/減減生活/日常分裝.png");
+    background-image: url("/02-圖片/減減生活/友善寵物＿.png");
     
     /* width: 18%;
     height: 100%;
@@ -663,7 +675,7 @@ section:nth-child(2n-1) {
     float: right;
 
     background-repeat: no-repeat;
-    background-image: url("/02-圖片/減減生活/少量.png");
+    background-image: url("/02-圖片/減減生活/斷捨離＿.png");
 
     /* width: 18%;
     height: 100%;
@@ -680,7 +692,7 @@ section:nth-child(2n-1) {
     background-size:100%;
 
     background-repeat: no-repeat;
-    background-image: url("/02-圖片/減減生活/循環利用.png");
+    background-image: url("/02-圖片/減減生活/從認改變＿.png");
 
     /* width: 18%;
     height: 100%;
@@ -715,7 +727,63 @@ ul {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url("/02-圖片/綠瓶子計畫/外送循環.png");
+    background-image: url("/02-圖片/綠瓶子計畫/外送循還圖.png");
+}
+.trcard11{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("/02-圖片/綠瓶子計畫/外送循環文字.png");
+}
+.trcard2{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("/02-圖片/綠瓶子計畫/甲租乙還圖.png");
+}
+.trcard21{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("/02-圖片/綠瓶子計畫/甲租乙還文字.png");
+}
+.trcard3{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("/02-圖片/綠瓶子計畫/空瓶回收圖.png");
+}
+.trcard31{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("/02-圖片/綠瓶子計畫/空瓶回收文字.png");
+}
+.trcard4{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("/02-圖片/綠瓶子計畫/重覆填裝圖.png");
+}
+.trcard41{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("/02-圖片/綠瓶子計畫/重覆填裝文字.png");
 }
 .CardList-item {
     width: 100%;
@@ -734,7 +802,7 @@ ul {
     width: 100%;
     height: 100%;
     position: relative;
-    border: 1px solid #1ca9b0;
+    /* border: 1px solid #1ca9b0; */
     -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg);
     -webkit-transition: -webkit-transform 700ms;
@@ -775,7 +843,7 @@ ul {
 
 .CardList-title {
     margin-top: 0;
-    background: #f0f0f0;
+    /* background: #f0f0f0; */
     color: #595959;
     text-align: center;
     font-size: 2rem;
@@ -806,7 +874,7 @@ ul {
 }
 
 .CardList-description {
-    background: #1ca9b0;
+    /* background: #1ca9b0; */
     color: #fff;
     z-index: 1;
     -webkit-transform: rotateY(180deg);
@@ -898,7 +966,7 @@ footer {
 
 
 .green_title_area h1 {
-    font-size: 48px;
+    font-size: 2rem;
     font-weight: 700;
     color: #2ba091;
 
