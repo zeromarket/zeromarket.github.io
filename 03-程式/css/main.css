@@ -354,7 +354,35 @@ body {
 }
 /* banner效果 */
 
+.controller {
+    -webkit-animation: bounce-down 5s linear infinite;
+    animation: bounce-down 5s linear infinite;
+    
+}
 
+@-webkit-keyframes bounce-down {
+    25% {
+        -webkit-transform: translateY(-4px);
+    }
+    50%, 100% {
+        -webkit-transform: translateY(0);
+    }
+    75% {
+        -webkit-transform: translateY(4px);
+    }
+}
+
+@keyframes bounce-down {
+    25% {
+        transform: translateY(-4px);
+    }
+    50%, 100% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(4px);
+    }
+}
 
 #item_text1 {
     background-image: url('/02-圖片/首頁/白色_無塑文字.png');
@@ -580,6 +608,10 @@ section:nth-child(2n-1) {
 /*減減生活*/
 .reduce{
     height: 80vh;
+    background-image: url("/02-圖片/減減生活/減減生活一頁圖_.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 #con{
     width: 960px;
