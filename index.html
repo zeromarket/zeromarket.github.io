@@ -435,21 +435,23 @@
             </section>
             <!-- 加入我們+footer -->
             <section class="section">
-                <div class="row"></div>
-                <!-- <div class="row p-5">
-                    <div class="col-lg-6 about">
-                        <div class="join"></div>
+                <div class="container align-middle add_ccontainer_flex">
+                    <div class="add_img ">
                     </div>
-                    <div class="col-lg-6">
-                        <div class="join1">
-                            <button class="download">下載表單</button>
-                        </div>
-                    </div> -->
                 </div>
-                <footer>
-                    <div class="d-flex justify-content-center align-items-end p-3 text-white"
-                        style="background-color: #1fa19b;">
-                        我是footer</div>
+                <footer class="text-white p-2" style="background-color: #1fa19b;">
+                    <div class="footer_text d-flex justify-content-center flex-column align-items-center">
+                        <p>
+                            Copyright © 2020 Zero Market Design For Education Limited
+                        </p>
+                        <div class="footer_size justify-content-around row mt-1">
+                            <p>電話：04-22130546</p>
+                            <p>傳真：04-77012238</p>
+                            <p>據點：台中市東區進化路218號</p>
+                            <p>郵件：zeromarket168@gmail.com</p>
+                        </div>
+
+                    </div>
                 </footer>
             </section>
         </div>
@@ -518,19 +520,19 @@
 
 
             // banner JQ互動效果
-            var x=0;
+            var x = 0;
             // 物件數
             $('.banner_img').mouseleave(function () {
                 // mouseout V.S mouseleave 在於 滑鼠移出後執行次數 1:無限大
                 if (x = 6) {
-                    
+
                     $('#person_1').fadeToggle();
                     $('#person_2').fadeToggle();
                     // toggle會自行判斷狀態
                     console.log(x);
                 }
                 else {
-                    x= x+1;
+                    x = x + 1;
                 }
             })
             $('#item_1').mouseleave(function () {
@@ -595,7 +597,7 @@
             ////////////////////////////
 
 
-             //////////好物生活的JS部分///////////////
+            //////////好物生活的JS部分///////////////
 
             // 點選goods_icon時，相對應的goods_info出現
             var goods_icon = document.querySelectorAll(".goods_icon")
@@ -646,7 +648,7 @@
                     }
                 })
             }
-            
+
             ////////////////////////////////
 
 

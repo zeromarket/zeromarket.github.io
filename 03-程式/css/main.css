@@ -1266,3 +1266,29 @@ footer {
     border-radius: 20px;
 
 }
+.add_img{
+    width: 100%;
+    height: 70%;
+    background-image: url("/02-圖片/加入我們/加入我們圖加文字png.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* margin-top: 50px; */
+    
+   
+}
+.add_ccontainer_flex{
+    display: flex;  
+    /* flex-wrap: wrap; */
+    align-items: center;
+}
+p{
+    margin-bottom: 0;
+}
+.footer_size{
+    width: 1110px;
+}
+.footer_text{  
+    font-size:0.7rem;
+    
+}
