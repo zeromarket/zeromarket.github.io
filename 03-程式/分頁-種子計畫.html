@@ -313,7 +313,7 @@
         .title {
             color: #2BA091;
             font-weight: 700;
-            font-size: 48px;
+            font-size: 2rem;
         }
 
         .text1 {
@@ -340,10 +340,15 @@
             line-height: 2.2rem;
         }
 
+        strong {
+            width: 100%;
+            text-align: center;
+        }
+
         .section {
             max-width: 100%;
-            padding: 4rem;
-            margin: 5vh auto 0 auto;
+            padding: 4rem 0 0 0;
+            /* margin: 5vh auto 0 auto; */
             /* background: white;
             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); */
         }
@@ -499,13 +504,27 @@
         }
 
         .buttons {
-            display: -webkit-box;
-            display: -ms-flexbox;
+            width: 100%;
             display: flex;
+            justify-content: center;
+            /* display: -webkit-box;
+            display: -ms-flexbox; */
+
         }
 
         .buttons .btn {
             margin-right: 15px;
+        }
+
+        .c-title {
+            font-weight: 700;
+            margin: auto;
+            width: 100px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            background-color: #F3C71F;
+
         }
 
         form .btn {
@@ -520,12 +539,13 @@
             margin: 0 auto;
         }
 
+
         .form-progress {
             position: relative;
             display: block;
-            margin: 3rem auto;
+            margin: 6rem auto 3rem auto;
             width: 100%;
-            max-width: 400px;
+            max-width: 600px;
         }
 
         progress {
@@ -557,12 +577,13 @@
 
         .form-progress-indicator {
             position: absolute;
-            top: -6px;
+            top: -68px;
             left: 0;
             display: inline-block;
-            width: 20px;
+            /* 邊線 含綠點 */
+            /* width: 20px;
             height: 20px;
-            /* border: 3px solid #ddd;
+            border: 3px solid #ddd;
             border-radius: 50%; */
             -webkit-transition: all .2s ease-in-out;
             transition: all .2s ease-in-out;
@@ -572,29 +593,32 @@
         }
 
         .form-progress-indicator.one {
-            left: 0;
-            width: 100px;
-            height: 100px;
+            left: -5px;
+            top: -75px;
+            width: 120px;
+            height: 110px;
             background-image: url('/02-圖片/種子計畫/第一顆種子.png');
             background-position: cover;
             background-size: contain;
             background-repeat: no-repeat;
+
         }
 
         .form-progress-indicator.two {
-            left: 33%;
-            width: 100px;
+            top: -55px;
+            left: 30%;
+            width: 60px;
             height: 100px;
             background-image: url('/02-圖片/種子計畫/第二顆種子.png');
             background-position: cover;
             background-size: contain;
             background-repeat: no-repeat;
         }
-        
+
 
         .form-progress-indicator.three {
-            left: 66%;
-            width: 100px;
+            left: 62%;
+            width: 75.3px;
             height: 100px;
             background-image: url('/02-圖片/種子計畫/第三顆種子.png');
             background-position: cover;
@@ -603,14 +627,28 @@
         }
 
         .form-progress-indicator.four {
-            left: 100%;
-            width: 100px;
-            height: 100px;
+            left: 95%;
+            width: 90.6px;
+            top: -85px;
+            height: 120px;
             background-image: url('/02-圖片/種子計畫/第四科種子.png');
             background-position: cover;
             background-size: contain;
             background-repeat: no-repeat;
         }
+
+        /* #onein{
+            width: 100px;
+            height: 22.3px;
+            background-image: url('/02-圖片/種子計畫/第一週.png');
+            background-position:center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: -4px;
+            left: 10%;
+            display: inline-block;
+        } */
 
         .form-progress-indicator.active {
             -webkit-animation: bounce .5s forwards;
@@ -627,6 +665,8 @@
             transition: .3s;
             will-change: padding;
             overflow: hidden;
+            display: flex;
+            justify-content: center;
         }
 
         .form-step {
@@ -636,6 +676,7 @@
             -webkit-transition-timing-function: ease-in-out;
             transition-timing-function: ease-in-out;
             will-change: transform, opacity;
+
         }
 
         .form-step.leaving {
@@ -723,6 +764,20 @@
         .hidden {
             display: none;
         }
+
+        .startstep {
+            width: 294px;
+            height: 100px;
+            background-image: url('/02-圖片/種子計畫/習慣養成.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin: 1rem auto;
+        }
+        .context{
+            width: 600px;
+            text-align: justify;
+        }
     </style>
 </head>
 
@@ -759,25 +814,29 @@
             </ul>
         </div>
     </nav>
-    <div class="container">
-        <div class="anchor"></div>
+    <section class="section">
+        <div class="container">
+            <!-- <div class="anchor"></div> -->
 
-        <div class="text-center title mt-5">
-            種<p class="text1"> ∙ </p>
-            子<p class="text1"> ∙ </p>
-            計<p class="text1"> ∙ </p>
-            劃</div>
+            <div class="text-center title m-4">
+                種<p class="text1"> ∙ </p>
+                子<p class="text1"> ∙ </p>
+                計<p class="text1"> ∙ </p>
+                劃</div>
 
-        <section class="section">
-            <h1>開始我們的減減生活</h1>
+
+            <div class="startstep mb-3"></div>
 
             <div class="form-progress">
                 <progress class="form-progress-bar" min="0" max="100" value="0" step="33"
                     aria-labelledby="form-progress-completion"></progress>
 
                 <div class="form-progress-indicator one active"></div>
+                <!-- <div id="onein"></div> -->
                 <div class="form-progress-indicator two"></div>
+                <!-- <div id="twoin"></div> -->
                 <div class="form-progress-indicator three"></div>
+                <!-- <div id="threein"></div> -->
                 <div class="form-progress-indicator four"></div>
 
                 <p id="form-progress-completion" class="js-form-progress-completion sr-only" aria-live="polite">0%
@@ -789,11 +848,13 @@
                 <!-- Step one -->
                 <div class="form-step js-form-step" data-step="1">
 
-                    <p class="form-instructions"><strong>Click the continue button to show form
-                            progression.</strong><br>
-                        Please fill out the fields below so we can learn some information about you. We promise to store
-                        these on Post-It<sup><small>TM</small></sup> notes around the office.</p>
-
+                    <p class="form-instructions a">
+                    <div class="c-title rounded text-white">- 第一周 -</div>
+                    <div class="context" style="text-align: center;">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptatibus quae ex neque dolorem
+                        dolores id accusantium saepe, eveniet perspiciatis deserunt dignissimos quasi voluptate qui
+                        nobis iure? Maxime, corporis veniam!
+                    </div>
                     <!-- <form action="" name="form-step-1">
                         <div class="fieldgroup">
                             <input type="text" name="firstName" id="firstName" />
@@ -821,7 +882,7 @@
                             <button type="submit" class="btn">Continue</button>
                         </div>
                     </form> -->
-                    <div class="buttons d-flex justify-content-center">
+                    <div class="buttons">
                         <button type="button" class="btn btn-alt js-reset d-flex ">Reset</button>
 
                         <button type="submit" class="btn">Continue</button>
@@ -830,7 +891,7 @@
 
                 <!-- Step two -->
                 <div class="form-step js-form-step waiting hidden" data-step="2">
-
+                    <div class="c-title rounded text-white">- 第二周 -</div>
                     <p class="form-instructions"><strong>Click the continue button to show form progression.</strong>
                         <br> Please fill in the token below with yesterday's date plus the timestamp from the day of
                         your birth (expressed as an integer) to the power of fourteen divided by two.</p>
@@ -857,7 +918,7 @@
 
                 <!-- Step three -->
                 <div class="form-step js-form-step waiting hidden" data-step="3">
-
+                    <div class="c-title rounded text-white">- 第三周 -</div>
                     <p class="form-instructions"><strong>Click the continue button to show form progression.</strong>
                         <br> Please fill in the token below with yesterday's date plus the timestamp from the day of
                         your birth (expressed as an integer) to the power of fourteen divided by two.</p>
@@ -919,7 +980,7 @@
 
                 <!-- Step four -->
                 <div class="form-step js-form-step waiting hidden" data-step="4">
-
+                    <div class="c-title rounded text-white">- 第四周 -</div>
                     <p class="form-instructions"><strong>Click the continue button to show form progression.</strong>
                         <br> Finally, please just write the words "I Agree" in the field below to consent to us using
                         the previous data you entered to buy a new iPhone.</p>
@@ -939,7 +1000,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+    </section>
     </div>
     <!-- bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.js"
