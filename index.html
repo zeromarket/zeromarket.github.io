@@ -31,11 +31,11 @@
 <body>
 
     <!-- begin是loading中的畫面呈現 -->
-    <!-- <div id="loading">
+    <div id="loading">
         <div id="begin_back"></div>
         <div id="begin"></div>
 
-    </div> -->
+    </div>
     <!-- 頁首 -->
     <!-- navbar -->
     <div id="home">
@@ -152,62 +152,9 @@
                         生<p class="text1"> ∙ </p>
                         活</div>
                     <div class="reduce">
-                        <!-- <div class="row1 d-flex" style="height: 40vh;width: 100%;">
-                            <div class="row1_1">
-                                <div class="reduce1"></div>
-                            </div>
-
-                            <div class="row1_2">
-                                <div class="reduce2"></div>
-                                <div class="reduce3"></div>
-                            </div>
-
-                        </div>
-
-                        <div class="row1 d-flex" style="height: 40vh;width: 100%;">
-                            <div class="row1_3">
-                                <div class="reduce4"></div>
-                                <div class="reduce5"></div>
-                            </div>
-                            <div class="row1_4">
-                                <div class="reduce6"></div>
-                            </div>
-                        </div> -->
-
                     </div>
 
-                    <!-- <div class="reduce">
-                        <div class="row about">
-                            <div class="col-md-7">
-                                <div class="reduce1"></div>
-                            </div>
-                            <div class="col-md-5">
-                                <div class="reduce2 awh"></div>
-                                <div class="reduce3 awh mt-1"></div>
-                            </div>
-                        </div> -->
-
-                    <!-- <div class="row about1">
-                        <div class="col-md-4">
-                            <div class="reduce4"></div>
-                            <img src='/02-圖片/減減生活/友善寵物.png' class="card-img-top" alt="友善寵物">
-                        </div>
-                        <div class="col-md-4">
-                            <div class="reduce5"></div>
-                            <img src='/02-圖片/減減生活/從認知改變世界 png.png' class="card-img-top" alt="????????">
-                        </div>
-                        <div class="col-md-4">
-                            <div class="reduce6"></div>
-                            <img src='/02-圖片/減減生活/斷捨離.png' class="card-img-top" alt="段捨離">
-                        </div> -->
-                    <!-- <div class="col-md-4">
-                            <img src="https://www.kahunsho-byebye.com/wp-content/themes/kahunsho-byebye/img/img_2.png"
-                                class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and</p>
-                            </div>
-                        </div> -->
-                    <!-- </div> -->
+                  
                 </div>
                 <!-- </div> -->
             </section>
@@ -520,19 +467,19 @@
 
 
             // banner JQ互動效果
-            var x = 0;
+            var x = 6;
             // 物件數
             $('.banner_img').mouseleave(function () {
                 // mouseout V.S mouseleave 在於 滑鼠移出後執行次數 1:無限大
-                if (x = 6) {
-
+                if (x > 1) {
+                    x = x - 1;
                     $('#person_1').fadeToggle();
                     $('#person_2').fadeToggle();
                     // toggle會自行判斷狀態
                     console.log(x);
                 }
                 else {
-                    x = x + 1;
+                    // x = x + 1;
                 }
             })
             $('#item_1').mouseleave(function () {
