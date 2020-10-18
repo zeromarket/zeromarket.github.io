@@ -95,19 +95,15 @@
 
                     <!-- <div id="big_log" class="text-center col mt-5" style="font-size: 100px;">Zero Market</div> -->
                     <div id="item_text1"></div>
-                    <div id="item_1" class="banner_img"></div>
-                    <div id="item_2" class="banner_img"></div>
+                    <div id="item_1" class="banner_img controller"></div>
+                    <div id="item_2" class="banner_img controller"></div>
                     <div id="item_text2"></div>
-                    <div id="item_3" class="banner_img"></div>
-                    <div id="item_4" class="banner_img"></div>
+                    <div id="item_3" class="banner_img controller"></div>
+                    <div id="item_4" class="banner_img controller"></div>
                     <div id="item_text3"></div>
-                    <div id="item_5" class="banner_img"></div>
-                    <div id="item_6" class="banner_img"></div>
+                    <div id="item_5" class="banner_img controller"></div>
+                    <div id="item_6" class="banner_img controller"></div>
                     <div id="item_text4"></div>
-
-
-                    <!-- <div id="item_5" class="banner_img"></div>
-                <div id="item_6" class="banner_img"></div> -->
                     <img id="person_1" src="/02-圖片/首頁/生氣.png">
                     <!-- src="/02-圖片/a1.png" -->
                     <img id="person_2" src="/02-圖片/首頁/笑臉.png">
@@ -480,58 +476,48 @@
 
 
             // banner JQ互動效果
-            var x = 6;
             // 物件數
             $('.banner_img').mouseleave(function () {
+                var x = 0;
                 // mouseout V.S mouseleave 在於 滑鼠移出後執行次數 1:無限大
-                if (x > 1) {
-                    x -= 1;
+                if (x=6) {
                     $('#person_1').fadeToggle();
                     $('#person_2').fadeToggle();
                     // toggle會自行判斷狀態
                     console.log(x);
                 }
                 else {
+                    x++;
                 }
             })
-            $('#item_1').mouseover(function () {
+            $('#item_1').mouseleave(function () {
                 $('#item_1').animate({ opacity: '0' }, 500);
                 // 消失時間0.5秒
-                // $('#item_1')[0].style.display = 'none';
+                
                 $('#item_1').delay(500).animate({ height: "0%" }, 0);
                 // 這裡要等待上排時間 物件消失後再display='none'
-                $('#person_1').fadeToggle();
-                $('#person_2').fadeToggle();
             })
             $('#item_2').mouseover(function () {
                 $('#item_2').animate({ opacity: '0' }, 500);
                 $('#item_2').delay(500).animate({ height: "0%" }, 0);
-                $('#person_1').fadeToggle();
-                $('#person_2').fadeToggle();
             })
             $('#item_3').mouseover(function () {
                 $('#item_3').animate({ opacity: '0' }, 500);
                 $('#item_3').delay(500).animate({ height: "0%" }, 0);
-                $('#person_1').fadeToggle();
-                $('#person_2').fadeToggle();
             })
             $('#item_4').mouseover(function () {
                 $('#item_4').animate({ opacity: '0' }, 500);
                 $('#item_4').delay(500).animate({ height: "0%" }, 0);
-                $('#person_1').fadeToggle();
-                $('#person_2').fadeToggle();
             })
             $('#item_5').mouseover(function () {
                 $('#item_5').animate({ opacity: '0' }, 500);
                 $('#item_5').delay(500).animate({ height: "0%" }, 0);
-                $('#person_1').fadeToggle();
-                $('#person_2').fadeToggle();
             })
             $('#item_6').mouseover(function () {
                 $('#item_6').animate({ opacity: '0' }, 500);
                 $('#item_6').delay(500).animate({ height: "0%" }, 0);
-                $('#person_1').fadeToggle();
-                $('#person_2').fadeToggle();
+                // $('#person_1').fadeToggle();
+                // $('#person_2').fadeToggle();
             })
 
             // 卡片翻轉的效果
