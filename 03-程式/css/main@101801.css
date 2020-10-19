@@ -586,7 +586,7 @@ section:nth-child(2n-1) {
 /*減減生活*/
 .reduce{
     height: 80vh;
-    background-image: url("/02-圖片/減減生活/減減生活一頁圖_.png");
+    background-image: url("/02-圖片/減減生活/減減生活一頁圖.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -1205,9 +1205,10 @@ p{
 }
 
 @media (max-width: 768px) { 
-    .banner{
+    
+    /* .banner{
         display: none!important;
-    }
+    } */
     .navbar-expand{
         height: 100vh;
     }
