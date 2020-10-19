@@ -636,15 +636,13 @@
 
             goods_icon.forEach(function (element, index) {
 
-                goods_icon.forEach(function (element, index) {
+                element.onmouseover = function () {
+                    goods_info[index].classList.add("active")
+                }
 
-                    element.onclick = function () {
-                        $(".goods_phone_info").removeClass("active")
-
-                        $('.goods_info_mask').addClass('active')
-                        goods_phone_info[index].classList.add("active")
-                    }
-                })
+                element.onmouseout = function () {
+                    goods_info[index].classList.remove("active")
+                }
 
             })
 
