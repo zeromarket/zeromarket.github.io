@@ -25,10 +25,13 @@
 }
 
 .green__info_box {
-    width: 30%;
+    width: 20%;
     opacity: 0;
     position: absolute;
     margin: auto;
+
+    display: flex;
+    justify-content: center;
 }
 
 .green__info_box.active {
@@ -50,8 +53,20 @@
     border: 2px solid white;
     position: absolute;
     bottom: 25px;
-    right: 30px;
 }
+
+.green_btn{
+    z-index: 4;
+    display: none;
+}
+
+.green_btn.active{
+    display: block;
+}
+
+
+
+
 
 
 
@@ -77,6 +92,9 @@
     .green_icon {
         margin-bottom: 18px;
     }
+
+    .green__info_box {
+        width: 30%;}
 }
 
 /* 500以下，2圓1行，圓變小 */
@@ -145,7 +163,10 @@
     .green__info_box {
         width: 65%;
     }
-    
+
+    .green__info_box button {
+        width: 40%;
+    }
 }
 
 /* 375以下，2圓1行，圓變小 */
