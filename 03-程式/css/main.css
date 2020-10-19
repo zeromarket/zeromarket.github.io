@@ -42,6 +42,11 @@
     position: relative;
 }
 
+
+/* navbar狀態 */
+.logo:hover {
+    background-image: url("/02-圖片/logo/黃色logo.png");
+}
 .logo{
     width: 150px;
     height: 35.4px;
@@ -49,10 +54,6 @@
 background-position: center;
 background-size: contain;
 background-repeat: no-repeat;
-}
-/* navbar狀態 */
-.logo:hover {
-    background-image: url("/02-圖片/logo/黃色logo.png");
 }
 /* .navbar-brand{
     width: 124px;
