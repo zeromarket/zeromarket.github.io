@@ -1308,7 +1308,7 @@ p{
     background-repeat: no-repeat;
     /* display: none; */
     width:100%;
-    background-color: #1fa19b;
+    background-color: rgb(45, 154, 144);
 }
 
 @media (max-width: 768px) { 
