@@ -79,7 +79,7 @@
                         <a class="nav-link" href="分頁03-種子計畫.html"><i class="fas fa-seedling hvr-icon"></i> 種子計畫</a>
                     </li>
                     <li class="nav-item hvr-icon-grow">
-                        <a class="nav-link" href="#section7"><i class="far fa-smile hvr-icon"></i> 安心保證</a>
+                        <a class="nav-link" target="_blank" href="https://www.facebook.com/ecocatfriendly/"><i class="far fa-smile hvr-icon"></i> 友站連結</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://www.instagram.com/?hl=zh-tw">
@@ -307,19 +307,19 @@
                     <div class="green__info_mask">
                         <div class="green__info_box">
                             <img src="02-圖片/安心保證/安心保證小卡-01.png" alt="">
-                            <button class="green_btn btn1"></button></div>
+                            <button class="green_btn c1"></button></div>
                         <div class="green__info_box">
                             <img src="02-圖片/安心保證/安心保證小卡-02.png" alt="">
-                            <button class="green_btn"></button></div>
+                            <button class="green_btn c2"></button></div>
                         <div class="green__info_box">
                             <img src="02-圖片/安心保證/安心保證小卡-03.png" alt="">
-                            <button class="green_btn"></button></div>
+                            <button class="green_btn c3"></button></div>
                         <div class="green__info_box">
                             <img src="02-圖片/安心保證/安心保證小卡-04.png" alt="">
-                            <button class="green_btn"></button></div>
+                            <button class="green_btn c4"></button></div>
                         <div class="green__info_box">
                             <img src="02-圖片/安心保證/安心保證小卡-05.png" alt="">
-                            <button class="green_btn"></button></div>
+                            <button class="green_btn c5"></button></div>
                     </div>
                 </div>
 
@@ -561,7 +561,7 @@
             });
 
 
-            //安心保證icon效果(原本的)
+             //安心保證icon效果(原本的)
             // var green_check = document.querySelectorAll('.green_check')
 
             // green_check.forEach(element => {
@@ -576,7 +576,7 @@
             var green_checks = document.querySelectorAll('.green_check')
             var green__info_box = document.querySelectorAll(".green__info_box")
 
-
+            var green_btns = document.querySelectorAll(".green_btn")
 
             green_checks.forEach(function (element, index) {
 
@@ -584,25 +584,43 @@
                     $(".green__info_box").removeClass("active")
 
                     $('.green__info_mask').addClass('active')
+
+                    green_btns[index].classList.add("active")
+
+                    console.log(green_btns[index]);
+
                     green__info_box[index].classList.add("active")
                 }
 
             })
 
-            var green_btns = document.querySelectorAll(".green_btn")
 
-            for (var i = 0; i < green_btns.length; i++) {
-                const btn = green_btns[i];
-                // const check = green_checks[i]
+            
+            
 
-                btn.onclick = function () {
-                    $('.green__info_mask').removeClass('active')
-                    $(".green__info_box").removeClass("active")
 
-                    // check.classList.add('active');
+            green_btns.forEach(function(element,index) {
+                element.onclick = function(){
+                    $('.green__info_mask.active').eq(0).removeClass('active')
+                    $(".green__info_box.active").eq(0).removeClass("active")
+                    $(".green_btns.active").removeClass("active")
+
+                    console.log(green_btns);
+                    green_checks[index].classList.add('active')
                 }
-            }
+            });
 
+            // for (let i = 0; i < green_btns.length; i++) {
+            //     const btn = green_btns[i]
+            //     const check = green_checks[i]
+            //     console.log(i);
+            //     btn.onclick = function () {
+            //         console.log(i);
+            //         $('.green__info_mask').removeClass('active')
+            //         $(".green__info_box").removeClass("active")
+            //         check.classList.add('active')
+            //     }
+            // }
 
 
 

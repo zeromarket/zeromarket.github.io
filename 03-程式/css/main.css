@@ -1302,13 +1302,12 @@ p{
     display: block;
 }
 .banner2{
-    background-image: url('/02-圖片/手機版/苦臉女.png');
+    background-image: url('/02-圖片/手機版/哭臉女.png');
     background-position: bottom;
     background-size: contain;
     background-repeat: no-repeat;
     /* display: none; */
-    height: 100vh;
-    width:100% ;
+    width:100%;
     background-color: #1fa19b;
 }
 
@@ -1316,8 +1315,10 @@ p{
     .banner1{
         display: none!important;
     }
-    .bnner2{
+    .banner2{
         /* display: unset; */
+        height: 100vh;
+
     }
     .navbar-expand{
         height: 100vh;
