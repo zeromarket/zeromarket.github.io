@@ -607,7 +607,7 @@ section:nth-child(2n-1) {
 /*減減生活*/
 .reduce{
     height: 80vh;
-    background-image: url("/02-圖片/減減生活/減減生活一頁圖_.png");
+    background-image: url("/02-圖片/減減生活/減減生活一頁圖.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -1291,9 +1291,64 @@ p{
     margin-bottom: 0;
 }
 .footer_size{
-    width: 1110px;
+    width: 768px;
 }
 .footer_text{  
-    font-size:0.7rem;
+    font-size:0.6rem;
     
+}
+.cc_active{
+    display: block;
+}
+.banner2{
+    background-image: url('/02-圖片/手機版/苦臉女.png');
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* display: none; */
+    height: 100vh;
+    width:100% ;
+    background-color: #1fa19b;
+}
+
+@media (max-width: 768px) { 
+    .banner1{
+        display: none!important;
+    }
+    .bnner2{
+        /* display: unset; */
+    }
+    .navbar-expand{
+        height: 100vh;
+    }
+    .what_img1{
+        width: 100%;
+        height: 100%;
+        background-image: url("/02-圖片/手機版/無包裝是什麼.png");
+    }
+    .what_img2{
+        background-image: url("/02-圖片/手機版/綠瓶子計畫.png");
+    }
+    p{
+        display: none;
+        padding: 10px 0;
+    }
+    .title {
+        font-size: 26px;
+    }
+    .reduce{
+        margin-top: 15px;
+        height: 75vh;
+        background-image: url("/02-圖片/手機版/減減生活.png");
+    }
+    #con{
+        width:100%;
+        padding: 10px;
+    }
+    
+    .add_img{
+        width: 100%;
+        height: 70%;
+        background-image: url("/02-圖片/手機版/加入我們.png");
+    }
 }
